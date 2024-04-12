@@ -8,12 +8,14 @@ import axios from "axios";
 function Uploading() {
   const [images, setImages] = useState([]);
   const [list, setList] = useState([]);
+  const [file, setFile] = useState([]);
   const [apiData, setAPIData] = useState({});
   const maxNumber = 69;
 
   const onChange = (imageList) => {
-    const newList = imageList.map((image) => ({ data_url: image.data_url }));
-    setImages(newList);
+    const newList = imageList.map((image) => image.file);
+    setFile(newList)
+    setImages(imageList);
   };
   const setState = async (
     title,
@@ -53,30 +55,31 @@ function Uploading() {
   }
 
   const SendRequest = async () => {
-    if (validateFormFields(apiData) && images.length > 0) {
-      try {
-        const data = await axios.post(
-          `${process.env.REACT_APP_DEVELOPMENT_URL}/dashboard/addpost`,
-          {
-            data: images,
-            ...apiData,
+    if (validateFormFields(apiData) && file.length > 0) {
+    try {
+      console.log(file)
+      const data = await axios.post(
+        `${process.env.REACT_APP_DEVELOPMENT_URL}/dashboard/addpost`,
+        {
+          data: file,
+          ...apiData,
+        },
+        {
+          headers: {
+            "Content-Type": " multipart/form-data"
           },
-          {
-            headers: {
-              "Content-Type": "application/json",
-            },
-          }
-        );
-        console.log(data);
-        setList(
-          data.data.msg.map((elem) => (
-            <img src={elem.data_url} alt="My images" />
-          ))
-        );
-        alert("Data delivered successfully");
-      } catch (error) {
-        console.log(error);
-      }
+        }
+      );
+      console.log(data);
+      setList(
+        data.data.msg.map((elem) => (
+          <img src={elem.data_url} alt="My images" />
+        ))
+      );
+      alert("Data delivered successfully");
+    } catch (error) {
+      console.log(error);
+    }
     } else {
       alert("All fields and some images are required");
     }

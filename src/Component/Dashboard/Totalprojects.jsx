@@ -24,11 +24,12 @@ function Totalprojects() {
   const row =
     records.length > 0
       ? records.map((elem, index) => {
+        console.log(elem)
           return (
             <div className="totalcont" key={index}>
               <div className="top">
                 <img
-                  src={`${elem.data_url}`}
+                  src={`${process.env.REACT_APP_DEVELOPMENT_URL}/images/${elem.data_url}`}
                   alt={elem.title}
                   width={"300px"}
                   height={"180px"}

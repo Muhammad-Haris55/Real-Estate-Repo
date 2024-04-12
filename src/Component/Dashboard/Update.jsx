@@ -43,7 +43,7 @@ function Update() {
       <div>
         <h1 >Title: {metaData.title}</h1>
         <img
-          src={metaData.data_url}
+          src={`${process.env.REACT_APP_DEVELOPMENT_URL}/images/${metaData.data_url}`}
           alt={metaData.title}
           width={"300px"}
           height={"180px"}
@@ -63,7 +63,7 @@ function Update() {
               <img
                 key={ind}
                 id={ind}
-                src={img.data_url}
+                src={`${process.env.REACT_APP_DEVELOPMENT_URL}/images/${img}`}
                 alt={metaData.title}
                 width={"300px"}
                 height={"180px"}
