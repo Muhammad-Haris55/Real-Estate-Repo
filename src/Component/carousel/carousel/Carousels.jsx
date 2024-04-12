@@ -3,7 +3,7 @@ import React from 'react'
 import "./cstyle.css"
 import img1 from "./slide-1.jpg"
 import img2 from "./slide-2.jpg"
-import img3 from "./slide-3.jpg"
+
 
 export default function Carousels() {
 

@@ -1,9 +1,7 @@
 import React from 'react'
 import styled from "styled-components";
-import { BsPerson } from "react-icons/bs";
-import { GiApc, GiHamburgerMenu } from "react-icons/gi";
+import { GiHamburgerMenu } from "react-icons/gi";
 import { MdClose } from "react-icons/md";
-import { IoSearchOutline } from "react-icons/io5";
 import { useState } from 'react';
 import logo from './IMG-20240223-WA0022-removebg-preview.png'
 

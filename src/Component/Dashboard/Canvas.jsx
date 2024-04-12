@@ -1,5 +1,5 @@
-import { React, useContext } from "react";
-import { NavLink, useNavigate } from "react-router-dom";
+import { React } from "react";
+
 // import AuthContext from "./context/auth";
 
 function Canvas() {

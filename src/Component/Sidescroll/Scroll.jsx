@@ -11,7 +11,7 @@ const Scroll = () => {
   });
   return (
           <Div>
-      <a href="#" className={`${visible ? "block" : "none"}`}>
+      <a href="/#" className={`${visible ? "block" : "none"}`}>
       <SiWhatsapp />
       </a>
     </Div>

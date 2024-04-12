@@ -1,5 +1,5 @@
 import React from 'react'
-import { NavLink } from 'react-router-dom';
+
 import Sidebar from './Sidebar';
 import Canvas from './Canvas'
 function Dashboard() {

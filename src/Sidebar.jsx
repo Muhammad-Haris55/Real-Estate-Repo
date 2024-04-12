@@ -39,13 +39,13 @@ function Sidebar() {
                                     Get Help
                                 </p>
                                 <button type="button" id="sbutton">
-                                    <img src="efund.png" />
+                                    <img src="efund.png" alt="img" />
                                     <NavLink className="nav-link" to="/Request">
                                         <span id="spam">Request Refund</span>
                                     </NavLink>
                                 </button>
                                 <button type="button" id="sbutton">
-                                    <img src="chat.png" />
+                                    <img src="chat.png"  alt="img"/>
                                     <NavLink className="nav-link" to="/Chat">
                                         <span id="spam">Live Chat</span>
                                     </NavLink>
@@ -56,13 +56,13 @@ function Sidebar() {
                                     Authentication
                                 </p>
                                 <button type="button" id="sbutton">
-                                    <img src="use.png" />
+                                    <img src="use.png" alt="img"/>
                                     <NavLink className="nav-link" to="/Profile">
                                         <span id="spam">Profile</span>
                                     </NavLink>
                                 </button>
                                 <button type="button" id="sbutton" >
-                                    <img src="signout.png" />
+                                    <img src="signout.png" alt="img"/>
                                     
                                     <NavLink className="nav-link" to="/">
                                         <span id="spam" >Sign Out</span>

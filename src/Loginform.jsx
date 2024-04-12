@@ -5,8 +5,7 @@ import {
     MDBInput,
     MDBCol,
     MDBRow,
-    MDBCheckbox,
-    MDBBtn
+    MDBCheckbox
 } from 'mdb-react-ui-kit';
 
 function Loginform() {

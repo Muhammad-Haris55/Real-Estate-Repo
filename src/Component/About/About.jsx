@@ -1,12 +1,11 @@
 import React from 'react'
-import img2 from "../Home/img/jared-erondu-6Fq2U47SKtE-unsplash.jpg"
 import Footer from '../Footer/Footer';
 import img3 from "./vn09h7yi-removebg-preview.png"
 import truck from "../Home/img/truck.png"
 import jcb from "../Home/img/jcb.png"
 import about from"../Home/img/about.png"
 import Background from "../Home/img/jared-erondu-6Fq2U47SKtE-unsplash.jpg"
-import Navbar3 from "../Navbar3/Navbar3"
+
 
 
 
@@ -90,7 +89,7 @@ export const About = () => {
             <div className="row gx-5">
                 <div className="col-lg-6 mb-5 mb-lg-0">
                     <div className="d-flex h-100 border border-5 border-danger pt-4">
-                        <img className="img-fluid mt-auto mx-auto" src={img3}/>
+                        <img className="img-fluid mt-auto mx-auto" src={img3} alt="img"/>
                     </div>
                 </div>
                 <div className="col-lg-6 pb-5">

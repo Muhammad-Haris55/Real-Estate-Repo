@@ -20,7 +20,7 @@ function Signup() {
                             <th scope="row">YEAR</th>
                             <td>2004</td>
                         </tr>
-                        <tr class="table-info" id='stable' id='stable'>
+                        <tr class="table-info" id='stable' >
                             <th scope="row">MADEIN</th>
                             <td>GERMANY</td>
                         </tr>
