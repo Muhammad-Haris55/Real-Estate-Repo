@@ -37,7 +37,7 @@ function Totalprojects() {
               </div>
               <div className="bottom">
                 <h5>{elem.title}</h5>
-                <p>{elem.description}</p>
+                {/* <p>{elem.description}</p> */}
 
                 <button
                   onClick={() => {

@@ -13,7 +13,7 @@ import "./index.css";
 import Totalprojects from "./Component/Dashboard/Totalprojects";
 import Uploading from "./Component/Dashboard/Uploading";
 import Update from "./Component/Dashboard/Update";
-
+import Project from "./Component/Projects/Project";
 function App() {
   return (
     <>
@@ -25,6 +25,7 @@ function App() {
         <Route path="D" element={<Uploading />}></Route>
         <Route path="T" element={<Totalprojects />}></Route>
         <Route path="U" element={<Update />}></Route>
+        <Route path="P" element={<Project />}></Route>
         <Route path="About" element={<About />}></Route>
         <Route path="Contact" element={<Contact />}></Route>
         <Route path="dash" element={<Dashboard />}></Route>

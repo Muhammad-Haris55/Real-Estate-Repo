@@ -28,6 +28,14 @@ function Update() {
         delete detail_data.data;
         setDetailData(detail_data);
         setIsLoading(false);
+        setAPIData({
+          title: meta_data?.title,
+          bedroom: detail_data?.bedroom,
+          price: detail_data?.price,
+          area: detail_data?.area,
+          washroom: detail_data?.washroom,
+          description: meta_data?.description,
+        })
         setIsData(true);
         setAPIData({
           title: meta_data?.title,
@@ -102,6 +110,7 @@ function Update() {
           }
         );
         console.log(data)
+
         alert("Data delivered successfully");
       } catch (error) {
         console.log(error);
@@ -120,61 +129,107 @@ function Update() {
 
   const myJSX = metaData && detailData && pic && (
     <>
-      <div>
-        <h1>Title: {metaData.title}</h1>
-        <img
-          src={`${process.env.REACT_APP_DEVELOPMENT_URL}/images/${metaData.data_url}`}
-          alt={metaData.title}
-          width={"300px"}
-          height={"180px"}
-        />
-        <p>Description: {metaData.description}</p>
-      </div>
-      <div>
-        {pic.map((img, ind) => {
+      <div id="update">
 
-          return (
-            <>
+
+        <div>
+          <div>
+
+            <h1 className="text-center my-2 updatetitle">{metaData.title}</h1>
+          </div>
+          <div style={{ display: 'flex' }}>
+
+            <div className="col-md-6" style={{ display: 'flex', flexDirection: "column", alignItems: 'center', gap: '5px' }}>
+
+              <p id="titlep"> Title Image </p>
               <img
-                key={ind}
-                src={`${process.env.REACT_APP_DEVELOPMENT_URL}/images/${img}`}
+                src={`${process.env.REACT_APP_DEVELOPMENT_URL}/images/${metaData.data_url}`}
                 alt={metaData.title}
-                width={"300px"}
-                height={"180px"}
-                style={{ padding: "5px", border: "2px solid black" }}
+                width={"450px"}
+                height={"300px"}
+                style={{ boxShadow: 'rgba(0, 0, 0, 0.24) 0px 3px 8px', borderRadius: '10px', padding: '3px' }}
               />
-              <button
-                onClick={() => {
-                  addDeletePic(img, ind);
-                }}
-              >
-                Delete
-              </button>
-            </>
-          );
-        })}
+            </div>
+            <div id="projectd" className="col-md-6" style={{ display: 'flex', flexDirection: "column", alignItems: 'center', justifyContent: 'center', gap: '5px' }}>
+
+              <p id="updatedesc">Project description </p>
+              <p id="updatedesc2"> {metaData.description}</p>
+              <div style={{width:'100%',display:'flex',gap:'5px'}}>
+
+                {isLoading ? (
+                  <h1>Data is Loading</h1>
+                ) : (
+                  isData && (
+                    <button
+                      class="browsebtn my-2"
+                      style={{ width: "235px", whiteSpace: "nowrap", padding: "5px" }}
+                      type="button"
+                      data-bs-toggle="modal"
+                      data-bs-target="#exampleModal"
+                    >
+                      Update project details
+                    </button>
+                  )
+                )}
+                <button
+                  class="browsebtn my-2"
+                  style={{ width: "235px", whiteSpace: "nowrap", padding: "5px" }}
+                  type="button"
+                >
+                  Add Images ?
+                </button>
+                <button
+                  class="browsebtn my-2"
+                  style={{ width: "235px", whiteSpace: "nowrap", padding: "5px", fontSize: '13px', borderRadius: '12px' }}
+                  id='rembtn'
+                  onClick={SendRequest}
+                >
+                  Upload Project
+                </button>
+              </div>
+            </div>
+
+          </div>
+        </div>
+
+        <div className="my-3" style={{ display: 'flex', width: '100%', flexWrap: 'wrap', alignItems: 'center', justifyContent: 'center', gap: '15px' }}>
+          {pic.map((img, ind) => {
+            return (
+              <>
+                <div style={{ display: 'flex', flexDirection: 'column', alignItems: 'center', gap: '15px', margin: '3px' }}>
+
+                  <img
+                    key={ind}
+                    src={`${process.env.REACT_APP_DEVELOPMENT_URL}/images/${img}`}
+                    alt={metaData.title}
+                    width={"380px"}
+                    height={"260px"}
+                    style={{ boxShadow: 'rgba(0, 0, 0, 0.24) 0px 3px 8px', borderRadius: '10px' }}
+                  />
+                  <button
+                    onClick={() => {
+                      addDeletePic(img, ind);
+                    }}
+                    style={{ width: '150px', height: '30px', display: 'flex', flexDirection: 'column', alignItems: 'center', justifyContent: 'center', fontSize: '13px' }}
+                    id="rembtn"
+                  >
+                    Delete
+                  </button>
+                </div>
+              </>
+            );
+          })}
+        </div>
       </div>
     </>
   );
   return (
     <div>
-      <p> Update Page</p>
-      {isLoading ? (
-        <h1>Data is Loading</h1>
-      ) : (
-        isData && (
-          <button
-            class="browsebtn my-2"
-            style={{ width: "255px", whiteSpace: "nowrap", padding: "5px" }}
-            type="button"
-            data-bs-toggle="modal"
-            data-bs-target="#exampleModal"
-          >
-            View project details
-          </button>
-        )
-      )}
-      <button type="button" onClick={SendRequest}>Submit</button>
+      {/* <p> Update Page</p> */}
+      {/* View Project detail (mpodal btn) */}
+
+      {/* Submit btn */}
+      {/* <button type="button" onClick={SendRequest}>Submit</button> */}
       {isLoading ? <h1>Data is Loading</h1> : isData && myJSX}
       <Modal
         uploading={setState}

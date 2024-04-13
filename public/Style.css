@@ -22,7 +22,8 @@
     /* background: rgb(16,16,16); */
 }
 
-html,body {
+html,
+body {
     /* overflow-y: auto; */
     scroll-behavior: smooth;
     height: 100%;
@@ -2091,20 +2092,21 @@ body.open .sidebar {
     align-items: center;
     font-family: "Noto Sans Lao Looped", sans-serif;
     justify-content: center;
-    
+
     /* background-color: rgba(255, 0, 0, 0.599); */
     /* background: rgb(30, 144, 255); */
     /* background: linear-gradient(277deg, rgba(30, 144, 255, 1) 13%, rgba(32, 111, 220, 1) 25%);
      background-color: rgba(0, 0, 255, 0.823); */
-     background-color: rgb(21, 124, 227);
-     /* background-color: rgb(152, 173, 192); */
+    background-color: rgb(21, 124, 227);
+    /* background-color: rgb(152, 173, 192); */
 }
 
 
 .cloud h4 {
     font-size: 23px;
 }
-.form-floating textarea{
+
+.form-floating textarea {
     font-size: 14px;
 }
 
@@ -2224,19 +2226,20 @@ body.open .sidebar {
     font-size: 14px;
 }
 
-#color2{
-    
+#color2 {
+
     background-color: rgb(196, 26, 26);
-    color:white;
+    color: white;
 
 }
-#color2:hover{
+
+#color2:hover {
 
     background-color: white;
     color: rgb(196, 26, 26);
     border: 1px solid rgb(196, 26, 26);
-    font-size: 14px; 
- }
+    font-size: 14px;
+}
 
 
 
@@ -2266,10 +2269,32 @@ body.open .sidebar {
     background-color: white;
     color: rgb(196, 26, 26);
 }
+#rembtn2 {
+    font-size: 11px;
+    padding: 3px 8px 4px 8px;
+    width: min-content;
+    margin-top: 1px;
+    border: none;
+    height: 26px;
+    width: min-content;
+    /* border-radius: 2px; */
+    outline: none;
+    background-color:rgba(0, 0, 255, 0.823);
+    color: white;
+    border-radius: 3px;
+    white-space: nowrap;
+    transition: all 0.2s ease;
+}
+
+#rembtn2:hover {
+    border: 1px solid rgba(0, 0, 255, 0.823);
+    background-color: white;
+    color: rgba(0, 0, 255, 0.823);
+}
 
 #color {
     /* font-size: 11px; */
-    
+
     border-radius: 12px;
     border: none;
     outline: none;
@@ -2311,8 +2336,8 @@ body.open .sidebar {
     /* background-color: rgba(255, 0, 0, 0.599); */
     /* background-color: rgb(137, 163, 186); */
     background-color: rgb(21, 124, 227);
-    
-    
+
+
     /* align-items: center; */
     /* justify-content: space-between; */
     gap: 20px;
@@ -2331,12 +2356,14 @@ body.open .sidebar {
     padding: 5px;
 }
 
-.bottom h5{
+.bottom h5 {
     color: #000;
 }
-.bottom p{
+
+.bottom p {
     font-size: 15px;
 }
+
 .totalcont {
     /* border: 2px solid black; */
     width: 320px;
@@ -2380,7 +2407,7 @@ body.open .sidebar {
     /* border: 2px solid black;/ */
     /* position:-webkit-sticky; */
     overflow: hidden;
-    
+
     /* font-family: var; */
     /* top: 0; */
     /* left: 0; */
@@ -2544,8 +2571,157 @@ body.open .sidebar {
     box-shadow: rgba(0, 0, 0, 0.35) 5px 5px 15px;
 }
 
+/* Update page */
+.updatetitle {
+    font-size: 3.5rem;
+    color: #131212;
+    /* text-decoration: underline; */
+    font-family: var(--navbarfont);
+}
 
+#titlep {
+    font-size: 2rem;
+    color: #131212;
+    /* text-decoration: underline; */
+    font-family: var(--navbarfont);
+
+}
+
+#update {
+    padding: 10px;
+    /* border: 2px solid black; */
+}
+
+#updatedesc {
+    font-size: 2rem;
+    color: #131212;
+    /* text-decoration: underline; */
+    font-family: var(--navbarfont);
+
+}
+
+#updatedesc2 {
+    font-size: 1.4rem;
+
+    color: #131212;
+    /* text-decoration: underline; */
+    font-family: var(--navbarfont);
+
+}
+
+#projectd {
+    line-height: 1.1;
+}
+
+/* Project page */
+@import url('https://fonts.googleapis.com/css2?family=Dancing+Script:wght@400..700&family=Koulen&family=Noto+Sans+Lao+Looped:wght@100..900&family=Raleway:ital,wght@0,100..900;1,100..900&display=swap');
+
+.hprojectpage {
+    min-height: 90vh;
+    width: 100%;
+    font-family: var(--navbarfont);
+    /* border: 1px solid black; */
+    padding: 10px;
+}
+
+.pcardholder {
+    /* width: 90%; */
+    /* border: 2px solid black; */
+    min-height: 90vh;
+    /* overflow: hidden; */
+    /* padding: 30px; */
+    padding: 10px 60px 10px 60px;
+    display: flex;
+    flex-wrap: wrap;
+    /* align-items: center; */
+    gap: 20px;
+    justify-content: space-evenly;
+}
+
+.pcard {
+    /* border: 2px solid black; */
+    height: 345px;
+    width: 270px;
+    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 6px;
+    /* filter: drop-shadow( rgba(0, 0, 0, 0.24) 0px 3px 8px); */
+    border-radius: 9px;
+}
+
+.htop {
+    
+    width: 100%;
+    height: 60%;
+    padding: 3px;
+}
+.htop img{
+    width: 100%;
+    height: 100%;
+    border-top-left-radius:5px ;
+    border-top-right-radius:5px ;
+}
+.hbottom{
+    /* border: 2px solid black; */
+    width: 100%;
+    min-height: 40%;
+    padding: 1px;
+    /* line-height: ; */
+}
+.hbottom h6{
+    font-family: "Raleway", sans-serif;
+    font-size: 14px;
+    text-align: center;
+    font-weight: 600;
+    color: #463737;
+}
+.bimages{
+    /* border: 2px solid black; */
+    /* border: ; */
+    /* line-height: .5; */
+    display: flex;
+    justify-content: space-evenly;
+    height: 40px;
+    /* height: 30px; */
+}
+.bprices{
+    /* border: 2px solid black; */
+    /* border: ; */
+    /* line-height: .5; */
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding-top: 3px;
+    /* justify-content: space-evenly; */
+    height: 40px;
+    padding: 5px 10px 5px 10px;
+    /* padding-left: 10px; */
+    /* padding-right: 10px; */
+
+    /* height: 30px; */
+}
+.btext{
+    position: relative;
+    top: 2px;
+}
+.bimages img{
+    width: 19px!important;
+}
+.imgdetail{
+    font-size: 12px;
+    display: flex;
+    gap: 4px;
+    align-items: center;
+    /* justify-content: center; */
+}
+.unit{
+    font-size: 10px;
+}
+.unit2{
+    font-size: 12px;
+    font-weight: bold;
+}
 /*  */
+
+/* MEDIA QUERIES OF HARRIS */
 @media (max-width:1000px) {
     .mainuplaod {
         /* background-color: yellow; */
