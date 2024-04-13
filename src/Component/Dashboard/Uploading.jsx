@@ -57,7 +57,7 @@ function Uploading() {
   const SendRequest = async () => {
     if (validateFormFields(apiData) && file.length > 0) {
     try {
-      console.log(file)
+
       const data = await axios.post(
         `${process.env.REACT_APP_DEVELOPMENT_URL}/dashboard/addpost`,
         {

@@ -1,4 +1,5 @@
 import axios from "axios";
+import Modal from "./Modal";
 import React, { useEffect, useState } from "react";
 import { useSearchParams } from "react-router-dom";
 
@@ -6,12 +7,12 @@ function Update() {
   const [metaData, setMetaData] = useState();
   const [detailData, setDetailData] = useState();
   const [pic, setPic] = useState();
-  const [metaUpdated, setMetaUpdated] = useState({});
-  const [detialUpdated, setDetailUpdated] = useState({});
+  const [delpic, setDelpic] = useState([]);
   const [isLoading, setIsLoading] = useState(true);
   const [isData, setIsData] = useState(false);
   const [queryParameters] = useSearchParams();
-  
+  const [apiData, setAPIData] = useState({});
+  const [stat, setStat] = useState(true)
   const id = queryParameters.get("id");
 
   useEffect(() => {
@@ -22,26 +23,102 @@ function Update() {
         } = await axios.get(
           `${process.env.REACT_APP_DEVELOPMENT_URL}/dashboard/onepost?id=${id}`
         );
-        console.log(meta_data);
-        console.log(detail_data);
         setMetaData(meta_data);
         setPic(detail_data.data);
         delete detail_data.data;
         setDetailData(detail_data);
         setIsLoading(false);
         setIsData(true);
-      } catch (error) {}
+        setStat(prev => !prev)
+      } catch (error) {
+        setIsData(false);
+        setIsLoading(false);
+        setStat(prev => !prev)
+      }
     }
     apiFunction();
   }, [id]);
-  const addDeletePic = (id) => {
+
+  const setState = async (
+    title,
+    bedroom,
+    washroom,
+    area,
+    price,
+    description
+  ) => {
+    setMetaData({ ...metaData, title: title, description: description });
+    setAPIData({ title, bedroom, washroom, area, price, description });
+  };
+  function validateFormFields(obj) {
+    const requiredFields = [
+      "title",
+      "bedroom",
+      "washroom",
+      "area",
+      "price",
+      "description",
+    ];
+
+    for (const field of requiredFields) {
+      if (!(field in obj)) {
+        return false;
+      }
+
+      if (
+        obj[field] === null ||
+        obj[field] === undefined ||
+        obj[field] === ""
+      ) {
+        return false;
+      }
+    }
+
+    return true;
+  }
+  const SendRequest = async () => {
+    if (validateFormFields(apiData)) {
+      try {
+
+        const data = await axios.put(
+          `${process.env.REACT_APP_DEVELOPMENT_URL}/dashboard/updatepost?id=${id}`,
+          {
+            // data: file,
+            ...apiData,
+            delpic: delpic,
+          },
+          {
+            headers: {
+              "Content-Type": " application/json"
+            },
+          }
+        );
+console.log(data)
+        // setList(
+        //   data.data.msg.map((elem) => (
+        //     <img src={elem.data_url} alt="My images" />
+        //   ))
+        // );
+        alert("Data delivered successfully");
+      } catch (error) {
+        console.log(error);
+      }
+    } else {
+      alert("All fields and some images are required");
+    }
+  };
+  const addDeletePic = (img, id) => {
+    setDelpic(prev => {
+      prev.push(img)
+      return prev
+    })
     setPic((prevPosts) => prevPosts.filter((post, index) => index !== id));
   };
 
   const myJSX = metaData && detailData && pic && (
     <>
       <div>
-        <h1 >Title: {metaData.title}</h1>
+        <h1>Title: {metaData.title}</h1>
         <img
           src={`${process.env.REACT_APP_DEVELOPMENT_URL}/images/${metaData.data_url}`}
           alt={metaData.title}
@@ -51,18 +128,12 @@ function Update() {
         <p>Description: {metaData.description}</p>
       </div>
       <div>
-        <h6>Bedroom: {detailData.bedroom}</h6>
-        <h6>Washroom: {detailData.washroom}</h6>
-        <h6>Area: {detailData.area}</h6>
-        <h6>Price: {detailData.price}</h6>
-      </div>
-      <div>
         {pic.map((img, ind) => {
+
           return (
             <>
               <img
                 key={ind}
-                id={ind}
                 src={`${process.env.REACT_APP_DEVELOPMENT_URL}/images/${img}`}
                 alt={metaData.title}
                 width={"300px"}
@@ -71,11 +142,10 @@ function Update() {
               />
               <button
                 onClick={() => {
-                  addDeletePic(ind);
+                  addDeletePic(img, ind);
                 }}
               >
-                {" "}
-                Delete{" "}
+                Delete
               </button>
             </>
           );
@@ -86,7 +156,35 @@ function Update() {
   return (
     <div>
       <p> Update Page</p>
+      {isLoading ? (
+        <h1>Data is Loading</h1>
+      ) : (
+        isData && (
+          <button
+            class="browsebtn my-2"
+            style={{ width: "255px", whiteSpace: "nowrap", padding: "5px" }}
+            type="button"
+            data-bs-toggle="modal"
+            data-bs-target="#exampleModal"
+          >
+            View project details
+          </button>
+        )
+      )}
+      <button type="button" onClick={SendRequest}>Submit</button>
       {isLoading ? <h1>Data is Loading</h1> : isData && myJSX}
+      <Modal
+        uploading={setState}
+        key={stat}
+        data={{
+          title: metaData?.title,
+          bedroom: detailData?.bedroom,
+          price: detailData?.price,
+          area: detailData?.area,
+          washroom: detailData?.washroom,
+          description: metaData?.description,
+        }}
+      />
     </div>
   );
 }

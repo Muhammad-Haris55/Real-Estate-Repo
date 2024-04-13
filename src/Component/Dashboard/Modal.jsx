@@ -1,20 +1,20 @@
-import React, { useRef } from "react";
+import React, { useState } from "react";
 
 function Modal(props) {
-  const title = useRef();
-  const bedroom = useRef();
-  const washroom = useRef();
-  const area = useRef();
-  const price = useRef();
-  const description = useRef();
+  const [title, setTitle] = useState(props?.data?.title);
+  const [bedroom, setBedroom] = useState(props?.data?.bedroom);
+  const [washroom, setWashroom] = useState(props?.data?.washroom);
+  const [area, setArea] = useState(props?.data?.area);
+  const [price, setPrice] = useState(props?.data?.price);
+  const [description, setDescription] = useState(props?.data?.description);
 
   const dataFill = () => {
-    const title_ref = title.current.value;
-    const bedroom_ref = bedroom.current.value;
-    const washroom_ref = washroom.current.value;
-    const area_ref = area.current.value;
-    const price_ref = price.current.value;
-    const description_ref = description.current.value;
+    const title_ref = title;
+    const bedroom_ref = bedroom;
+    const washroom_ref = washroom;
+    const area_ref = area;
+    const price_ref = price;
+    const description_ref = description;
     if (
       !title_ref ||
       !description_ref ||
@@ -69,7 +69,8 @@ function Modal(props) {
                   aria-describedby="inputGroup-sizing-sm"
                   placeholder="eg:Chapel Residency"
                   style={{ marginRight: "4px" }}
-                  ref={title}
+                  value={title}
+                  onChange={(e) => { setTitle(e.target.value) }}
                 />
               </div>
               <div class="input-group input-group-sm mb-3">
@@ -83,7 +84,8 @@ function Modal(props) {
                   aria-describedby="inputGroup-sizing-sm"
                   placeholder="eg:4"
                   style={{ marginRight: "4px" }}
-                  ref={bedroom}
+                  value={bedroom}
+                  onChange={(e) => { setBedroom(e.target.value) }}
                 />
                 <span class="input-group-text" id="inputGroup-sizing-sm">
                   Washrooms
@@ -95,7 +97,8 @@ function Modal(props) {
                   aria-describedby="inputGroup-sizing-sm"
                   placeholder="eg:5"
                   style={{ marginRight: "4px" }}
-                  ref={washroom}
+                  value={washroom}
+                  onChange={(e) => { setWashroom(e.target.value) }}
                 />
                 <span class="input-group-text" id="inputGroup-sizing-sm">
                   Area
@@ -107,7 +110,8 @@ function Modal(props) {
                   aria-describedby="inputGroup-sizing-sm"
                   placeholder="10,0000 sq/km"
                   style={{ marginRight: "4px" }}
-                  ref={area}
+                  value={area}
+                  onChange={(e) => { setArea(e.target.value) }}
                 />
                 <span class="input-group-text" id="inputGroup-sizing-sm">
                   Price
@@ -119,7 +123,8 @@ function Modal(props) {
                   aria-describedby="inputGroup-sizing-sm"
                   placeholder="50,000 Rs"
                   style={{ marginRight: "4px" }}
-                  ref={price}
+                  value={price}
+                  onChange={(e) => { setPrice(e.target.value) }}
                 />
               </div>
               <div class="form-floating">
@@ -128,7 +133,8 @@ function Modal(props) {
                   placeholder="Leave a comment here"
                   id="floatingTextarea"
                   style={{ height: "100px" }}
-                  ref={description}
+                  value={description}
+                  onChange={(e) => { setDescription(e.target.value) }}
                 ></textarea>
                 <label for="floatingTextarea" style={{ fontSize: "13px" }}>
                   Project description
