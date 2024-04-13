@@ -29,6 +29,14 @@ function Update() {
         setDetailData(detail_data);
         setIsLoading(false);
         setIsData(true);
+        setAPIData({
+          title: meta_data?.title,
+          bedroom: detail_data?.bedroom,
+          price: detail_data?.price,
+          area: detail_data?.area,
+          washroom: detail_data?.washroom,
+          description: meta_data?.description,
+        })
         setStat(prev => !prev)
       } catch (error) {
         setIsData(false);
@@ -93,12 +101,7 @@ function Update() {
             },
           }
         );
-console.log(data)
-        // setList(
-        //   data.data.msg.map((elem) => (
-        //     <img src={elem.data_url} alt="My images" />
-        //   ))
-        // );
+        console.log(data)
         alert("Data delivered successfully");
       } catch (error) {
         console.log(error);
