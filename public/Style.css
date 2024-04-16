@@ -2655,6 +2655,25 @@ body.open .sidebar {
     box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 6px;
     /* filter: drop-shadow( rgba(0, 0, 0, 0.24) 0px 3px 8px); */
     border-radius: 9px;
+    cursor: pointer;
+}
+
+.pcard:hover {
+    box-shadow: rgba(0, 0, 0, 0.25) 0px 54px 55px, rgba(0, 0, 0, 0.12) 0px -12px 20px, rgba(0, 0, 0, 0.12) 0px 4px 6px, rgba(0, 0, 0, 0.17) 0px 12px 13px, rgba(0, 0, 0, 0.09) 0px -3px 5px;
+
+
+    transition: all 0.3s ease;
+    transform: scale(1.01);
+}
+
+.pcard:hover>.htop {
+    
+    transition: all 0.3s ease;
+    /* transform: scale(1.02); */
+    transform: scale(1.02);
+}
+.pcard:hover>.htop img{
+    border-radius: 4px;
 }
 
 .htop {
@@ -2695,9 +2714,11 @@ body.open .sidebar {
     justify-content: space-evenly;
     height: 40px;
     /* height: 30px; */
+    color: #000;
 }
 
 .bprices {
+    /* color: #161515; */
     /* border: 2px solid black; */
     /* border: ; */
     /* line-height: .5; */
@@ -2806,24 +2827,28 @@ body.open .sidebar {
     min-height: 60vh;
     /* height: 100% !important; */
 }
-.cola h5{
+
+.cola h5 {
     font-size: 19px;
     color: #000;
     line-height: 1.3;
 }
+
 .cola {
     display: flex;
     flex-direction: column;
     /* align-items: space-evenly; */
     justify-content: center;
 }
-.im{
-    margin-top: 60px!important;
-    color: #0c0c0cf1 ;
+
+.im {
+    margin-top: 60px !important;
+    color: #0c0c0cf1;
     font-size: 34px;
 }
-.innerimages{
-    border: 1px solid black;
+
+.innerimages {
+    /* border: 1px solid black; */
     height: 100%;
     padding: 20px;
     display: flex;
@@ -2833,11 +2858,62 @@ body.open .sidebar {
     gap: 10px;
     /* padding-bottom: 10px; */
 }
-.inimage{
-    border: 1px solid black;
+
+.inimage {
+    cursor: pointer;
+    /* border: 1px solid black; */
     height: 220px;
     width: 330px;
 }
+
+.inimage img {
+    width: 100%;
+    box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
+    height: 100%;
+    border-radius: 5px;
+}
+
+.inimage img:hover {
+    /* box-shadow: rgba(0, 0, 0, 0.25) 0px 54px 55px, rgba(0, 0, 0, 0.12) 0px -12px 30px, rgba(0, 0, 0, 0.12) 0px 4px 6px, rgba(0, 0, 0, 0.17) 0px 12px 13px, rgba(0, 0, 0, 0.09) 0px -3px 5px; */
+    box-shadow: rgba(0, 0, 0, 0.25) 0px 54px 55px, rgba(0, 0, 0, 0.12) 0px -12px 30px, rgba(0, 0, 0, 0.12) 0px 4px 6px, rgba(0, 0, 0, 0.17) 0px 12px 13px, rgba(0, 0, 0, 0.09) 0px -3px 5px;
+    /* box-shadow: rgba(0, 0, 0, 0.24) 15px 15px 18px; */
+    transform: scale(1.03);
+    transition: all 0.3s ease;
+
+}
+
+/*  */
+
+
+/* Modal */
+
+.carousel-item img {
+    width: 100%;
+    height: 82vh;
+}
+
+.modal-content {
+    height: 94vh !important;
+    /* background-color: transparent !important; */
+    background-color: rgb(240, 248, 255) !important;
+    font-family: var(--navbarfont);
+}
+
+.modal-header {
+    height: 7vh !important;
+    border: none !important;
+    display: flex;
+    /* padding-top: 10px; */
+    align-items: center;
+    justify-content: space-between;
+}
+
+#carouselExampleIndicators {
+    /* border: 2px solid black!important; */
+    width: 100% !important;
+    height: 470px !important;
+}
+
 /*  */
 /* MEDIA QUERIES OF HARRIS */
 @media (max-width:1000px) {
