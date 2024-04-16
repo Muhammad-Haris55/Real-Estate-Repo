@@ -176,7 +176,7 @@ function Update() {
                   style={{ width: "235px", whiteSpace: "nowrap", padding: "5px" }}
                   type="button"
                 >
-                  Add Images ?
+                  Add Images 
                 </button>
                 <button
                   class="browsebtn my-2"
