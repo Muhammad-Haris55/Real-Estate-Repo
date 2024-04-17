@@ -13,7 +13,7 @@ export const DataContextProvider = (props) => {
         const { data } = await axios.get(
           `${process.env.REACT_APP_DEVELOPMENT_URL}/dashboard/viewpost`
         );
-        
+        console.log(data.data)        
         setProjData(data.data);
       } catch (err) {
         alert(err);

@@ -1,13 +1,71 @@
-import React from 'react'
+import React, { useContext, useEffect, useState } from 'react'
 import { NavLink } from 'react-router-dom'
+import ProjectContext from '../../context/project'
+
 function Project() {
+    const ctx = useContext(ProjectContext)
+    const [projData, setProjData] = useState([])
+    const [isLoading, setIsLoading] = useState(true)
+    const [isData, setIsData] = useState(false)
+    const [stat, setStat] = useState(true)
+    useEffect(() => {
+        setProjData([...ctx.data])
+        setStat(prev => !prev)
+    }, [ctx])
+    const BtnHandler = (id) => {
+        console.log(id)
+    }
+    const data = projData.length >= 1 && projData.map((elem, ind) => {
+        return <div className="pcard" key={ind}>
+            <div className="htop">
+                <img src={`${process.env.REACT_APP_DEVELOPMENT_URL}/images/${elem.title.data_url}`}
+                    alt={elem.title.title} />
+            </div>
+            <div className="hbottom">
+                <h6 className='mt-2'>{elem.title.title} </h6>
+                <div className='bimages'>
+                    <div className='imgdetail'>
+                        <img src="area.png" alt="" />
+                        <p className='mt-3 btext'>{elem.area} <span className='unit'>sqf</span></p>
+                    </div>
+                    <div className='imgdetail'>
+
+                        <img src="bed.png" alt="" />
+                        <p className='mt-3 btext'>{elem.bedroom} beds</p>
+                    </div>
+                    <div className='imgdetail'>
+
+                        <img src="tub.png" alt="" />
+                        <p className='mt-3 btext'>{elem.washroom} baths</p>
+                    </div>
+                </div>
+                <div className="bprices">
+                    <div style={{ display: 'flex', flexDirection: 'column', justifyContent: 'center' }}>
+                        <span className='unit'>
+                            Price
+                        </span>
+                        <span className='unit2'>{elem.price}</span>
+                    </div>
+                    {/* <NavLink to="/i"> */}
+                    <button
+                        id="rembtn2"
+                        onClick={() => { BtnHandler(elem.title._id) }}
+                    >
+                        Walk through
+                    </button>
+                    {/* </NavLink> */}
+                </div>
+            </div>
+
+        </div>
+    })
     return (
         <>
             <div className="hprojectpage">
                 <h2 className='text-center mt-4'>Featured Projects</h2>
-                <div className="col-md-10 mx-auto pcardholder">
+                <div className="col-md-10 mx-auto pcardholder" key={stat}>
                     {/* Yh aik main indivual card ha abd is p map krio aur route bh isy p dala wa ha next inner page ka bakio p route nhi h isy p map krio just! */}
-                    <div className="pcard">
+                    {/* <div className="pcard">
                         <div className="htop">
                             <img src="https://gfsbuilders.com.pk/wp-content/uploads/2023/10/0-24.webp" alt="" />
                         </div>
@@ -46,8 +104,9 @@ function Project() {
                             </div>
                         </div>
 
-                    </div>
-                    <div className="pcard">
+                    </div> */}
+                    {data}
+                    {/* <div className="pcard">
                         <div className="htop">
                             <img src="https://gfsbuilders.com.pk/wp-content/uploads/2024/02/grid-NTR-1-4-1024x682.jpg" alt="" />
                         </div>
@@ -246,7 +305,7 @@ function Project() {
 
                     </div>
 
-
+ */}
                 </div>
             </div>
             {/* Project Page */}
