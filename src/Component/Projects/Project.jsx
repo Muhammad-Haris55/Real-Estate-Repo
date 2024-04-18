@@ -1,19 +1,30 @@
 import React, { useContext, useEffect, useState } from 'react'
-import { NavLink } from 'react-router-dom'
+import {  createSearchParams, useNavigate } from 'react-router-dom'
 import ProjectContext from '../../context/project'
 
 function Project() {
+    const navigate = useNavigate()
     const ctx = useContext(ProjectContext)
     const [projData, setProjData] = useState([])
     const [isLoading, setIsLoading] = useState(true)
     const [isData, setIsData] = useState(false)
     const [stat, setStat] = useState(true)
     useEffect(() => {
-        setProjData([...ctx.data])
-        setStat(prev => !prev)
+        if (ctx.data.length >= 1) {
+            setProjData([...ctx.data])
+            setStat(prev => !prev)
+            setIsLoading(false)
+            setIsData(true)
+        }
+
     }, [ctx])
     const BtnHandler = (id) => {
-        console.log(id)
+        return navigate({
+            pathname: `/I`,
+            search: createSearchParams({
+                id: id,
+            }).toString(),
+        });
     }
     const data = projData.length >= 1 && projData.map((elem, ind) => {
         return <div className="pcard" key={ind}>
@@ -105,7 +116,8 @@ function Project() {
                         </div>
 
                     </div> */}
-                    {data}
+                    {/* {isLoading  } */}
+                    {isLoading ? <p>Data is Loading</p> : isData && data}
                     {/* <div className="pcard">
                         <div className="htop">
                             <img src="https://gfsbuilders.com.pk/wp-content/uploads/2024/02/grid-NTR-1-4-1024x682.jpg" alt="" />
