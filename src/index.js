@@ -7,13 +7,16 @@ import "@fortawesome/fontawesome-free/css/all.min.css";
 import reportWebVitals from "./reportWebVitals";
 import { BrowserRouter } from "react-router-dom";
 import { DataContextProvider } from "./context/store";
+import { ProjectContextProvider } from "./context/project";
 
 const root = ReactDOM.createRoot(document.getElementById("root"));
 root.render(
   <BrowserRouter>
-    <DataContextProvider>
-      <App />
-    </DataContextProvider>
+    <ProjectContextProvider>
+      <DataContextProvider>
+        <App />
+      </DataContextProvider>
+    </ProjectContextProvider>
   </BrowserRouter>
 );
 
