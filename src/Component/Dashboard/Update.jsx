@@ -64,14 +64,13 @@ function Update() {
         }
       })
       SetTitlePic(data.data.img.data_url)
-      e.target.title = null
+      e.target.title.value = ''
     } catch (err) {
       console.log(err)
     }
   };
   const addImages = async (e) => {
     e.preventDefault();
-    console.log(e.target.img.files)
     const fileObj = e.target.img.files;
     if (!fileObj) {
       alert("Please select a file")
@@ -87,6 +86,7 @@ function Update() {
         }
       })
       setPic(detail_data.data);
+      e.target.img.value = ''
     } catch (err) {
       console.log(err)
     }
@@ -131,7 +131,7 @@ function Update() {
   const SendRequest = async () => {
     if (validateFormFields(apiData)) {
       try {
-        const data = await axios.put(
+        await axios.put(
           `${process.env.REACT_APP_DEVELOPMENT_URL}/dashboard/updatepost?id=${id}`,
           {
             // data: file,
@@ -145,6 +145,7 @@ function Update() {
           }
         );
         alert("Data delivered successfully");
+        setDelpic([])
       } catch (error) {
         console.log(error);
       }
