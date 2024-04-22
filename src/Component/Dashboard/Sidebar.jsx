@@ -37,8 +37,8 @@ function Sidebar() {
               </button>
               <button type="button" id="sbutton">
                 <img src="chat.png" alt='pic' />
-                <a className="nav-link" href="https://tawk.to/chat/65cbbfd80ff6374032cd1d4c/1hmhuapn4" target="_blank"  rel="noreferrer"  style={{textDecoration:'none'}}>
-                  <span id="spam">Live Chat</span>
+                <a className="nav-link" href="/Reviews"  rel="noreferrer"  style={{textDecoration:'none'}}>
+                  <span id="spam">User Reviews</span>
                 </a>
               </button>
 

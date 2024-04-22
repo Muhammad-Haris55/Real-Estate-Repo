@@ -47,6 +47,7 @@ function Modal(props) {
         <div class="modal-dialog modal-dialog-centered modal-lg">
           <div class="modal-content">
             <div class="modal-header">
+
               <h5 class="modal-title" id="exampleModalLabel">
                 Add project details
               </h5>
@@ -58,87 +59,92 @@ function Modal(props) {
               ></button>
             </div>
             <div class="modal-body">
-              <div class="input-group  mb-3">
-                <span class="input-group-text" id="inputGroup-sizing-sm">
-                  Title
-                </span>
-                <input
-                  type="text"
-                  class="form-control"
-                  aria-label="Sizing example input"
-                  aria-describedby="inputGroup-sizing-sm"
-                  placeholder="eg:Chapel Residency"
-                  style={{ marginRight: "4px" }}
-                  value={title}
-                  onChange={(e) => { setTitle(e.target.value) }}
-                />
-              </div>
-              <div class="input-group input-group-sm mb-3">
-                <span class="input-group-text" id="inputGroup-sizing-sm">
-                  Bedrooms
-                </span>
-                <input
-                  type="text"
-                  class="form-control"
-                  aria-label="Sizing example input"
-                  aria-describedby="inputGroup-sizing-sm"
-                  placeholder="eg:4"
-                  style={{ marginRight: "4px" }}
-                  value={bedroom}
-                  onChange={(e) => { setBedroom(e.target.value) }}
-                />
-                <span class="input-group-text" id="inputGroup-sizing-sm">
-                  Washrooms
-                </span>
-                <input
-                  type="text"
-                  class="form-control"
-                  aria-label="Sizing example input"
-                  aria-describedby="inputGroup-sizing-sm"
-                  placeholder="eg:5"
-                  style={{ marginRight: "4px" }}
-                  value={washroom}
-                  onChange={(e) => { setWashroom(e.target.value) }}
-                />
-                <span class="input-group-text" id="inputGroup-sizing-sm">
-                  Area
-                </span>
-                <input
-                  type="text"
-                  class="form-control"
-                  aria-label="Sizing example input"
-                  aria-describedby="inputGroup-sizing-sm"
-                  placeholder="10,0000 sq/km"
-                  style={{ marginRight: "4px" }}
-                  value={area}
-                  onChange={(e) => { setArea(e.target.value) }}
-                />
-                <span class="input-group-text" id="inputGroup-sizing-sm">
-                  Price
-                </span>
-                <input
-                  type="text"
-                  class="form-control"
-                  aria-label="Sizing example input"
-                  aria-describedby="inputGroup-sizing-sm"
-                  placeholder="50,000 Rs"
-                  style={{ marginRight: "4px" }}
-                  value={price}
-                  onChange={(e) => { setPrice(e.target.value) }}
-                />
-              </div>
-              <div class="form-floating">
-                <textarea
-                  class="form-control"
-                  placeholder="Leave a comment here"
-                  id="floatingTextarea"
-                  style={{ height: "100px" }}
-                  value={description}
-                  onChange={(e) => { setDescription(e.target.value) }}
-                ></textarea>
-                <label for="floatingTextarea" style={{ fontSize: "13px" }}>
-                  Project description
-                </label>
+              <div className="modalinput">
+
+
+                <div class="input-group  mb-3">
+                  <span class="input-group-text" id="inputGroup-sizing-sm">
+                    Title
+                  </span>
+                  <input
+                    type="text"
+                    class="form-control"
+                    aria-label="Sizing example input"
+                    aria-describedby="inputGroup-sizing-sm"
+                    placeholder="eg:Chapel Residency"
+                    style={{ marginRight: "4px" }}
+                    value={title}
+                    onChange={(e) => { setTitle(e.target.value) }}
+                  />
+                </div>
+                <div class="input-group input-group-sm mb-3">
+                  <span class="input-group-text" id="inputGroup-sizing-sm">
+                    Bedrooms
+                  </span>
+                  <input
+                    type="text"
+                    class="form-control"
+                    aria-label="Sizing example input"
+                    aria-describedby="inputGroup-sizing-sm"
+                    placeholder="eg:4"
+                    style={{ marginRight: "4px" }}
+                    value={bedroom}
+                    onChange={(e) => { setBedroom(e.target.value) }}
+                  />
+                  <span class="input-group-text" id="inputGroup-sizing-sm">
+                    Washrooms
+                  </span>
+                  <input
+                    type="text"
+                    class="form-control"
+                    aria-label="Sizing example input"
+                    aria-describedby="inputGroup-sizing-sm"
+                    placeholder="eg:5"
+                    style={{ marginRight: "4px" }}
+                    value={washroom}
+                    onChange={(e) => { setWashroom(e.target.value) }}
+                  />
+                  <span class="input-group-text" id="inputGroup-sizing-sm">
+                    Area
+                  </span>
+                  <input
+                    type="text"
+                    class="form-control"
+                    aria-label="Sizing example input"
+                    aria-describedby="inputGroup-sizing-sm"
+                    placeholder="10,0000 sq/km"
+                    style={{ marginRight: "4px" }}
+                    value={area}
+                    onChange={(e) => { setArea(e.target.value) }}
+                  />
+                  <span class="input-group-text" id="inputGroup-sizing-sm">
+                    Price
+                  </span>
+                  <input
+                    type="text"
+                    class="form-control"
+                    aria-label="Sizing example input"
+                    aria-describedby="inputGroup-sizing-sm"
+                    placeholder="50,000 Rs"
+                    style={{ marginRight: "4px" }}
+                    value={price}
+                    onChange={(e) => { setPrice(e.target.value) }}
+                  />
+                </div>
+
+                <div class="form-floating">
+                  <textarea
+                    class="form-control"
+                    placeholder="Leave a comment here"
+                    id="floatingTextarea"
+                    style={{ height: "100px" }}
+                    value={description}
+                    onChange={(e) => { setDescription(e.target.value) }}
+                  ></textarea>
+                  <label for="floatingTextarea" style={{ fontSize: "13px" }}>
+                    Project description
+                  </label>
+                </div>
               </div>
             </div>
             <div class="modal-footer">

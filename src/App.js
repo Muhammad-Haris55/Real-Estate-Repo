@@ -16,11 +16,12 @@ import Update from "./Component/Dashboard/Update";
 import Project from "./Component/Projects/Project";
 import Navbar3 from "./Component/Navbar3/Navbar3"
 import Innerproject from "./Component/Projects/Innerproject";
+import Userreviews from "./Component/Dashboard/Userreviews"
 function App() {
   return (
     <>
-      <Navbar3 />
-      <Scroll />
+      {/* <Navbar3 /> */}
+      {/* <Scroll /> */}
       {/* <Footer/> */}
       <Routes>
         <Route path="/" element={<Home />}></Route>
@@ -29,6 +30,7 @@ function App() {
         <Route path="U" element={<Update />}></Route>
         <Route path="P" element={<Project />}></Route>
         <Route path="I" element={<Innerproject />}></Route>
+        <Route path="/Reviews" element={<Userreviews />}></Route>
         <Route path="About" element={<About />}></Route>
         <Route path="Contact" element={<Contact />}></Route>
         <Route path="dash" element={<Dashboard />}></Route>

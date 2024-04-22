@@ -5,7 +5,7 @@ function Project() {
         <>
             <div className="hprojectpage">
                 <h2 className='text-center mt-4'>Featured Projects</h2>
-                <div className="col-md-10 mx-auto pcardholder">
+                <div className="col-md-11 col-sm-12 mx-auto pcardholder">
                     {/* Yh aik main indivual card ha abd is p map krio aur route bh isy p dala wa ha next inner page ka bakio p route nhi h isy p map krio just! */}
                     <div className="pcard">
                         <div className="htop">
