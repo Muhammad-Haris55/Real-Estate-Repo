@@ -69,6 +69,28 @@ function Update() {
       console.log(err)
     }
   };
+  const addImages = async (e) => {
+    e.preventDefault();
+    console.log(e.target.img.files)
+    const fileObj = e.target.img.files;
+    if (!fileObj) {
+      alert("Please select a file")
+      return
+    }
+    const file = Object.values(fileObj)
+    try {
+      const { data: { detail_data } } = await axios.put(`${process.env.REACT_APP_DEVELOPMENT_URL}/dashboard/addimage?id=${id}`, {
+        data: [...file]
+      }, {
+        headers: {
+          "Content-Type": "multipart/form-data"
+        }
+      })
+      setPic(detail_data.data);
+    } catch (err) {
+      console.log(err)
+    }
+  };
   const setState = async (
     title,
     bedroom,
@@ -122,8 +144,6 @@ function Update() {
             },
           }
         );
-        console.log(data);
-
         alert("Data delivered successfully");
       } catch (error) {
         console.log(error);
@@ -207,17 +227,20 @@ function Update() {
                     </button>
                   )
                 )}
-                <button
-                  class="browsebtn my-2"
-                  style={{
-                    width: "235px",
-                    whiteSpace: "nowrap",
-                    padding: "5px",
-                  }}
-                  type="button"
-                >
-                  Add Images
-                </button>
+                <form onSubmit={addImages}>
+                  <input type="file" name="img" id="title" multiple />
+                  <button
+                    class="browsebtn my-2"
+                    style={{
+                      width: "235px",
+                      whiteSpace: "nowrap",
+                      padding: "5px",
+                    }}
+                    type="submit"
+                  >
+                    Add Images
+                  </button>
+                </form>
                 <button
                   class="browsebtn my-2"
                   style={{
