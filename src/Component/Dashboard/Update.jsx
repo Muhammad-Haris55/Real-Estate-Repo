@@ -4,6 +4,7 @@ import React, { useEffect, useState } from "react";
 import { useSearchParams } from "react-router-dom";
 
 function Update() {
+
   const [metaData, setMetaData] = useState();
   const [detailData, setDetailData] = useState();
   const [pic, setPic] = useState();
@@ -51,7 +52,6 @@ function Update() {
   const titleSubmit = async (e) => {
     e.preventDefault();
     const fileObj = e.target.title.files[0];
-    // alert(fileObj)
     if (!fileObj) {
       alert("Please select a file")
       return
@@ -71,10 +71,8 @@ function Update() {
     }
   };
   const addImages = async (e) => {
-    // alert("Sub CLicked")
     e.preventDefault();
     const fileObj = e.target.img.files;
-    // alert(fileObj)
     if (!fileObj) {
       alert("Please select a file")
       return

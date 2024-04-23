@@ -74,7 +74,7 @@ function Innerproject() {
             <div className="inner">
                 {isLoading ? <p>Data is Loading</p> : isData && data}
             </div >
-            {images.length >= 1 && <Modal data={images} title={title}/>}
+            {images.length >= 1 && <Modal data={images} title={title} />}
         </>
     )
 }

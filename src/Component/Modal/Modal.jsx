@@ -2,15 +2,12 @@ import React, { useState } from "react";
 
 function Modal(props) {
     const [images] = useState(props.data);
-    const [title] = useState(props.title)
     const data = images.map((img, index) => (
         <div className={`carousel-item ${index === 0 ? 'active' : ''}`} id="modalcarousel" key={index}>
             <div className='imgdiv'>
-
                 <img
                     src={`${process.env.REACT_APP_DEVELOPMENT_URL}/images/${img}`}
                     alt="modal Images"
-                    // tabIndex={1}
                 />
             </div>
         </div>

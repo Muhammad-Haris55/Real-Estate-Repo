@@ -28,7 +28,8 @@ function Totalprojects() {
           "Content-Type": "application/json"
         }
       })
-      alert(data.data)
+      ctx.updateContext(data.data)
+      alert("Uploaded Successfully")
     } catch (err) {
       console.log(err)
     }
@@ -62,10 +63,10 @@ function Totalprojects() {
               >
                 Check
               </button>
-              <button
-                onClick={() => {
-                  submitHandler(elem._id);
-                }}
+              {elem.completed ? <button
+                // onClick={() => {
+                //   submitHandler(elem._id);
+                // }}
                 class="browsebtn2  "
                 id="color2"
                 style={{
@@ -74,8 +75,22 @@ function Totalprojects() {
                   padding: "5px",
                 }}
               >
-                Upload!
-              </button>
+                Delete!
+              </button> :
+                <button
+                  onClick={() => {
+                    submitHandler(elem._id);
+                  }}
+                  class="browsebtn2  "
+                  id="color2"
+                  style={{
+                    width: "100%",
+                    whiteSpace: "nowrap",
+                    padding: "5px",
+                  }}
+                >
+                  Upload!
+                </button>}
             </div>
           </div>
         );

@@ -7,7 +7,6 @@ import Signup from "./Signup";
 import About from "./Component/About/About";
 import Contact from "./Component/Contact/Contact";
 import Home from "./Component/Home/Home";
-import Scroll from "./Component/Sidescroll/Scroll";
 import Carousel from "./Component/carousel/carousel/Carousels";
 import "./index.css";
 import ClientComments from "./Component/Dashboard/ClientComments"
@@ -15,7 +14,6 @@ import Totalprojects from "./Component/Dashboard/Totalprojects";
 import Uploading from "./Component/Dashboard/Uploading";
 import Update from "./Component/Dashboard/Update";
 import Project from "./Component/Projects/Project";
-import Navbar3 from "./Component/Navbar3/Navbar3"
 import Innerproject from "./Component/Projects/Innerproject";
 import Userreviews from "./Component/Dashboard/Userreviews"
 function App() {

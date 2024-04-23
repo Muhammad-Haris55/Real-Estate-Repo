@@ -22,10 +22,9 @@ function Uploading() {
     bedroom,
     washroom,
     area,
-    price,
     description
   ) => {
-    setAPIData({ title, bedroom, washroom, area, price, description });
+    setAPIData({ title, bedroom, washroom, area, description });
   };
   function validateFormFields(obj) {
     const requiredFields = [
@@ -33,7 +32,6 @@ function Uploading() {
       "bedroom",
       "washroom",
       "area",
-      "price",
       "description",
     ];
 

@@ -5,7 +5,6 @@ function Modal(props) {
   const [bedroom, setBedroom] = useState(props?.data?.bedroom);
   const [washroom, setWashroom] = useState(props?.data?.washroom);
   const [area, setArea] = useState(props?.data?.area);
-  const [price, setPrice] = useState(props?.data?.price);
   const [description, setDescription] = useState(props?.data?.description);
 
   const dataFill = () => {
@@ -13,13 +12,11 @@ function Modal(props) {
     const bedroom_ref = bedroom;
     const washroom_ref = washroom;
     const area_ref = area;
-    const price_ref = price;
     const description_ref = description;
     if (
       !title_ref ||
       !description_ref ||
       !area_ref ||
-      !price_ref ||
       !bedroom_ref ||
       !washroom_ref
     ) {
@@ -30,7 +27,6 @@ function Modal(props) {
       bedroom_ref,
       washroom_ref,
       area_ref,
-      price_ref,
       description_ref
     );
   };

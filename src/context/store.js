@@ -3,6 +3,7 @@ import React, { useEffect, useState } from "react";
 
 const DataContext = React.createContext({
   data: [],
+  updateContext() {},
 });
 
 export const DataContextProvider = (props) => {
@@ -13,7 +14,6 @@ export const DataContextProvider = (props) => {
         const { data } = await axios.get(
           `${process.env.REACT_APP_DEVELOPMENT_URL}/dashboard/viewpost`
         );
-        console.log(data.data)        
         setProjData(data.data);
       } catch (err) {
         alert(err);
@@ -22,9 +22,21 @@ export const DataContextProvider = (props) => {
     Call();
     return () => {};
   }, []);
-
+  const updateContext = (updatedObj) => {
+    setProjData((prevObj) => {
+      return prevObj.map((obj) => {
+        if (obj._id === updatedObj._id) {
+          return updatedObj;
+        } else {
+          return obj;
+        }
+      });
+    });
+  };
   return (
-    <DataContext.Provider value={{ data: [...projData] }}>
+    <DataContext.Provider
+      value={{ data: [...projData], updateContext: updateContext }}
+    >
       {props.children}
     </DataContext.Provider>
   );
