@@ -42,7 +42,7 @@ function Innerproject() {
             </div>
             <h2 className='text-center mt-5'>About Our Project</h2>
             <div className="col-md-10 mx-auto inneritems">
-                <div className="col-md-6 cola">
+                <div className="col-xxl-6 col-xl-6 col-lg-6 col-md-9 col-sm-11 cola">
 
                     <h5>
                         {description}
@@ -56,7 +56,7 @@ function Innerproject() {
                     </button>
                 </div>
 
-                <div className="col-xxl-5 col-xl-5 col-lg-5 col-md-6 col-sm-9  colb">
+                <div className="col-xxl-6 col-xl-6 col-lg-6 col-md-9 col-sm-11  colb">
                     Embeding video!!!//Picture
                 </div>
             </div>

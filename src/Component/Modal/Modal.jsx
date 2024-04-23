@@ -10,7 +10,7 @@ function Modal(props) {
                 <img
                     src={`${process.env.REACT_APP_DEVELOPMENT_URL}/images/${img}`}
                     alt="modal Images"
-                    tabIndex={1}
+                    // tabIndex={1}
                 />
             </div>
         </div>

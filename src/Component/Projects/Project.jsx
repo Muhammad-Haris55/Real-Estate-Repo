@@ -1,5 +1,5 @@
 import React, { useContext, useEffect, useState } from 'react'
-import {  createSearchParams, useNavigate } from 'react-router-dom'
+import { createSearchParams, useNavigate } from 'react-router-dom'
 import ProjectContext from '../../context/project'
 
 function Project() {
@@ -51,18 +51,18 @@ function Project() {
                     </div>
                 </div>
                 <div className="bprices">
-                    <div style={{ display: 'flex', flexDirection: 'column', justifyContent: 'center' }}>
+                    {/* <div style={{ display: 'flex', flexDirection: 'column', justifyContent: 'center' }}>
                         <span className='unit'>
                             Price
                         </span>
                         <span className='unit2'>{elem.price}</span>
-                    </div>
+                    </div> */}
                     {/* <NavLink to="/i"> */}
                     <button
                         id="rembtn2"
                         onClick={() => { BtnHandler(elem.title._id) }}
                     >
-                        Walk through
+                        View Details
                     </button>
                     {/* </NavLink> */}
                 </div>

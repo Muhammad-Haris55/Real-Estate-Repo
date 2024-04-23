@@ -37,8 +37,17 @@ function Sidebar() {
               </button>
               <button type="button" id="sbutton">
                 <img src="chat.png" alt='pic' />
-                <NavLink className="nav-link" to="/Reviews">
+                <NavLink className="nav-link" to="/Comments">
+                  <span id="spam">User Comments</span>
+                </NavLink>
+                {/* <a className="nav-link" href="/Reviews"  rel="noreferrer"  style={{textDecoration:'none'}}>
                   <span id="spam">User Reviews</span>
+                </a> */}
+              </button>
+              <button type="button" id="sbutton">
+                <img src="userreview.png" alt='pic' />
+                <NavLink className="nav-link" to="/Reviews">
+                  <span id="spam">Client Reviews</span>
                 </NavLink>
                 {/* <a className="nav-link" href="/Reviews"  rel="noreferrer"  style={{textDecoration:'none'}}>
                   <span id="spam">User Reviews</span>

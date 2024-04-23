@@ -106,7 +106,7 @@ function Table() {
             </div>
             <div className="headupload2">
                 <Sidebar />
-                <div className="col-md-10 mx-auto pb-2 tablehead">
+                <div className="col-md-10 col-sm-12 mx-auto pb-2 tablehead">
                     <table class="table table-hover table-sucess mx-auto">
                         {/* <div className="tablewrapper"> */}
                         <thead>
@@ -118,7 +118,10 @@ function Table() {
                                     Name
                                 </th>
                                 <th scope="col" id="tth">
-                                    Comment
+                                    Email
+                                </th>
+                                <th scope="col" id="tth">
+                                    Querie
                                 </th>
                                 <th scope="col" id="tth">
                                     Action
@@ -127,7 +130,7 @@ function Table() {
                         </thead>
 
 
-                        {/* <tbody>
+                     {/* <tbody>
                             <tr>
                                 <th scope="col" id="ttr">
                                     1
@@ -177,7 +180,7 @@ function Table() {
                                     explicabo quos illo necessitatibus quod consequuntur soluta
                                     repellat iure. Voluptates, corporis?
                                 </th>
-                                <th scope="col" id="ttr2">
+                                <th scope="col" id="ttr2" className="text-center">
                                     <span>
                                         <button id="rembtn5">
                                             <img src="tick.png" alt="" />
@@ -655,7 +658,7 @@ function Table() {
                                 </th>
                             </tr>
                         </tbody> */}
-                        {/* </div> */}
+                        
                         <tbody>
                             {data}
                         </tbody>
@@ -676,7 +679,6 @@ function Table() {
                     </table>
                 </div >
             </div >
-            {/* </div> */}
         </>
     );
 }

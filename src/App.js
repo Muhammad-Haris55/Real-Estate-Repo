@@ -10,6 +10,7 @@ import Home from "./Component/Home/Home";
 import Scroll from "./Component/Sidescroll/Scroll";
 import Carousel from "./Component/carousel/carousel/Carousels";
 import "./index.css";
+import ClientComments from "./Component/Dashboard/ClientComments"
 import Totalprojects from "./Component/Dashboard/Totalprojects";
 import Uploading from "./Component/Dashboard/Uploading";
 import Update from "./Component/Dashboard/Update";
@@ -30,7 +31,8 @@ function App() {
         <Route path="U" element={<Update />}></Route>
         <Route path="P" element={<Project />}></Route>
         <Route path="I" element={<Innerproject />}></Route>
-        <Route path="/Reviews" element={<Userreviews />}></Route>
+        <Route path="/Comments" element={<Userreviews />}></Route>
+        <Route path="/Reviews" element={<ClientComments />}></Route>
         <Route path="About" element={<About />}></Route>
         <Route path="Contact" element={<Contact />}></Route>
         <Route path="dash" element={<Dashboard />}></Route>
