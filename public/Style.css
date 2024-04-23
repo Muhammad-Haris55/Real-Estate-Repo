@@ -2999,7 +2999,7 @@ body.open .sidebar {
     display: block;
     margin-left: auto;
     margin-right: auto;
-    margin-top: 100px;
+    margin-top: 270px;
     /* position: relative;
     top: 65px;
     left: 190px; */
@@ -3020,20 +3020,20 @@ body.open .sidebar {
     line-height: 30px !important;
 }
 
-.tablehead{
-    overflow-y: scroll!important;
-    max-height: 90vh!important;
+.tablehead {
+    overflow-y: scroll !important;
+    max-height: 90vh !important;
     box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
-border-radius: 5px!important;
+    border-radius: 5px !important;
     /* border: 2px solid black!important; */
     /* padding: 5px; */
- /* position: absolute; */
+    /* position: absolute; */
     /* overflow-y: scroll!important; */
     /* padding-bottom: 25px; */
 
     /* height: 90vh; */
     /* min-height: 90vh; */
-/*  */
+    /*  */
     /* .poppins-regular { */
     /* font-family: "Poppins", sans-serif!important; */
     /* font-weight: 400; */
@@ -3050,11 +3050,18 @@ border-radius: 5px!important;
     line-height: 25px !important;
     word-wrap: wrap;
     /* text-align: center; */
-    padding: 0px!important;
+    padding: 0px !important;
     /* width: 70px!important; */
 
 }
-#ttr2{
+
+#floatingTextarea2 {
+    min-height: 25vh !important;
+    /* overflow-y: hidden; */
+    /* max-height: aut; */
+}
+
+#ttr2 {
     /* border: 2px solid black!important; */
     display: flex;
     flex-direction: column;
@@ -3064,11 +3071,14 @@ border-radius: 5px!important;
     /* height: 100%!important; */
     justify-content: center;
 }
-#rembtn4 img,#rembtn5 img{
+
+#rembtn4 img,
+#rembtn5 img {
     width: 15px;
-    height:15px
+    height: 15px
 }
-#rembtn4{
+
+#rembtn4 {
     padding: 4px 6px 4px 6px;
     width: min-content;
     margin-top: 1px;
@@ -3082,7 +3092,8 @@ border-radius: 5px!important;
     color: white;
     border-radius: 3px;
 }
-#rembtn5{
+
+#rembtn5 {
     padding: 4px 6px 4px 6px;
     width: min-content;
     margin-top: 1px;
@@ -3095,20 +3106,82 @@ border-radius: 5px!important;
     background-color: rgba(0, 0, 255, 0.823);
     border-radius: 3px;
 }
-#rembtn4:hover{
+
+#btnholders {
+    /* border: 1px solid black; */
+    padding: 5px;
+    display: flex;
+    align-items: end;
+    justify-content: space-evenly !important;
+}
+
+#uform {
+    width: 300px !important;
+    /* width: min-content!important; */
+    /* margin: 0!important; */
+    /* padding: 0!important; */
+    display: flex;
+    align-items: center !important;
+    justify-content: center !important;
+    flex-direction: column;
+}
+#titleimagebtns{
+    /* border: 1px solid black; */
+    width: min-content;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    /* height: 40px; */
+    gap: 15px!important;
+}
+#titleform{
+    display: flex!important;
+    justify-content: center!important;
+    /* border: 2px solid yellow; */
+
+    
+    width: 70%!important;
+}
+
+input[type="file"] {
+    display: none;
+}
+
+.custom-file-upload {
+    border: 1px solid #ccc;
+    display: inline-block;
+    padding: 6px 12px;
+    cursor: pointer;
+    border-radius: 3px;
+    height: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    white-space: nowrap;
+    /* height: min-content; */
+    /* background-color: yellow; */
+}
+
+.showbtn {
+    display: inline-block;
+}
+
+#rembtn4:hover {
     /* background-color: rgba(0, 0, 255, 0.823); */
     background-color: rgb(138, 16, 16);
     cursor: pointer;
     transition: all 0.3s ease;
     /* border: 1px solid white; */
 }
-#rembtn5:hover{
+
+#rembtn5:hover {
     background-color: rgba(13, 13, 149, 0.842);
     /* background-color: rgb(138, 16, 16); */
     cursor: pointer;
     transition: all 0.3s ease;
     /* border: 1px solid white; */
 }
+
 /*  */
 
 .carousel-inner {
@@ -3335,7 +3408,12 @@ border-radius: 5px!important;
     .modal-body {
         height: 65vh !important;
     }
+
+    .imgdiv {
+        margin-top: 195px;
+    }
 }
+
 
 @media (max-width:415px) {
     .imgdiv img {
@@ -3347,24 +3425,31 @@ border-radius: 5px!important;
         width: 372px !important;
     }
 }
-@media(max-width:600px){
-    #ttr,#ttr2{
-        padding: 2px!important;
-        font-size: .8rem!important;
-        line-height: 18px!important;
+
+@media(max-width:600px) {
+
+    #ttr,
+    #ttr2 {
+        padding: 2px !important;
+        font-size: .8rem !important;
+        line-height: 18px !important;
         /* border: 2px solid black; */
-        height: 100%!important;
+        height: 100% !important;
     }
 }
-@media(max-width:550px){
-    #ttr,#ttr2{
-        padding: 0!important;
-        font-size: .6rem!important;
-        line-height: 18px!important;
+
+@media(max-width:550px) {
+
+    #ttr,
+    #ttr2 {
+        padding: 0 !important;
+        font-size: .6rem !important;
+        line-height: 18px !important;
         /* border: 2px solid black; */
-        height: 100%!important;
+        height: 100% !important;
     }
 }
+
 @media (max-width:380px) {
 
     #modalcarousel img {

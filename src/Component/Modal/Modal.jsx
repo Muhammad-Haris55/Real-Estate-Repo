@@ -10,6 +10,7 @@ function Modal(props) {
                 <img
                     src={`${process.env.REACT_APP_DEVELOPMENT_URL}/images/${img}`}
                     alt="modal Images"
+                    tabIndex={1}
                 />
             </div>
         </div>
@@ -29,56 +30,58 @@ function Modal(props) {
     return (
         <>
             <div
-                        class="modal fade"
-                        id="exampleModal"
-                        tabindex="-1"
-                        aria-labelledby="exampleModalLabel"
-                        aria-hidden="true"
-                    >
-                        <div class="modal-dialog  modal-lg  modal-dialog-centered">
-                            <div class="modal-content" id='imgmodal'>
-                                <div class="modal-header">
-                                    {/* <h1 class="modal-title fs-5 mt-3" id="exampleModalLabel">
+                class="modal fade"
+                id="exampleModal"
+                tabindex="-1"
+                aria-labelledby="exampleModalLabel"
+                aria-hidden="true"
+            >
+                <div class="modal-dialog  modal-lg  modal-dialog-centered">
+                    <div class="modal-content" id='imgmodal'>
+                        <div class="modal-header">
+                            {/* <h1 class="modal-title fs-5 mt-3" id="exampleModalLabel">
                                 {title}
                             </h1> */}
-                                    <button
-                                        type="button"
-                                        class="btn-close mt-3"
-                                        data-bs-dismiss="modal"
-                                        aria-label="Close"
-                                    ></button>
+                            <button
+                                type="button"
+                                class="btn-close mt-3"
+                                data-bs-dismiss="modal"
+                                aria-label="Close"
+                            ></button>
+                        </div>
+                        <div class="modal-body">
+                            <div id="carouselExampleIndicators" class="carousel slide">
+                                <div class="carousel-indicators">
+                                    {data2}
                                 </div>
-                                <div class="modal-body">
-                                    <div id="carouselExampleIndicators" class="carousel slide">
-                                        <div class="carousel-indicators">
-                                            {data2}
-                                        </div>
                                 <div class="carousel-inner">{data}</div>
-            <button
-                class="carousel-control-prev"
-                type="button"
-                data-bs-target="#carouselExampleIndicators"
-                data-bs-slide="prev"
-            >
-                <span
-                    class="carousel-control-prev-icon"
-                    aria-hidden="true"
-                ></span>
-                <span class="visually-hidden">Previous</span>
-            </button>
-            <button
-                class="carousel-control-next"
-                type="button"
-                data-bs-target="#carouselExampleIndicators"
-                data-bs-slide="next"
-            >
-                <span
-                    class="carousel-control-next-icon"
-                    aria-hidden="true"
-                ></span>
-                <span class="visually-hidden">Next</span>
-            </button>
-        </div>
+                                <button
+                                    class="carousel-control-prev"
+                                    type="button"
+                                    data-bs-target="#carouselExampleIndicators"
+                                    data-bs-slide="prev"
+                                    id='imgpreview'
+                                >
+                                    <span
+                                        class="carousel-control-prev-icon"
+                                        aria-hidden="true"
+                                    ></span>
+                                    <span class="visually-hidden">Previous</span>
+                                </button>
+                                <button
+                                    class="carousel-control-next"
+                                    type="button"
+                                    data-bs-target="#carouselExampleIndicators"
+                                    data-bs-slide="next"
+                                    id='imgpreview'
+                                >
+                                    <span
+                                        class="carousel-control-next-icon"
+                                        aria-hidden="true"
+                                    ></span>
+                                    <span class="visually-hidden">Next</span>
+                                </button>
+                            </div>
                         </div >
                     </div >
                 </div >

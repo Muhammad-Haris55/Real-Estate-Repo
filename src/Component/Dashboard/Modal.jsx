@@ -136,8 +136,8 @@ function Modal(props) {
                   <textarea
                     class="form-control"
                     placeholder="Leave a comment here"
-                    id="floatingTextarea"
-                    style={{ height: "100px" }}
+                    id="floatingTextarea2"
+                    // style={{ height: "100px" }}
                     value={description}
                     onChange={(e) => { setDescription(e.target.value) }}
                   ></textarea>

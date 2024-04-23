@@ -51,6 +51,7 @@ function Update() {
   const titleSubmit = async (e) => {
     e.preventDefault();
     const fileObj = e.target.title.files[0];
+    // alert(fileObj)
     if (!fileObj) {
       alert("Please select a file")
       return
@@ -70,8 +71,10 @@ function Update() {
     }
   };
   const addImages = async (e) => {
+    // alert("Sub CLicked")
     e.preventDefault();
     const fileObj = e.target.img.files;
+    // alert(fileObj)
     if (!fileObj) {
       alert("Please select a file")
       return
@@ -190,9 +193,41 @@ function Update() {
                   padding: "3px",
                 }}
               />
-              <form onSubmit={titleSubmit}>
-                <input type="file" name="title" id="title" />
-                <button type="submit"> Change Title Image</button>
+              <form onSubmit={titleSubmit} id="titleform">
+                <div id="titleimagebtns">
+
+                  <label for="file-upload2" class="custom-file-upload">
+                   Change Title Image
+                  </label>
+                  <input id="file-upload2" type="file" name="title" />
+
+                  <button
+                    class="browsebtn my-2"
+                    style={{
+                      width: "135px",
+                      whiteSpace: "nowrap",
+                      padding: "5px",
+                      borderRadius:'6px',
+                    }}
+                    type="submit"
+                  >
+                    Submit
+                  </button>
+                </div>
+                {/* <input type="file" name="title" id="title" />
+                <button type="submit"> Change Title Image</button> */}
+
+                {/* <div id="titleimagebtns">
+                  <label for="file-upload" class="custom-file-upload">
+                    Change Title Image
+                  </label>
+                  <input type="file" name="title" id="title" />
+                  <button type="submit" class="browsebtn" style={{
+                    width: "135px",
+                    whiteSpace: "nowrap",
+                    padding: "5px",
+                  }}> Submit</button>
+                </div> */}
               </form>
             </div>
             <div
@@ -208,7 +243,7 @@ function Update() {
             >
               <p id="updatedesc">Project description </p>
               <p id="updatedesc2"> {metaData.description}</p>
-              <div style={{ width: "100%", display: "flex", gap: "5px" }}>
+              <div style={{ width: "100%", display: "flex", gap: "5px" }} id="btnholders">
                 {isLoading ? (
                   <h1>Data is Loading</h1>
                 ) : (
@@ -228,8 +263,16 @@ function Update() {
                     </button>
                   )
                 )}
-                <form onSubmit={addImages}>
-                  <input type="file" name="img" id="title" multiple />
+                <form onSubmit={addImages} id="uform" >
+                  {/* <div id="utitle">
+
+                    <input className="text-center showbtn" type="file" name="img"  multiple />
+                  </div> */}
+                  <label for="file-upload" class="custom-file-upload">
+                    Add New Images
+                  </label>
+                  <input id="file-upload" type="file" name="img" multiple />
+
                   <button
                     class="browsebtn my-2"
                     style={{
@@ -239,7 +282,7 @@ function Update() {
                     }}
                     type="submit"
                   >
-                    Add Images
+                    Submit
                   </button>
                 </form>
                 <button

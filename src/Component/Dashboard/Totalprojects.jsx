@@ -52,7 +52,7 @@ function Totalprojects() {
                 onClick={() => {
                   checkHandler(elem._id);
                 }}
-                class="browsebtn2 mt-1 mb-1"
+                class="browsebtn2 my-1"
                 id="color"
                 style={{
                   width: "100%",
@@ -66,7 +66,7 @@ function Totalprojects() {
                 onClick={() => {
                   submitHandler(elem._id);
                 }}
-                class="browsebtn2  mb-2"
+                class="browsebtn2  "
                 id="color2"
                 style={{
                   width: "100%",
