@@ -3,6 +3,7 @@ import { NavLink, createSearchParams, useNavigate } from "react-router-dom";
 import Sidebar from "./Sidebar";
 import DataContext from "../../context/store";
 import axios from "axios";
+import Canvas from "./Canvas";
 
 function Totalprojects() {
   // setRecords(ctx.data);
@@ -185,7 +186,9 @@ function Totalprojects() {
 
         </div>
       </div>
+    <Canvas/>
     </>
+
   );
 }
 

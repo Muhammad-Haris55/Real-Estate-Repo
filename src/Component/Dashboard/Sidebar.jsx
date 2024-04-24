@@ -27,7 +27,7 @@ function Sidebar() {
               </p>
               <button type="button" id="sbutton">
                 <img src="file.png" alt="" />
-                <NavLink className="nav-link" to="/T">
+                <NavLink className="nav-link" to="/Dashboard">
                   <span id="spam">All Projects</span>
                 </NavLink>
               </button>
@@ -36,13 +36,13 @@ function Sidebar() {
               </p>
               <button type="button" id="sbutton">
                 <img src="upload.png" alt='pic' />
-                <NavLink className="nav-link" to="/D">
+                <NavLink className="nav-link" to="/UploadProject">
                   <span id="spam">Upload Project</span>
                 </NavLink>
               </button>
               <button type="button" id="sbutton">
                 <img src="chat.png" alt='pic' />
-                <NavLink className="nav-link" to="/Comments">
+                <NavLink className="nav-link" to="/UserComments">
                   <span id="spam">User Comments</span>
                 </NavLink>
                 {/* <a className="nav-link" href="/Reviews"  rel="noreferrer"  style={{textDecoration:'none'}}>
@@ -51,7 +51,7 @@ function Sidebar() {
               </button>
               <button type="button" id="sbutton">
                 <img src="userreview.png" alt='pic' />
-                <NavLink className="nav-link" to="/Reviews">
+                <NavLink className="nav-link" to="/ClientReviews">
                   <span id="spam">Client Reviews</span>
                 </NavLink>
                 {/* <a className="nav-link" href="/Reviews"  rel="noreferrer"  style={{textDecoration:'none'}}>
@@ -72,8 +72,6 @@ function Sidebar() {
                 <img src="signout.png" alt='pic' />
                 <span id="spam">Sign Out</span>
 
-                {/* <button onClick={logoutHandler} className="nav-link" to="/"> */}
-                {/* </button> */}
               </button>
             </nav>
           </div>

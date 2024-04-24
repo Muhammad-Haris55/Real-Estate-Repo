@@ -2,6 +2,7 @@ import React, { useEffect, useState } from "react";
 import Sidebar from "./Sidebar";
 import { NavLink } from "react-router-dom";
 import axios from "axios";
+import Canvas from "./Canvas";
 function Table() {
   const [comments, setComments] = useState([]);
   useEffect(() => {
@@ -129,6 +130,7 @@ function Table() {
           </table>
         </div>
       </div>
+      <Canvas/>
     </>
   );
 }

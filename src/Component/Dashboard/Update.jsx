@@ -2,6 +2,7 @@ import axios from "axios";
 import Modal from "./Modal";
 import React, { useEffect, useState } from "react";
 import { useSearchParams } from "react-router-dom";
+import Canvas from "./Canvas";
 
 function Update() {
 
@@ -386,7 +387,9 @@ function Update() {
         }}
       />
     </div>
+    // <Canvas>
   );
+<Canvas/>
 }
 
 export default Update;

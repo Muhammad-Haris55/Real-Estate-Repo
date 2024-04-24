@@ -27,11 +27,11 @@ function App() {
       <Routes>
         <Route path="/" element={<Home />}></Route>
         <Route element={<PrivateRoutes />}>
-          <Route path="D" element={<Uploading />}></Route>
-          <Route path="T" element={<Totalprojects />}></Route>
-          <Route path="U" element={<Update />}></Route>
-          <Route path="/Comments" element={<Userreviews />}></Route>
-          <Route path="/Reviews" element={<ClientComments />}></Route>
+          <Route path="/UploadProject" element={<Uploading />}></Route>
+          <Route path="/Dashboard" element={<Totalprojects />}></Route>
+          <Route path="/U" element={<Update />}></Route>
+          <Route path="/UserComments" element={<Userreviews />}></Route>
+          <Route path="/ClientReviews" element={<ClientComments />}></Route>
         </Route>
         <Route path="P" element={<Project />}></Route>
         <Route path="I" element={<Innerproject />}></Route>
