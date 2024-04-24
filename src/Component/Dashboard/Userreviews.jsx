@@ -8,7 +8,12 @@ function Table() {
     async function apiFunction() {
       try {
         const { data } = await axios.get(
-          `${process.env.REACT_APP_DEVELOPMENT_URL}/contact/allcomment`
+          `${process.env.REACT_APP_DEVELOPMENT_URL}/contact/allcomment`,
+          {
+            headers: {
+              auth_token: localStorage.getItem("token"),
+            },
+          }
         );
         setComments([...data]);
       } catch (error) {
@@ -32,7 +37,12 @@ function Table() {
   const approveHandler = async (id) => {
     try {
       const { data } = await axios.patch(
-        `${process.env.REACT_APP_DEVELOPMENT_URL}/contact/approve?id=${id}`
+        `${process.env.REACT_APP_DEVELOPMENT_URL}/contact/approve?id=${id}`,
+        {},{
+          headers: {
+            auth_token: localStorage.getItem("token"),
+          },
+        }
       );
       updateComment(data);
       alert("Comment Approved");
@@ -44,7 +54,8 @@ function Table() {
   const deleteHandler = async (id) => {
     try {
       await axios.delete(
-        `${process.env.REACT_APP_DEVELOPMENT_URL}/contact/deletecomment?id=${id}`
+        `${process.env.REACT_APP_DEVELOPMENT_URL}/contact/deletecomment?id=${id}`,
+        { headers: { auth_token: localStorage.getItem("token") } }
       );
       alert("Comment Deleted");
       const newC = comments.filter((c) => c._id !== id);

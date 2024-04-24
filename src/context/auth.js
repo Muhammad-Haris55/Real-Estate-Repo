@@ -19,6 +19,7 @@ export const AuthContextProvider = (props) => {
         {
           headers: {
             "Content-Type": "application/json",
+            auth_token: localStorage.getItem("token"),
           },
         }
       );
@@ -54,23 +55,21 @@ export const AuthContextProvider = (props) => {
 
   const logoutHandler = async () => {
     try {
-       await axios.post(
+      const { data } = await axios.post(
         `${process.env.REACT_APP_DEVELOPMENT_URL}/user/logout`,
         {},
         {
           headers: {
             "Content-Type": "application/json",
-            auth_token: isLoggedIn
-              ? `bearer ${localStorage.getItem("token")}`
-              : "",
+            auth_token: localStorage.getItem("token"),
           },
         }
       );
-      localStorage.removeItem("IsloggedIn");
+      localStorage.removeItem("IsLoggedIn");
       localStorage.removeItem("token");
       setIsLoggedIn(false);
-      // return { msg: data.msg, status: data.status };
-      return
+      return { msg: data.msg, status: data.status };
+      // return;
     } catch (err) {
       if (err.response?.status === 401) {
         localStorage.removeItem("IsloggedIn");
@@ -78,7 +77,7 @@ export const AuthContextProvider = (props) => {
         setIsLoggedIn(false);
         return navigate("/");
       }
-      return
+      // return;
     }
   };
 

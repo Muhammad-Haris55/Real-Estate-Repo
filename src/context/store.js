@@ -12,14 +12,19 @@ export const DataContextProvider = (props) => {
     async function Call() {
       try {
         const { data } = await axios.get(
-          `${process.env.REACT_APP_DEVELOPMENT_URL}/dashboard/viewpost`
+          `${process.env.REACT_APP_DEVELOPMENT_URL}/dashboard/viewpost`,
+          {
+            headers: {
+              auth_token: localStorage.getItem("token"),
+            },
+          }
         );
         setProjData(data.data);
       } catch (err) {
-        alert(err);
+        // alert(err);
       }
     }
-    Call();
+    localStorage.getItem("token") && Call();
     return () => {};
   }, []);
   const updateContext = (updatedObj) => {
@@ -34,7 +39,6 @@ export const DataContextProvider = (props) => {
     });
   };
   const updateContext2 = (id) => {
-
     const newData = projData.map((obj) => {
       if (obj._id !== id) return obj;
     });

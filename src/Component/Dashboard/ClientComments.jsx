@@ -8,7 +8,11 @@ function Table() {
     async function apiFunction() {
       try {
         const { data } = await axios.get(
-          `${process.env.REACT_APP_DEVELOPMENT_URL}/contact/getcontact`
+          `${process.env.REACT_APP_DEVELOPMENT_URL}/contact/getcontact`, {
+          headers: {
+            auth_token: localStorage.getItem("token"),
+          }
+        }
         );
         setComments([...data]);
       } catch (error) {
@@ -20,7 +24,11 @@ function Table() {
   const deleteHandler = async (id) => {
     try {
       await axios.delete(
-        `${process.env.REACT_APP_DEVELOPMENT_URL}/contact/deletecontact?id=${id}`
+        `${process.env.REACT_APP_DEVELOPMENT_URL}/contact/deletecontact?id=${id}`, {
+          headers: {
+            auth_token: localStorage.getItem("token"),
+          }
+      }
       );
       alert("Comment Deleted");
       const newC = comments.filter((c) => c._id !== id);

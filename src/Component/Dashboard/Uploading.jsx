@@ -64,7 +64,8 @@ function Uploading() {
         },
         {
           headers: {
-            "Content-Type": " multipart/form-data"
+            "Content-Type": " multipart/form-data",
+            auth_token: localStorage.getItem("token"),
           },
         }
       );

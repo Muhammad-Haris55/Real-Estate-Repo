@@ -5,12 +5,29 @@ import DataContext from "../../context/store";
 import axios from "axios";
 
 function Totalprojects() {
+  // setRecords(ctx.data);
   const navigate = useNavigate();
   const ctx = useContext(DataContext);
   const [records, setRecords] = useState([]);
   useEffect(() => {
-    setRecords(ctx.data);
-  }, [ctx]);
+    async function Call() {
+      try {
+        const { data } = await axios.get(
+          `${process.env.REACT_APP_DEVELOPMENT_URL}/dashboard/viewpost`,
+          {
+            headers: {
+              auth_token: localStorage.getItem("token"),
+            },
+          }
+        );
+        setRecords(data.data);
+      } catch (err) {
+        // alert(err);
+      }
+    }
+    Call();
+    return () => { };
+  }, []);
   const checkHandler = (id) => {
     return navigate({
       pathname: `/U`,
@@ -19,32 +36,49 @@ function Totalprojects() {
       }).toString(),
     });
   };
+  const updateContext = (updatedObj) => {
+    setRecords((prevObj) => {
+      return prevObj.map((obj) => {
+        if (obj._id === updatedObj._id) {
+          return updatedObj;
+        } else {
+          return obj;
+        }
+      });
+    });
+  };
   const submitHandler = async (id) => {
 
     try {
       const { data } = await axios.put(`${process.env.REACT_APP_DEVELOPMENT_URL}/dashboard/completepost?id=${id}`, {
       }, {
         headers: {
-          "Content-Type": "application/json"
+          "Content-Type": "application/json",
+          auth_token: localStorage.getItem("token"),
         }
       })
-      ctx.updateContext(data.data)
+      updateContext(data.data)
       alert("Uploaded Successfully")
     } catch (err) {
       console.log(err)
     }
   };
+  const updateContext2 = (id) => {
+    const newData = records.map((obj) => {
+      if (obj._id !== id) return obj;
+    });
+    setRecords([...newData]);
+  };
   const deleteHandler = async (id) => {
 
     try {
       await axios.delete(`${process.env.REACT_APP_DEVELOPMENT_URL}/dashboard/delete?id=${id}`, {
-      }, {
         headers: {
-          "Content-Type": "application/json"
+          auth_token: localStorage.getItem("token"),
         }
       })
 
-      ctx.updateContext2(id)
+      updateContext2(id)
       alert("Uploaded Successfully")
     } catch (err) {
       console.log(err)

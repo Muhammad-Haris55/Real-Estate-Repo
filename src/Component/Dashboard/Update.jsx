@@ -24,6 +24,7 @@ function Update() {
           data: { meta_data, detail_data },
         } = await axios.get(
           `${process.env.REACT_APP_DEVELOPMENT_URL}/dashboard/onepost?id=${id}`
+          , { headers: { auth_token: localStorage.getItem("token"), } }
         );
         setMetaData(meta_data);
         SetTitlePic(meta_data.data_url)
@@ -61,7 +62,8 @@ function Update() {
         data: fileObj
       }, {
         headers: {
-          "Content-Type": "multipart/form-data"
+          "Content-Type": "multipart/form-data",
+          auth_token: localStorage.getItem("token"),
         }
       })
       SetTitlePic(data.data.img.data_url)
@@ -83,7 +85,8 @@ function Update() {
         data: [...file]
       }, {
         headers: {
-          "Content-Type": "multipart/form-data"
+          "Content-Type": "multipart/form-data",
+          auth_token: localStorage.getItem("token")
         }
       })
       setPic(detail_data.data);
@@ -142,6 +145,7 @@ function Update() {
           {
             headers: {
               "Content-Type": " application/json",
+              auth_token: localStorage.getItem("token"),
             },
           }
         );
@@ -195,7 +199,7 @@ function Update() {
                 <div id="titleimagebtns">
 
                   <label for="file-upload2" class="custom-file-upload">
-                   Change Title Image
+                    Change Title Image
                   </label>
                   <input id="file-upload2" type="file" name="title" />
 
@@ -205,7 +209,7 @@ function Update() {
                       width: "135px",
                       whiteSpace: "nowrap",
                       padding: "5px",
-                      borderRadius:'6px',
+                      borderRadius: '6px',
                     }}
                     type="submit"
                   >
