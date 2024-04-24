@@ -34,52 +34,55 @@ function Totalprojects() {
       console.log(err)
     }
   };
+  const deleteHandler = async (id) => {
+
+    try {
+      await axios.delete(`${process.env.REACT_APP_DEVELOPMENT_URL}/dashboard/delete?id=${id}`, {
+      }, {
+        headers: {
+          "Content-Type": "application/json"
+        }
+      })
+
+      ctx.updateContext2(id)
+      alert("Uploaded Successfully")
+    } catch (err) {
+      console.log(err)
+    }
+  };
   const row =
     records.length > 0
       ? records.map((elem, index) => {
-        return (
-          <div className="totalcont" key={index}>
-            <div className="top">
-              <img
-                src={`${process.env.REACT_APP_DEVELOPMENT_URL}/images/${elem.data_url}`}
-                alt={elem.title}
-                width={"300px"}
-                height={"180px"}
-              />
-            </div>
-            <div className="bottom">
-              <h5>{elem.title}</h5>
-              <button
-                onClick={() => {
-                  checkHandler(elem._id);
-                }}
-                class="browsebtn2 my-1"
-                id="color"
-                style={{
-                  width: "100%",
-                  whiteSpace: "nowrap",
-                  padding: "5px",
-                }}
-              >
-                Check
-              </button>
-              {elem.completed ? <button
-                // onClick={() => {
-                //   submitHandler(elem._id);
-                // }}
-                class="browsebtn2  "
-                id="color2"
-                style={{
-                  width: "100%",
-                  whiteSpace: "nowrap",
-                  padding: "5px",
-                }}
-              >
-                Delete!
-              </button> :
+        if (elem) {
+          return (
+            <div className="totalcont" key={index}>
+              <div className="top">
+                <img
+                  src={`${process.env.REACT_APP_DEVELOPMENT_URL}/images/${elem?.data_url}`}
+                  alt={elem?.title}
+                  width={"300px"}
+                  height={"180px"}
+                />
+              </div>
+              <div className="bottom">
+                <h5>{elem?.title}</h5>
                 <button
                   onClick={() => {
-                    submitHandler(elem._id);
+                    checkHandler(elem?._id);
+                  }}
+                  class="browsebtn2 my-1"
+                  id="color"
+                  style={{
+                    width: "100%",
+                    whiteSpace: "nowrap",
+                    padding: "5px",
+                  }}
+                >
+                  Check
+                </button>
+                {elem?.completed ? <button
+                  onClick={() => {
+                    deleteHandler(elem?._id);
                   }}
                   class="browsebtn2  "
                   id="color2"
@@ -89,11 +92,26 @@ function Totalprojects() {
                     padding: "5px",
                   }}
                 >
-                  Upload!
-                </button>}
+                  Delete!
+                </button> :
+                  <button
+                    onClick={() => {
+                      submitHandler(elem?._id);
+                    }}
+                    class="browsebtn2  "
+                    id="color2"
+                    style={{
+                      width: "100%",
+                      whiteSpace: "nowrap",
+                      padding: "5px",
+                    }}
+                  >
+                    Upload!
+                  </button>}
+              </div>
             </div>
-          </div>
-        );
+          );
+        }
       })
       : null;
   return (

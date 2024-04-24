@@ -1,5 +1,5 @@
 import { Route, Routes } from "react-router-dom";
-import Loginform from "./Loginform";
+import Loginform from "./Component/User/Loginform";
 import Dashboard from "./Dashboard";
 import Dpage1 from "./Dpage1";
 import Profile from "./Profile";
@@ -9,13 +9,15 @@ import Contact from "./Component/Contact/Contact";
 import Home from "./Component/Home/Home";
 import Carousel from "./Component/carousel/carousel/Carousels";
 import "./index.css";
-import ClientComments from "./Component/Dashboard/ClientComments"
+import ClientComments from "./Component/Dashboard/ClientComments";
 import Totalprojects from "./Component/Dashboard/Totalprojects";
 import Uploading from "./Component/Dashboard/Uploading";
 import Update from "./Component/Dashboard/Update";
 import Project from "./Component/Projects/Project";
 import Innerproject from "./Component/Projects/Innerproject";
-import Userreviews from "./Component/Dashboard/Userreviews"
+import Userreviews from "./Component/Dashboard/Userreviews";
+import PrivateRoutes from "./Component/User/PrivaateRoutes";
+
 function App() {
   return (
     <>
@@ -24,13 +26,16 @@ function App() {
       {/* <Footer/> */}
       <Routes>
         <Route path="/" element={<Home />}></Route>
-        <Route path="D" element={<Uploading />}></Route>
-        <Route path="T" element={<Totalprojects />}></Route>
-        <Route path="U" element={<Update />}></Route>
+        <Route element={<PrivateRoutes />}>
+          <Route path="D" element={<Uploading />}></Route>
+          <Route path="T" element={<Totalprojects />}></Route>
+          <Route path="U" element={<Update />}></Route>
+          <Route path="/Comments" element={<Userreviews />}></Route>
+          <Route path="/Reviews" element={<ClientComments />}></Route>
+        </Route>
         <Route path="P" element={<Project />}></Route>
         <Route path="I" element={<Innerproject />}></Route>
-        <Route path="/Comments" element={<Userreviews />}></Route>
-        <Route path="/Reviews" element={<ClientComments />}></Route>
+        <Route path="L" element={<Loginform />}></Route>
         <Route path="About" element={<About />}></Route>
         <Route path="Contact" element={<Contact />}></Route>
         <Route path="dash" element={<Dashboard />}></Route>

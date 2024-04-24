@@ -33,9 +33,20 @@ export const DataContextProvider = (props) => {
       });
     });
   };
+  const updateContext2 = (id) => {
+
+    const newData = projData.map((obj) => {
+      if (obj._id !== id) return obj;
+    });
+    setProjData([...newData]);
+  };
   return (
     <DataContext.Provider
-      value={{ data: [...projData], updateContext: updateContext }}
+      value={{
+        data: [...projData],
+        updateContext: updateContext,
+        updateContext2: updateContext2,
+      }}
     >
       {props.children}
     </DataContext.Provider>

@@ -8,14 +8,17 @@ import reportWebVitals from "./reportWebVitals";
 import { BrowserRouter } from "react-router-dom";
 import { DataContextProvider } from "./context/store";
 import { ProjectContextProvider } from "./context/project";
+import { AuthContextProvider } from "./context/auth";
 
 const root = ReactDOM.createRoot(document.getElementById("root"));
 root.render(
   <BrowserRouter>
     <ProjectContextProvider>
-      <DataContextProvider>
-        <App />
-      </DataContextProvider>
+      <AuthContextProvider>
+        <DataContextProvider>
+          <App />
+        </DataContextProvider>
+      </AuthContextProvider>
     </ProjectContextProvider>
   </BrowserRouter>
 );

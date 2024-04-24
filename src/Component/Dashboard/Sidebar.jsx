@@ -1,10 +1,15 @@
-import { React } from "react";
+import { React, useContext } from "react";
 import { NavLink } from "react-router-dom";
+import AuthContext from "../../context/auth";
 // import AuthContext from "./context/auth";
 
 // import 'react-toastify/dist/ReactToastify.css';
 
 function Sidebar() {
+  const ctx = useContext(AuthContext)
+  const logoutHandler = () => {
+    ctx.onLogout()
+  }
   return (
     <>
       <div className="dcol1 col-xxl-2 col-xl-2 col-1g-2 col-md-2 ">
@@ -63,12 +68,12 @@ function Sidebar() {
                   <span id="spam">Profile</span>
                 </NavLink>
               </button> */}
-              <button type="button" id="sbutton" onClick={''}>
-                <img src="signout.png" alt='pic'/>
+              <button type="button" id="sbutton" onClick={logoutHandler}>
+                <img src="signout.png" alt='pic' />
+                <span id="spam">Sign Out</span>
 
-                <NavLink className="nav-link" to="/">
-                  <span id="spam">Sign Out</span>
-                </NavLink>
+                {/* <button onClick={logoutHandler} className="nav-link" to="/"> */}
+                {/* </button> */}
               </button>
             </nav>
           </div>
