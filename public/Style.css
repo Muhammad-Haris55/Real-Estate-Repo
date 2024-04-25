@@ -267,8 +267,17 @@ tbody {
     box-shadow: none !important;
     align-items: center;
     justify-content: center;
-    /* border: 0.0625rem solid rgba(41,43,48,0.05); */
     /* border: 1px solid black; */
+}
+.backbtn{
+    /* border: 0.0625rem solid rgba(41,43,48,0.05); */
+    width: 100%;
+    display: flex;
+    justify-content: end;
+    padding-right: 10px;
+}
+.backbtn img{
+    cursor: pointer;
 }
 
 #lastcol button {
@@ -664,6 +673,15 @@ body.open .sidebar {
 @media(max-width:1030px) {
     .dcol1 {
         display: none;
+    }
+    #mainupdate{
+        /* border: 1px solid black; */
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+    }
+    #btnholders{
+        flex-wrap: wrap;
     }
 
     #cbtn {
@@ -2641,6 +2659,10 @@ body.open .sidebar {
     /* text-decoration: underline; */
     font-family: var(--navbarfont);
 }
+#mainupdate img{
+    width: 450px;
+    height: 300px;
+}
 
 #titlep {
     font-size: 2rem;
@@ -3415,6 +3437,19 @@ input[type="file"] {
 @media(max-width:500px) {
     .cola h5 {
         font-size: 1rem;
+    }
+    #update{
+        padding: 1px;
+    }
+    #mainupdate img{
+        width: 100%;
+    }
+    .updatetitle{
+        font-size: 2.5rem;
+    }
+    #updatedesc2{
+        padding: 5px;
+        font-size: 1.25rem;
     }
 
     .modal-body {

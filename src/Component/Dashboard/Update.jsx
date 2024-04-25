@@ -1,9 +1,9 @@
 import axios from "axios";
 import Modal from "./Modal";
 import React, { useEffect, useState } from "react";
-import { useSearchParams } from "react-router-dom";
+import { useNavigate, useSearchParams } from "react-router-dom";
 import Canvas from "./Canvas";
-
+import { Navigate } from "react-router-dom";
 function Update() {
 
   const [metaData, setMetaData] = useState();
@@ -133,6 +133,10 @@ function Update() {
 
     return true;
   }
+  const Navigate=useNavigate()
+  const backHandler=()=>{
+    Navigate("/Dashboard")
+  }
   const SendRequest = async () => {
     if (validateFormFields(apiData)) {
       try {
@@ -171,12 +175,15 @@ function Update() {
     <>
       <div id="update">
         <div>
+          <div className="backbtn">
+              <img onClick={backHandler} src="backbtn2.png" alt="" />
+          </div>
           <div>
             <h1 className="text-center my-2 updatetitle">{metaData.title}</h1>
           </div>
-          <div style={{ display: "flex" }}>
+          <div style={{ display: "flex" }} id="mainupdate">
             <div
-              className="col-md-6"
+              className="col-xxl-6 col-xl-6 col-md-6 col-sm-12"
               style={{
                 display: "flex",
                 flexDirection: "column",
@@ -188,8 +195,7 @@ function Update() {
               <img
                 src={`${process.env.REACT_APP_DEVELOPMENT_URL}/images/${titlePic}`}
                 alt={metaData.title}
-                width={"450px"}
-                height={"300px"}
+                
                 style={{
                   boxShadow: "rgba(0, 0, 0, 0.24) 0px 3px 8px",
                   borderRadius: "10px",
@@ -217,25 +223,11 @@ function Update() {
                     Submit
                   </button>
                 </div>
-                {/* <input type="file" name="title" id="title" />
-                <button type="submit"> Change Title Image</button> */}
-
-                {/* <div id="titleimagebtns">
-                  <label for="file-upload" class="custom-file-upload">
-                    Change Title Image
-                  </label>
-                  <input type="file" name="title" id="title" />
-                  <button type="submit" class="browsebtn" style={{
-                    width: "135px",
-                    whiteSpace: "nowrap",
-                    padding: "5px",
-                  }}> Submit</button>
-                </div> */}
               </form>
             </div>
             <div
               id="projectd"
-              className="col-md-6"
+              className="col-xxl-6 col-xl-6 col-md-6 col-sm-12"
               style={{
                 display: "flex",
                 flexDirection: "column",
@@ -267,10 +259,7 @@ function Update() {
                   )
                 )}
                 <form onSubmit={addImages} id="uform" >
-                  {/* <div id="utitle">
-
-                    <input className="text-center showbtn" type="file" name="img"  multiple />
-                  </div> */}
+                 
                   <label for="file-upload" class="custom-file-upload">
                     Add New Images
                   </label>
