@@ -5,6 +5,7 @@ function Modal(props) {
   const [bedroom, setBedroom] = useState(props?.data?.bedroom);
   const [washroom, setWashroom] = useState(props?.data?.washroom);
   const [area, setArea] = useState(props?.data?.area);
+  const [link, setLink] = useState(props?.data?.link);
   const [description, setDescription] = useState(props?.data?.description);
 
   const dataFill = () => {
@@ -13,21 +14,24 @@ function Modal(props) {
     const washroom_ref = washroom;
     const area_ref = area;
     const description_ref = description;
+    const link_ref = link;
     if (
       !title_ref ||
       !description_ref ||
       !area_ref ||
       !bedroom_ref ||
+      !link_ref ||
       !washroom_ref
     ) {
-      return alert("Please fill all thte fields");
+      return alert("Please fill all the fields");
     }
     return props.uploading(
       title_ref,
       bedroom_ref,
       washroom_ref,
       area_ref,
-      description_ref
+      description_ref,
+      link_ref,
     );
   };
   return (
@@ -41,7 +45,7 @@ function Modal(props) {
         aria-hidden="true"
       >
         <div class="modal-dialog modal-dialog-centered modal-lg">
-          <div class="modal-content" style={{height:'minContent'}} id="ogmodal">
+          <div class="modal-content" style={{ height: 'minContent' }} id="ogmodal">
             <div class="modal-header">
 
               <h5 class="modal-title" id="exampleModalLabel">
@@ -55,7 +59,7 @@ function Modal(props) {
               ></button>
             </div>
             <div class="modal-body" >
-              <div className="modalinput" style={{padding:'5px'}}> 
+              <div className="modalinput" style={{ padding: '5px' }}>
 
 
                 <div class="input-group  mb-3">
@@ -113,9 +117,23 @@ function Modal(props) {
                     value={area}
                     onChange={(e) => { setArea(e.target.value) }}
                   />
-                  
-                </div>
 
+                </div>
+                <div class="input-group  mb-3">
+                  <span class="input-group-text" id="inputGroup-sizing-sm">
+                    Facebook Link
+                  </span>
+                  <input
+                    type="text"
+                    class="form-control"
+                    aria-label="Sizing example input"
+                    aria-describedby="inputGroup-sizing-sm"
+                    placeholder="Enter your Facebook video link"
+                    style={{ marginRight: "4px" }}
+                    value={link}
+                    onChange={(e) => { setLink(e.target.value) }}
+                  />
+                </div>
                 <div class="form-floating">
                   <textarea
                     class="form-control"

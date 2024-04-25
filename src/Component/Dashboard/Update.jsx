@@ -27,6 +27,7 @@ function Update() {
           `${process.env.REACT_APP_DEVELOPMENT_URL}/dashboard/onepost?id=${id}`
           , { headers: { auth_token: localStorage.getItem("token"), } }
         );
+        console.log(detail_data)
         setMetaData(meta_data);
         SetTitlePic(meta_data.data_url)
         setPic(detail_data.data);
@@ -37,10 +38,10 @@ function Update() {
         setAPIData({
           title: meta_data?.title,
           bedroom: detail_data?.bedroom,
-          price: detail_data?.price,
           area: detail_data?.area,
           washroom: detail_data?.washroom,
           description: meta_data?.description,
+          link: detail_data?.link
         });
         setStat((prev) => !prev);
       } catch (error) {
@@ -101,11 +102,11 @@ function Update() {
     bedroom,
     washroom,
     area,
-    price,
-    description
+    description,
+    link,
   ) => {
     setMetaData({ ...metaData, title: title, description: description });
-    setAPIData({ title, bedroom, washroom, area, price, description });
+    setAPIData({ title, bedroom, washroom, area, description, link });
   };
   function validateFormFields(obj) {
     const requiredFields = [
@@ -113,7 +114,7 @@ function Update() {
       "bedroom",
       "washroom",
       "area",
-      "price",
+      "link",
       "description",
     ];
 
@@ -133,8 +134,8 @@ function Update() {
 
     return true;
   }
-  const Navigate=useNavigate()
-  const backHandler=()=>{
+  const Navigate = useNavigate()
+  const backHandler = () => {
     Navigate("/Dashboard")
   }
   const SendRequest = async () => {
@@ -176,7 +177,7 @@ function Update() {
       <div id="update">
         <div>
           <div className="backbtn">
-              <img onClick={backHandler} src="backbtn2.png" alt="" />
+            <img onClick={backHandler} src="backbtn2.png" alt="" />
           </div>
           <div>
             <h1 className="text-center my-2 updatetitle">{metaData.title}</h1>
@@ -195,7 +196,7 @@ function Update() {
               <img
                 src={`${process.env.REACT_APP_DEVELOPMENT_URL}/images/${titlePic}`}
                 alt={metaData.title}
-                
+
                 style={{
                   boxShadow: "rgba(0, 0, 0, 0.24) 0px 3px 8px",
                   borderRadius: "10px",
@@ -259,7 +260,7 @@ function Update() {
                   )
                 )}
                 <form onSubmit={addImages} id="uform" >
-                 
+
                   <label for="file-upload" class="custom-file-upload">
                     Add New Images
                   </label>
@@ -369,16 +370,16 @@ function Update() {
         data={{
           title: metaData?.title,
           bedroom: detailData?.bedroom,
-          price: detailData?.price,
           area: detailData?.area,
           washroom: detailData?.washroom,
           description: metaData?.description,
+          link: detailData?.link
         }}
       />
     </div>
     // <Canvas>
   );
-<Canvas/>
+  <Canvas />
 }
 
 export default Update;

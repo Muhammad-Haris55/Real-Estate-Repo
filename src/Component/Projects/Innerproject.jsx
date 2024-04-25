@@ -2,10 +2,11 @@ import React, { useEffect, useState } from 'react'
 import Modal from "../Modal/Modal"
 import { useSearchParams } from 'react-router-dom';
 import axios from 'axios';
-
+import { FacebookEmbed } from 'react-social-media-embed';
 function Innerproject() {
     const [queryParameters] = useSearchParams();
     const [title, setTitle] = useState('')
+    const [link, setLink] = useState('')
     const [description, setDescription] = useState('')
     const [images, setImages] = useState([])
     const [isLoading, setIsLoading] = useState(true)
@@ -18,9 +19,11 @@ function Innerproject() {
                 const { data } = await axios.get(
                     `${process.env.REACT_APP_DEVELOPMENT_URL}/dashboard/project?id=${id}`
                 );
+                console.log(data)
                 setTitle(data.title)
                 setDescription(data.description)
                 setImages(data.pic)
+                setLink(data?.link)
                 setIsData(true)
                 setIsLoading(false)
                 setStat(prev => !prev)
@@ -57,7 +60,11 @@ function Innerproject() {
                 </div>
 
                 <div className="col-xxl-6 col-xl-6 col-lg-6 col-md-9 col-sm-11  colb">
-                    Embeding video!!!//Picture
+                <div style={{ display: 'flex', justifyContent: 'center' }}>
+                    {/* <FacebookEmbed url={`${link}`} width={450} height={380}/> */}
+                    <FacebookEmbed url={`${link}`} height={380}  />
+                    </div>
+
                 </div>
             </div>
             <h2 className='text-center im'>IMAGES TOUR</h2>

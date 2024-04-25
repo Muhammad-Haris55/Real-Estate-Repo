@@ -22,16 +22,16 @@ function Uploading() {
     bedroom,
     washroom,
     area,
-    description
+    description, link
   ) => {
-    setAPIData({ title, bedroom, washroom, area, description });
+    setAPIData({ title, bedroom, washroom, area, description, link });
   };
   function validateFormFields(obj) {
     const requiredFields = [
       "title",
       "bedroom",
       "washroom",
-      "area",
+      "area", "link",
       "description",
     ];
 
@@ -54,31 +54,30 @@ function Uploading() {
 
   const SendRequest = async () => {
     if (validateFormFields(apiData) && file.length > 0) {
-    try {
+      try {
 
-      const data = await axios.post(
-        `${process.env.REACT_APP_DEVELOPMENT_URL}/dashboard/addpost`,
-        {
-          data: file,
-          ...apiData,
-        },
-        {
-          headers: {
-            "Content-Type": " multipart/form-data",
-            auth_token: localStorage.getItem("token"),
+        const data = await axios.post(
+          `${process.env.REACT_APP_DEVELOPMENT_URL}/dashboard/addpost`,
+          {
+            data: file,
+            ...apiData,
           },
-        }
-      );
-      console.log(data);
-      setList(
-        data.data.msg.map((elem) => (
-          <img src={elem.data_url} alt="My images" />
-        ))
-      );
-      alert("Data delivered successfully");
-    } catch (error) {
-      console.log(error);
-    }
+          {
+            headers: {
+              "Content-Type": " multipart/form-data",
+              auth_token: localStorage.getItem("token"),
+            },
+          }
+        );
+        setList(
+          data.data.msg.map((elem) => (
+            <img src={elem.data_url} alt="My images" />
+          ))
+        );
+        alert("Data delivered successfully");
+      } catch (error) {
+        console.log(error);
+      }
     } else {
       alert("All fields and some images are required");
     }

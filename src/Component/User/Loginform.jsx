@@ -27,7 +27,7 @@ function Loginform() {
       return alert(val.msg);
     }
     alert(val.msg);
-    navigate("/T");
+    navigate("/Dashboard");
   };
   const scroll = () => {
     window.scrollTo({ top: 0, behavior: "smooth" });

@@ -68,11 +68,13 @@ export const AuthContextProvider = (props) => {
       localStorage.removeItem("IsLoggedIn");
       localStorage.removeItem("token");
       setIsLoggedIn(false);
-      return { msg: data.msg, status: data.status };
+      navigate("/");
+      return 
+      // return { msg: data.msg, status: data.status };
       // return;
     } catch (err) {
       if (err.response?.status === 401) {
-        localStorage.removeItem("IsloggedIn");
+        localStorage.removeItem("IsLoggedIn");
         localStorage.removeItem("token");
         setIsLoggedIn(false);
         return navigate("/");
