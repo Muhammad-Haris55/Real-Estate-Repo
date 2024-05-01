@@ -1,6 +1,12 @@
 import React, { useContext, useEffect, useState } from 'react'
 import { createSearchParams, useNavigate } from 'react-router-dom'
 import ProjectContext from '../../context/project'
+import Navbar3 from '../Navbar3/Navbar3'
+import Footer from '../Footer/Footer'
+import Cform from '../Contact/Cform'
+import truck from "../Home/img/truck.png"
+import jcb from "../Home/img/jcb.png"
+
 
 function Project() {
     const navigate = useNavigate()
@@ -72,6 +78,7 @@ function Project() {
     })
     return (
         <>
+        <Navbar3/>
             <div className="hprojectpage">
                 <h2 className='text-center mt-4'>Featured Projects</h2>
                 <div className="col-md-11 col-sm-12 mx-auto pcardholder" key={stat}>
@@ -321,6 +328,24 @@ function Project() {
                 </div>
             </div>
             {/* Project Page */}
+            <Cform/>
+            <div className="truck">
+        <div className="container-fluid">
+          <div className="row">
+            <div className="col-md-6 jkhgkj">
+              <div className="truck_img1">
+                <img src={truck} alt="#" />
+              </div>
+            </div>
+            <div className="col-md-6 hassaan">
+              <div className="truck_img1">
+                <img src={jcb} alt="#" />
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+            <Footer/>
         </>
     )
 }

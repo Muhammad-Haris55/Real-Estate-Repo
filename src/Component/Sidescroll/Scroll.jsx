@@ -11,7 +11,7 @@ const Scroll = () => {
   });
   return (
           <Div>
-      <a href="/#" className={`${visible ? "block" : "none"}`}>
+      <a href="https://api.whatsapp.com/send/?phone=03158058848&text=Hi%2C+I+want+to+discuss+about+a+project.&type=phone_number&app_absent=0" target='blank' className={`${visible ? "block" : "none"}`}>
       <SiWhatsapp />
       </a>
     </Div>

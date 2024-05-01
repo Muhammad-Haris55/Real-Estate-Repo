@@ -1,18 +1,19 @@
 import React from 'react'
 import {MDBFooter, MDBContainer, MDBRow, MDBCol, MDBIcon} from 'mdb-react-ui-kit';
-import logo from '../Navbar3/IMG-20240223-WA0022-removebg-preview.png'
+import logo from '../Navbar3/AR builder logo.png'
 
 const Footer = () => {
   return (
+    <>
            
-          <MDBFooter className='text-center text-lg-start text-muted' style={{ background: "black", padding: "10px", boxshadow: "10px 10px 5px black" }}>
+          <MDBFooter className='text-center text-lg-start text-muted' style={{ background: "#706c61", padding: "10px", boxshadow: "10px 10px 5px black" }}>
           <section className='' style={{ color: "white" }}>
             <MDBContainer className='text-center text-md-start mt-5'>
               <MDBRow className='mt-3'>
                 <MDBCol md="3" lg="4" xl="3" className='mx-auto mb-4'>
                 <img src={logo}  style={{width:"50%",height:"20vh"}} className="me-3"  alt="" />
                    
-                  <h4 className='text-uppercase fw-bold mb-4' style={{ color: " rgb(167,12,24)" }}>
+                  <h4 className='text-uppercase fw-bold mb-4' style={{ }}>
                     Ahmed & Rehman Builders
                   </h4>
                   <p>
@@ -20,14 +21,14 @@ const Footer = () => {
                   </p>
                 </MDBCol>
                 <MDBCol md="4" lg="3" xl="3" className='mx-auto mb-md-0 mb-4'>
-                  <h6 className='text-uppercase fw-bold mb-4' style={{ color: "rgb(167,12,24)" }}>Leading Real State Network</h6>
+                  <h6 className='text-uppercase fw-bold mb-4' style={{  }}>Leading Real State Network</h6>
                   <p>
                     <MDBIcon icon="home" className="me-2" />
-                    CM-24 Gulistan e Rafi Malir City Karachi ! 43
+                    CM-24 Gulistan e Rafi, Malir City, Karachi
                   </p>
                   <p>
                     <MDBIcon icon="envelope" className="me-3" />
-                    ARbuilders620@gmail.com
+                    arbuilderndeveloper@gmail.com
                   </p>
                   <p>
                     <MDBIcon icon="phone" className="me-3" />0300-0288620
@@ -35,9 +36,7 @@ const Footer = () => {
                   <p>
                     <MDBIcon icon="phone" className="me-3" />0315-8058848
                   </p>
-                  <p>
-                    <MDBIcon icon="print" className="me-3" /> 0312-0288620
-                  </p>
+                  
                   <div className='hover' style={{ color: " rgb(167,12,24)" }}>
                     <a href='' className='me-4 text-reset'>
                       <MDBIcon fab icon="facebook-f" />
@@ -55,7 +54,7 @@ const Footer = () => {
                 </MDBCol>
   
                 <MDBCol md="2" lg="2" xl="2" className='mx-auto mb-4'>
-                  <h6 className='text-uppercase fw-bold mb-4' style={{ color: " rgb(167,12,24)" }}>Our Projects</h6>
+                  <h6 className='text-uppercase fw-bold mb-4' style={{ color: "" }}>Our Projects</h6>
                   <p>
                     <a href='#!' className='text-reset'>
                       Al-rehman garden
@@ -79,7 +78,7 @@ const Footer = () => {
                 </MDBCol>
   
                 <MDBCol md="3" lg="2" xl="2" className='mx-auto mb-4'>
-                  <h6 className='text-uppercase fw-bold mb-4' style={{ color: " rgb(167,12,24)" }}>Quick Lines</h6>
+                  <h6 className='text-uppercase fw-bold mb-4' style={{  }}>Quick Lines</h6>
                   
                   <p>
                     <a href='#!' className='text-reset'>
@@ -93,7 +92,7 @@ const Footer = () => {
                   </p>
                   <p>
                     <a href='#!' className='text-reset'>
-                      About and Appartments
+                      Our Projects
                     </a>
                   </p>
                 </MDBCol>
@@ -103,13 +102,15 @@ const Footer = () => {
             </MDBContainer>
           </section>
   
-          <div className='text-center p-4' style={{ backgroundColor: 'rgba(0, 0, 0, 0.05)', color: "white" }}>
-            © 2021 Copyright:
+          
+        </MDBFooter>
+        <div className='text-center p-2' style={{ backgroundColor: 'black', color: "white" }}>
+            © 2021 Copyright: 
             <a className='text-reset fw-bold' href='https://mdbootstrap.com/'>
-              QirratDon.com
+              AR Builders & Developers
             </a>
           </div>
-        </MDBFooter>
+          </>
   )
 }
 

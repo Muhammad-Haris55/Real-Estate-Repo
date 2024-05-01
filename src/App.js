@@ -17,7 +17,7 @@ import Project from "./Component/Projects/Project";
 import Innerproject from "./Component/Projects/Innerproject";
 import Userreviews from "./Component/Dashboard/Userreviews";
 import PrivateRoutes from "./Component/User/PrivaateRoutes";
-
+import Login1 from "./Component/loginform1/Login1";
 function App() {
   return (
     <>
@@ -40,7 +40,7 @@ function App() {
         <Route path="Contact" element={<Contact />}></Route>
         <Route path="dash" element={<Dashboard />}></Route>
         <Route path="/Signup" element={<Signup />}></Route>
-        <Route path="/Login" element={<Loginform />}></Route>
+        <Route path="/Login" element={<Login1 />}></Route>
         <Route path="/Dashboard" element={<Dpage1 />}></Route>
         <Route path="/Request" element={<Dashboard />}></Route>
         <Route path="/Sample" element={<Dashboard />}></Route>

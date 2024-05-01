@@ -3,6 +3,14 @@ import Modal from "../Modal/Modal"
 import { useSearchParams } from 'react-router-dom';
 import axios from 'axios';
 import { FacebookEmbed } from 'react-social-media-embed';
+import Navbar3 from '../Navbar3/Navbar3';
+import Footer from '../Footer/Footer';
+import truck from "../Home/img/truck.png"
+import jcb from "../Home/img/jcb.png"
+
+
+
+
 function Innerproject() {
     const [queryParameters] = useSearchParams();
     const [title, setTitle] = useState('')
@@ -78,10 +86,30 @@ function Innerproject() {
         </div>
     return (
         <>
+        <Navbar3/>
             <div className="inner">
                 {isLoading ? <p>Data is Loading</p> : isData && data}
             </div >
             {images.length >= 1 && <Modal data={images} title={title} />}
+
+
+            <div className="truck">
+        <div className="container-fluid">
+          <div className="row">
+            <div className="col-md-6 jkhgkj">
+              <div className="truck_img1">
+                <img src={truck} alt="#" />
+              </div>
+            </div>
+            <div className="col-md-6 hassaan">
+              <div className="truck_img1">
+                <img src={jcb} alt="#" />
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+            <Footer/>
         </>
     )
 }
