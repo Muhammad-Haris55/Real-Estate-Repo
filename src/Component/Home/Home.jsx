@@ -19,86 +19,75 @@ import plot from "./img/icons8-ground-48.png"
 import 'swiper/css'
 import { Swiper, SwiperSlide } from "swiper/react"
 import Navbar3 from "../Navbar3/Navbar3"
+import { useEffect, useState } from "react";
+import axios from "axios";
 
 const Home = () => {
-
-  const data = [
-    {
-      image: service1,
-      // background:teal,
-      title: "About Us",
-      description: "Welcome to ARK Builders, where we provide you with smart, innovative construction solutions for your development needs, to make sure you always get amazing returns.",
-    },
-    {
-      image: service1,
-      // background:white,
-      title: "Our Mission",
-      description: "Here at ARK Builders, it is our mission to provide the ultimate customer satisfaction, and help our clients acheive their dreams with the right construction solution for them.",
-    },
-    {
-      image: service1,
-      // background:teal,
-      title: "Our Vision",
-      description: "ARK Builders hope to complete our consumers' residential and commercial needs, and provide them with high return investment opportunities with their developments.",
-    },
-    {
-      image: service1,
-      // background:white,
-      title: "Our Projects",
-      description: "ARK Builders completes all of its construction with integrity and quality, to ensure the dreams of our clients never fall short.",
-    },
-  ];
-  const TestimonialsData = [
-    {
-        // image : profile1,
-        name: "Diane Hurst",
-        nam2: "IT sourcing Manager",
-        comment: " The very best. Found odometer rollbacks. Report impressed me on multiple levels",
-        // name: "John Alendon"
-    },
-    {
-        // image : profile2,
-        name: "Damein Cochran",
-        nam2: "Sales Associate",
-        comment: " The very best. Found odometer rollbacks. Report impressed me on multiple levels",
-        // name: "Natasha"
-    },
-    {
-        // image : profile1,
-        name: "Sophia-Rose Butler",
-        nam2: "Medical Assistant",
-        comment: " >Wow! Worth much more than I paid. This report is the real deal! Thank you!",
-        // name: "Alex Hormonzi"
-    },
-    {
-        // image : profile1,
-        name: "Diane Hurst",
-        nam2: "IT sourcing Manager",
-        comment: "The very best. Found odometer rollbacks. Report impressed me on multiple levels",
-        // name: "John Alendon"
-    },
-    {
-        // image : profile2,
-        name: "Damein Cochran",
-        nam2: "Sales Associate",
-        comment: "The very best. Found odometer rollbacks. Report impressed me on multiple levels",
-        // name: "Natasha"
-    },
-    {
-        // image : profile1,
-        name: "Sophia-Rose Butler",
-        nam2: "Medical Assistant",
-        comment: "Wow! Worth much more than I paid. This report is the real deal! Thank you!",
-        // name: "Alex Hormonzi"
+  const [TestimonialsData, setData] = useState([])
+  useEffect(() => {
+    async function apiCall() {
+      try {
+        const { data } = await axios.get(`${process.env.REACT_APP_DEVELOPMENT_URL}/contact/approvecomment`)
+        // console.log(data)
+        setData([...data])
+      } catch (e) {
+        console.log(e)
+      }
     }
-]
+    apiCall()
+  }, {})
 
-  
+  // const TestimonialsData = [
+  //   {
+  //     // image : profile1,
+  //     name: "Diane Hurst",
+  //     nam2: "IT sourcing Manager",
+  //     comment: " The very best. Found odometer rollbacks. Report impressed me on multiple levels",
+  //     // name: "John Alendon"
+  //   },
+  //   {
+  //     // image : profile2,
+  //     name: "Damein Cochran",
+  //     nam2: "Sales Associate",
+  //     comment: " The very best. Found odometer rollbacks. Report impressed me on multiple levels",
+  //     // name: "Natasha"
+  //   },
+  //   {
+  //     // image : profile1,
+  //     name: "Sophia-Rose Butler",
+  //     nam2: "Medical Assistant",
+  //     comment: " >Wow! Worth much more than I paid. This report is the real deal! Thank you!",
+  //     // name: "Alex Hormonzi"
+  //   },
+  //   {
+  //     // image : profile1,
+  //     name: "Diane Hurst",
+  //     nam2: "IT sourcing Manager",
+  //     comment: "The very best. Found odometer rollbacks. Report impressed me on multiple levels",
+  //     // name: "John Alendon"
+  //   },
+  //   {
+  //     // image : profile2,
+  //     name: "Damein Cochran",
+  //     nam2: "Sales Associate",
+  //     comment: "The very best. Found odometer rollbacks. Report impressed me on multiple levels",
+  //     // name: "Natasha"
+  //   },
+  //   {
+  //     // image : profile1,
+  //     name: "Sophia-Rose Butler",
+  //     nam2: "Medical Assistant",
+  //     comment: "Wow! Worth much more than I paid. This report is the real deal! Thank you!",
+  //     // name: "Alex Hormonzi"
+  //   }
+  // ]
+
+
 
 
   return (
     <>
-      <Navbar3/>
+      <Navbar3 />
       <Carousels />
       {/* property type */}
       <div className="container-fluid py-5">
@@ -107,7 +96,7 @@ const Home = () => {
             <div className="col-lg-4 col-md-6">
               <div className="mb-3">
                 <h6 style={{ color: "black" }} className=" text-uppercase"> | Services</h6>
-                <h2 style={{ fontweight: "900",color:"black" }}>Pioneer Of Modern Building Company</h2>
+                <h2 style={{ fontweight: "900", color: "black" }}>Pioneer Of Modern Building Company</h2>
               </div>
               <p className="mb-4">Welcome to our estate marketing and building services! At our core, we specialize in property management, construction, and real estate solutions.</p>
               <a style={{ background: "maroon", color: "white" }} href="" className="btn  py-md-3 px-md-5">Talk Us Now</a>
@@ -159,7 +148,7 @@ const Home = () => {
             <div className="col-md-6">
               <div className="project_main">
                 <h1 className="services_taital">Your Dream Space
-Our Passion</h1>
+                  Our Passion</h1>
                 <p className="services_text">Ahemd & Rehman builders & developers are serving low-cost housing to their customers by conveying comforts and high-standard utilities to their clients. So, everyone can attain their dream house for themselves and turn their visions into reality with AR Builders. AR Builders & Developers are best construction company in Pakistan. We aim to facilitate luxurious and affordable housing services to our customers with comfort. So, avail this best opportunity to attain your dream house for yourself and turn your living desires into achievements with AR Builders & Developers in Pakistan.</p>
                 <div className="moremore_bt"><a href="#">Read More </a></div>
                 {/* <div className="image_6"><img src={circle1}/></div> */}
@@ -205,13 +194,13 @@ Our Passion</h1>
       </div>
 
       {/* about2*/}
-     
+
       <div className="section best-deal">
         <div className="container">
           <div className="row">
             <div className="col-lg-4">
               <div className="section-heading">
-                <br/>
+                <br />
                 <h6 style={{ color: "black" }}> | Best Deal</h6>
                 <h2 style={{ color: " rgb(167,12,24)", fontFamily: "protestStrike", fontWeight: "900" }}>Find Your Best Deal Right Now!</h2>
               </div>
@@ -240,19 +229,19 @@ Our Passion</h1>
                               <li>Total Space <span>185 sqf</span></li>
                               <li>Number of rooms <span>4</span></li>
                               <li>Parking Available <span>Yes</span></li>
-                              <span style={{fontweight:"900", color: "white"}}>Enquire Now</span>
+                              <span style={{ fontweight: "900", color: "white" }}>Enquire Now</span>
                             </ul>
                           </div>
                         </div>
                         <div className="col-lg-6">
-                          <img src={about} style={{ width: "100%", height: "50vh",borderRadius:"25px" }} alt="" />
+                          <img src={about} style={{ width: "100%", height: "50vh", borderRadius: "25px" }} alt="" />
                         </div>
                         <div className="col-lg-3">
                           <h4 style={{ fontSize: "18px", fontWeight: "700" }}>Extra Info About Property</h4>
                           <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, do eiusmod tempor pack incididunt ut labore et dolore magna aliqua quised ipsum suspendisse.
                             <br /><br />When you need free CSS templates, you can simply type TemplateMo in any search engine website. In addition, you can type TemplateMo Portfolio, TemplateMo One Page Layouts, etc.</p>
                           <div classNamename="icon-button">
-                            <a style={{color:"maroon"}} href="property-details.html"><i className="fa fa-calendar"></i> Schedule a visit</a>
+                            <a style={{ color: "maroon" }} href="property-details.html"><i className="fa fa-calendar"></i> Schedule a visit</a>
                           </div>
                         </div>
                       </div>
@@ -264,58 +253,58 @@ Our Passion</h1>
           </div>
         </div>
       </div>
-      
+
       {/* about */}
 
-       {/* testimonials */}
-       <div className="testimonials">
-                <h3 h3 className="display-5 fw-bold " style={{ color: "rgb(167,12,24)", textAlign: "center", fontFamily: "protestStrike" }}>What Our Client Say About Us</h3 >
-                <br />
-                <div className="wrapper1">
-                </div>
-                <div className="carousel2" >
-                    <Swiper
-                        breakpoints={{
-                            0: {
-                                slidesPerView: 1,
-                            },
-                            400: {
-                                slidesPerView: 2,
-                            },
-                            546: {
-                                // width: 576,
-                                slidesPerView: 2,
-                            },
-                            768: {
-                                // width: 768,
-                                slidesPerView: 4,
-                            },
+      {/* testimonials */}
+      <div className="testimonials">
+        <h3 h3 className="display-5 fw-bold " style={{ color: "rgb(167,12,24)", textAlign: "center", fontFamily: "protestStrike" }}>What Our Client Say About Us</h3 >
+        <br />
+        <div className="wrapper1">
+        </div>
+        <div className="carousel2" >
+          <Swiper
+            breakpoints={{
+              0: {
+                slidesPerView: 1,
+              },
+              400: {
+                slidesPerView: 2,
+              },
+              546: {
+                // width: 576,
+                slidesPerView: 2,
+              },
+              768: {
+                // width: 768,
+                slidesPerView: 4,
+              },
 
-                        }}
-                        slidesPerView={4}
-                        slidesPerGroup={1}
-                        spaceBetween={20}
-                        className="t1Carousel">
-                        {
-                            TestimonialsData.map((testimonials, i) => (
-                                <SwiperSlide>
-                                    <div className="testimonial">
-                                        
-                                       
-                                        <span>{testimonials.comment}</span>
-                                        <hr />
-                                        <span>{testimonials.name}</span>
-
-                                    </div>
-                                </SwiperSlide>))
-                        }
+            }}
+            slidesPerView={4}
+            slidesPerGroup={1}
+            spaceBetween={20}
+            className="t1Carousel">
+            {
+              TestimonialsData.map((testimonials, i) => (
+                <SwiperSlide>
+                  <div className="testimonial">
 
 
+                    <span>{testimonials.comment}</span>
+                    <hr />
+                    <span>{testimonials.name}</span>
 
-                    </Swiper>
+                  </div>
+                </SwiperSlide>))
+            }
 
-                </div>
-            </div>
+
+
+          </Swiper>
+
+        </div>
+      </div>
 
 
       <div className="container-xxl py-5">
@@ -329,11 +318,11 @@ Our Passion</h1>
             <div className="col-lg-6 wow fadeIn" data-wow-delay="0.5s">
               <h1 className="mb-4" style={{ fontFamily: "protestStrike", fontWeight: "700", color: "maroon" }}>Join Us As We Bring Real Estate Visionaries To The Forefront.</h1>
               <p className="mb-4">At Ahmed & Rehman Builders, we are a dynamic and multifaceted real estate firm committed to transforming your property dreams into reality. With a diverse portfolio of services, we cater to a wide spectrum of real estate needs:
-</p>
+              </p>
               <p><i className="fa fa-check text-dark me-3"></i>Real Estate Expertise.</p>
               <p><i className="fa fa-check text-dark me-3"></i>Construction and Development.</p>
               <p><i className="fa fa-check text-dark me-3"></i>Property Marketing.</p>
-              
+
 
 
               <button className="btn" >About us</button>
@@ -344,7 +333,7 @@ Our Passion</h1>
       </div>
 
       {/* map */}
-     
+
       <div >
         <h3 h3 className="display-5 fw-bold " style={{ color: "rgb(167,12,24)", textAlign: "center", fontFamily: "protestStrike" }}> Boasting A Superb Location</h3 >
         <div className="col-lg-6 mx-auto">

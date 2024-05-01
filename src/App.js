@@ -1,5 +1,5 @@
 import { Route, Routes } from "react-router-dom";
-import Loginform from "./Component/User/Loginform";
+// import Loginform from "./Component/User/Loginform";
 import Dashboard from "./Dashboard";
 import Dpage1 from "./Dpage1";
 import Profile from "./Profile";
@@ -35,7 +35,7 @@ function App() {
         </Route>
         <Route path="P" element={<Project />}></Route>
         <Route path="I" element={<Innerproject />}></Route>
-        <Route path="L" element={<Loginform />}></Route>
+        {/* <Route path="L" element={<Loginform />}></Route> */}
         <Route path="About" element={<About />}></Route>
         <Route path="Contact" element={<Contact />}></Route>
         <Route path="dash" element={<Dashboard />}></Route>
