@@ -370,6 +370,9 @@ body.open .sidebar {
     width: 100%;
 }
 
+#ecolor,.modal-bodys input,.modal-bodys textarea{
+    color: #0c0c0c!important;
+}
 /* Toogle button hai jisy abhi display none kr rhy hain */
 .sidebar-header {
     visibility: hidden;
@@ -3023,7 +3026,6 @@ body.open .sidebar {
 
 
 .modal-body {
-    /* border: 2px solid black; */
     height: 90vh;
     /* display: flex; */
     /* align-items: center; */
@@ -3031,10 +3033,11 @@ body.open .sidebar {
 }
 
 .imgdiv {
+    /* border: 2px solid black; */
     display: block;
     margin-left: auto;
     margin-right: auto;
-    margin-top: 270px;
+    margin-top: 75px;
     /* position: relative;
     top: 65px;
     left: 190px; */
@@ -3462,7 +3465,11 @@ input[type="file"] {
     }
 
     .imgdiv {
-        margin-top: 195px;
+        margin-top: 95px;
+    }
+    #modalcarousel img {
+        width: 370px !important;
+        Height: 370px !important;
     }
 }
 
@@ -3474,7 +3481,13 @@ input[type="file"] {
     }
 
     #modalcarousel img {
-        width: 372px !important;
+        width: 310px !important;
+        Height: 310px !important;
+    }
+}
+@media (max-width: 380px) {
+    .imgdiv {
+        margin-top: 55px;
     }
 }
 
@@ -3508,7 +3521,9 @@ input[type="file"] {
 @media (max-width:380px) {
     
     #modalcarousel img {
-        width: 345px !important;
+        width: 250px !important;
+        height: 250px!important;
+        /* width: 345px !important; */
     }
     
     #ttr,
@@ -3521,6 +3536,7 @@ input[type="file"] {
 @media(max-width:350px) {
     #modalcarousel img {
         width: 328px !important;
+        /* Height: 328px !important; */
     }
 }
 
