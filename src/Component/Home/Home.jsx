@@ -1,7 +1,4 @@
-
-import service1 from "./img/service1.png";
 import home from "./img/pixasquare-4ojhpgKpS68-unsplash.jpg"
-// import about from "./img/avi-werde-hHz4yrvxwlA-unsplash.jpg"
 import about from "./img/Home (1).jpg"
 import Carousels from '../carousel/carousel/Carousels';
 import Footer from '../Footer/Footer';
