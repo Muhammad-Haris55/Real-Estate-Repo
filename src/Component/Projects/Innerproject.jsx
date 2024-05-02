@@ -68,9 +68,15 @@ function Innerproject() {
                 </div>
 
                 <div className="col-xxl-6 col-xl-6 col-lg-6 col-md-9 col-sm-11  colb">
-                <div style={{ display: 'flex', justifyContent: 'center' }}>
-                    {/* <FacebookEmbed url={`${link}`} width={450} height={380}/> */}
-                    <FacebookEmbed url={`${link}`} height={380}  />
+                    <div style={{ display: 'flex', justifyContent: 'center', alignItems: 'center' }} >
+                        {/* <FacebookEmbed url={`${link}`}width={550} /> */}
+                        {/* <FacebookEmbed url={"https://www.facebook.com/BuildersGFS/videos/1196635581509534"}width={500}  height={300}/> */}
+                        {/* <FacebookEmbed url={"https://www.facebook.com/BuildersGFS/videos/1145371583467952"}width={500}  height={300}/> */}
+                        {/* <FacebookEmbed url={"https://fb.watch/rOpty7GMLo/"}width={500}  height={300}/> */}
+                        {/* <FacebookEmbed url={"https://fb.watch/rOp29OtUVq/"}width={400}  /> */}
+                        {/* <div className='fvideo'> */}
+                        <FacebookEmbed url={`${link}`} />
+                        {/* </div> */}
                     </div>
 
                 </div>
@@ -86,7 +92,7 @@ function Innerproject() {
         </div>
     return (
         <>
-        <Navbar3/>
+            <Navbar3 />
             <div className="inner">
                 {isLoading ? <p>Data is Loading</p> : isData && data}
             </div >
@@ -94,22 +100,22 @@ function Innerproject() {
 
 
             <div className="truck">
-        <div className="container-fluid">
-          <div className="row">
-            <div className="col-md-6 jkhgkj">
-              <div className="truck_img1">
-                <img src={truck} alt="#" />
-              </div>
+                <div className="container-fluid">
+                    <div className="row">
+                        <div className="col-md-6 jkhgkj">
+                            <div className="truck_img1">
+                                <img src={truck} alt="#" />
+                            </div>
+                        </div>
+                        <div className="col-md-6 hassaan">
+                            <div className="truck_img1">
+                                <img src={jcb} alt="#" />
+                            </div>
+                        </div>
+                    </div>
+                </div>
             </div>
-            <div className="col-md-6 hassaan">
-              <div className="truck_img1">
-                <img src={jcb} alt="#" />
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-            <Footer/>
+            <Footer />
         </>
     )
 }

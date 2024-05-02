@@ -620,10 +620,11 @@ body.open .sidebar {
     /* height: -5vh; */
     /* height: min-content; */
     width: 100%;
+    height: 12vh!important;
     display: flex;
     align-items: center;
     justify-content: space-between;
-    padding-top: 15px;
+    /* padding-top: 15px; */
     color: var(--defautcolor);
 
     /* box-shadow: rgba(0, 0, 0, 0.3) 0px 19px 38px, rgba(0, 0, 0, 0.22) 0px 15px 12px; */
@@ -1638,6 +1639,11 @@ body.open .sidebar {
     margin-left: 0px;
 }
 
+#videoparent {
+    border: 5px solid black;
+    min-height: 10vh!important;
+    /* object-fit: cover !important; */
+}
 .moremore_bt {
     width: 170px;
     float: left;
@@ -2906,7 +2912,7 @@ body.open .sidebar {
 
 .cola,
 .colb {
-    border: 1px solid black;
+    /* border: 1px solid black; */
     /* height: 60vh !important; */
     padding: 5px;
     /* Ye height enable kr dengy aur upr wali disable */
@@ -2915,7 +2921,17 @@ body.open .sidebar {
     /* width: 100%!important; */
     /* height: 100% !important; */
 }
+.colb{
+    /* height: 60vh; */
+    /* overflow: hidden; */
+    /* object-fit: cover!important; */
+}
+.colb .fvideo{
+    /* overflow: ; */
+    /* object-fit: cover!important; */
+    /* border: 5px solid black; */
 
+}
 .cola h5 {
     font-size: 19px;
     color: #000;
