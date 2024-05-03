@@ -53,29 +53,29 @@ function Innerproject() {
             </div>
             <h2 className='text-center mt-5'>About Our Project</h2>
             <div className="col-md-10 mx-auto inneritems">
-                <div className="col-xxl-6 col-xl-6 col-lg-6 col-md-9 col-sm-11 cola">
+                <div className="col-xxl-6 col-xl-6 col-lg-6 col-md-11 col-sm-11 cola">
 
                     <h5>
                         {description}
                     </h5>
-                    <button className='mt-3'
+                    <button className='mt-2'
 
-                        style={{ width: '150px', height: '35px', display: 'flex', flexDirection: 'column', alignItems: 'center', justifyContent: 'center', fontSize: '13px' }}
+                        style={{ width: '150px', height: '38px', display: 'flex', flexDirection: 'column', alignItems: 'center', justifyContent: 'center', fontSize: '13px' }}
                         id="rembtn"
                     >
                         Enquire Now!
                     </button>
                 </div>
 
-                <div className="col-xxl-6 col-xl-6 col-lg-6 col-md-9 col-sm-11  colb">
+                <div className="col-xxl-6 col-xl-6 col-lg-6 col-md-11 col-sm-11  colb">
                     <div style={{ display: 'flex', justifyContent: 'center', alignItems: 'center' }} >
                         {/* <FacebookEmbed url={`${link}`}width={550} /> */}
-                        {/* <FacebookEmbed url={"https://www.facebook.com/BuildersGFS/videos/1196635581509534"}width={500}  height={300}/> */}
+                        <FacebookEmbed url={"https://www.facebook.com/BuildersGFS/videos/1196635581509534"}width={500}  height={300}/>
                         {/* <FacebookEmbed url={"https://www.facebook.com/BuildersGFS/videos/1145371583467952"}width={500}  height={300}/> */}
                         {/* <FacebookEmbed url={"https://fb.watch/rOpty7GMLo/"}width={500}  height={300}/> */}
                         {/* <FacebookEmbed url={"https://fb.watch/rOp29OtUVq/"}width={400}  /> */}
                         {/* <div className='fvideo'> */}
-                        <FacebookEmbed url={`${link}`} />
+                        {/* <FacebookEmbed url={`${link}`} /> */}
                         {/* </div> */}
                     </div>
 

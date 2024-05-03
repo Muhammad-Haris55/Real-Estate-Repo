@@ -163,7 +163,9 @@ function Totalprojects() {
             data-aos-duration="500"
             data-aos-delay="500"
           >
-            <p>Logo</p>
+            
+            <img src="logo.png" alt=""  style={{width :'100px',height:'70px'}}/>
+            {/* <p>Logo</p> */}
 
           </NavLink>
         </div>
