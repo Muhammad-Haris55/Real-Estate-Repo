@@ -4886,7 +4886,7 @@ input[type="file"] {
 .title-c {
     font-size: 2rem;
     font-weight: 600;
-    margin-left: -190px;
+    margin-left: 10px;
     color: #060606;
 }
 

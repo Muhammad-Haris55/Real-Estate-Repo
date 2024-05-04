@@ -69,8 +69,8 @@ function Innerproject() {
 
                 <div className="col-xxl-6 col-xl-6 col-lg-6 col-md-11 col-sm-11  colb">
                     <div style={{ display: 'flex', justifyContent: 'center', alignItems: 'center' }} >
-                        {/* <FacebookEmbed url={`${link}`}width={550} /> */}
-                        <FacebookEmbed url={"https://www.facebook.com/BuildersGFS/videos/1196635581509534"}width={500}  height={300}/>
+                        <FacebookEmbed url={`${link}`}width={500}  height={300} />
+                        {/* <FacebookEmbed url={"https://www.facebook.com/BuildersGFS/videos/1196635581509534"}width={500}  height={300}/> */}
                         {/* <FacebookEmbed url={"https://www.facebook.com/BuildersGFS/videos/1145371583467952"}width={500}  height={300}/> */}
                         {/* <FacebookEmbed url={"https://fb.watch/rOpty7GMLo/"}width={500}  height={300}/> */}
                         {/* <FacebookEmbed url={"https://fb.watch/rOp29OtUVq/"}width={400}  /> */}

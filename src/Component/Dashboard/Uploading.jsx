@@ -231,7 +231,7 @@ function Uploading() {
       </div>
       {/* {list.length > 0 ? list : <p></p>} */}
       <Modal uploading={setState} />
-      <Canvas />
+      <Canvas /> 
     </>
   );
 }

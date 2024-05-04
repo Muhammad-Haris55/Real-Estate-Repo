@@ -48,7 +48,7 @@ const Navbar3 = () => {
             <NavLink to="/Contact">Contact</NavLink>
           </li>
                
-          <button className="btn " to="/Contact" style={{ background: "rgb(167,12,24)" }}><NavLink style={{color:"white"}} className="fa fa-calendar" > Schedule a visit</NavLink></button>
+          <button className="btn "  style={{ background: "rgb(167,12,24)" }}><NavLink to="/Contact" style={{color:"white"}} className="fa fa-calendar" > Schedule a visit</NavLink></button>
         </ul>
       </div>
       <div className="account-info">
