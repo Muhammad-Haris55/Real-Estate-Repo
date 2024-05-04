@@ -55,7 +55,7 @@ export const AuthContextProvider = (props) => {
 
   const logoutHandler = async () => {
     try {
-      const { data } = await axios.post(
+       await axios.post(
         `${process.env.REACT_APP_DEVELOPMENT_URL}/user/logout`,
         {},
         {

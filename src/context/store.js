@@ -41,6 +41,7 @@ export const DataContextProvider = (props) => {
   const updateContext2 = (id) => {
     const newData = projData.map((obj) => {
       if (obj._id !== id) return obj;
+      else return null
     });
     setProjData([...newData]);
   };

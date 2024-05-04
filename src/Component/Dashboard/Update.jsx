@@ -2,8 +2,8 @@ import axios from "axios";
 import Modal from "./Modal";
 import React, { useEffect, useState } from "react";
 import { useNavigate, useSearchParams } from "react-router-dom";
-import Canvas from "./Canvas";
-import { Navigate } from "react-router-dom";
+// import Canvas from "./Canvas";
+
 function Update() {
 
   const [metaData, setMetaData] = useState();
@@ -358,11 +358,6 @@ function Update() {
   );
   return (
     <div>
-      {/* <p> Update Page</p> */}
-      {/* View Project detail (mpodal btn) */}
-
-      {/* Submit btn */}
-      {/* <button type="button" onClick={SendRequest}>Submit</button> */}
       {isLoading ? <h1>Data is Loading</h1> : isData && myJSX}
       <Modal
         uploading={setState}
@@ -379,7 +374,7 @@ function Update() {
     </div>
     // <Canvas>
   );
-  <Canvas />
+
 }
 
 export default Update;
