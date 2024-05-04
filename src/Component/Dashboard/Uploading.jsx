@@ -229,7 +229,7 @@ function Uploading() {
           </div>
         </div>
       </div>
-      {list.length > 0 ? list : <p>No images</p>}
+      {/* {list.length > 0 ? list : <p></p>} */}
       <Modal uploading={setState} />
       <Canvas />
     </>

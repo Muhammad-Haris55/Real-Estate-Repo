@@ -6,34 +6,34 @@ const Footer = () => {
   return (
     <>
            
-          <MDBFooter className='text-center text-lg-start text-muted' style={{ background: "#706c61", padding: "10px", boxshadow: "10px 10px 5px black" }}>
-          <section className='' style={{ color: "white" }}>
+          <MDBFooter className='text-center text-lg-start text-muted' style={{ background: "silver", padding: "10px", boxshadow: "10px 10px 5px black" }}>
+          <section className='' style={{ color: "black" }}>
             <MDBContainer className='text-center text-md-start mt-5'>
               <MDBRow className='mt-3'>
                 <MDBCol md="3" lg="4" xl="3" className='mx-auto mb-4'>
-                <img src={logo}  style={{width:"50%",height:"20vh"}} className="me-3"  alt="" />
+                <img src={logo}  style={{width:"45%",height:"20vh"}} className="me-3"  alt="" />
                    
-                  <h4 className='text-uppercase fw-bold mb-4' style={{ }}>
-                    Ahmed & Rehman Builders
-                  </h4>
+                  <h4 className='text-uppercase fw-bold mb-4' style={{ fontFamily:"Poppins"}}>
+                    Ahmed & Rehman Builders & Developers
+                                   </h4>
                   <p>
   
                   </p>
                 </MDBCol>
                 <MDBCol md="4" lg="3" xl="3" className='mx-auto mb-md-0 mb-4'>
-                  <h6 className='text-uppercase fw-bold mb-4' style={{  }}>Leading Real State Network</h6>
-                  <p>
+                  <h6 className='text-uppercase fw-bold mb-4' style={{ fontFamily:"Poppins" }}>Leading Real State Network</h6>
+                  <p style={{fontFamily:"Mulish" , fontWeight:"700"}}> 
                     <MDBIcon icon="home" className="me-2" />
                     CM-24 Gulistan e Rafi, Malir City, Karachi
                   </p>
-                  <p>
+                  <p style={{fontFamily:"Mulish" , fontWeight:"700"}}>
                     <MDBIcon icon="envelope" className="me-3" />
                     arbuilderndeveloper@gmail.com
                   </p>
-                  <p>
+                  <p style={{fontFamily:"Mulish" , fontWeight:"700"}}>
                     <MDBIcon icon="phone" className="me-3" />0300-0288620
                   </p>
-                  <p>
+                  <p style={{fontFamily:"Mulish" , fontWeight:"700"}}>
                     <MDBIcon icon="phone" className="me-3" />0315-8058848
                   </p>
                   
@@ -54,23 +54,23 @@ const Footer = () => {
                 </MDBCol>
   
                 <MDBCol md="2" lg="2" xl="2" className='mx-auto mb-4'>
-                  <h6 className='text-uppercase fw-bold mb-4' style={{ color: "" }}>Our Projects</h6>
-                  <p>
+                  <h6 className='text-uppercase fw-bold mb-4' style={{ fontFamily:"Poppins" }}>Our Projects</h6>
+                  <p style={{fontFamily:"Mulish" }}>
                     <a href='#!' className='text-reset'>
                       Al-rehman garden
                     </a>
                   </p>
-                  <p>
+                  <p style={{fontFamily:"Mulish" }}>
                     <a href='#!' className='text-reset'>
                       Bahria town
                     </a>
                   </p>
-                  <p>
+                  <p style={{fontFamily:"Mulish" }}>
                     <a href='#!' className='text-reset'>
-                      Soul city
+                      Gloobe Residency
                     </a>
                   </p>
-                  <p>
+                  <p style={{fontFamily:"Mulish" }}>
                     <a href='#!' className='text-reset'>
                       Urban city
                     </a>
@@ -78,20 +78,20 @@ const Footer = () => {
                 </MDBCol>
   
                 <MDBCol md="3" lg="2" xl="2" className='mx-auto mb-4'>
-                  <h6 className='text-uppercase fw-bold mb-4' style={{  }}>Quick Lines</h6>
+                  <h6 className='text-uppercase fw-bold mb-4' style={{ fontFamily:"Poppins"  }}>Quick Lines</h6>
                   
                   <p>
-                    <a href='#!' className='text-reset'>
+                    <a style={{fontFamily:"Mulish"}} href='/contact' className='text-reset'>
                       Contact us
                     </a>
                   </p>
                   <p>
-                    <a href='#!' className='text-reset'>
+                    <a style={{fontFamily:"Mulish"}} href='/about' className='text-reset'>
                       About Company
                     </a>
                   </p>
                   <p>
-                    <a href='#!' className='text-reset'>
+                    <a style={{fontFamily:"Mulish"}} href='/project' className='text-reset'>
                       Our Projects
                     </a>
                   </p>
@@ -105,9 +105,9 @@ const Footer = () => {
           
         </MDBFooter>
         <div className='text-center p-2' style={{ backgroundColor: 'black', color: "white" }}>
-            © 2021 Copyright: 
-            <a className='text-reset fw-bold' href='https://mdbootstrap.com/'>
-              AR Builders & Developers
+             Copyright © 2021 | AR Builders & Developers 
+            <a className='text-reset' href='https://mdbootstrap.com/'>
+              
             </a>
           </div>
           </>

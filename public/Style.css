@@ -6,7 +6,8 @@
 /* Thead font */
 @import url('https://fonts.googleapis.com/css2?family=Noto+Sans+Meetei+Mayek:wght@600&display=swap');
 
-
+@import url('https://fonts.googleapis.com/css2?family=Rubik:ital,wght@0,300..900;1,300..900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Mulish:ital,wght@0,200..1000;1,200..1000&family=Rubik:ital,wght@0,300..900;1,300..900&display=swap');
 
 
 @import url('https://fonts.googleapis.com/css2?family=Dancing+Script:wght@400..700&family=Noto+Sans+Lao+Looped:wght@100..900&display=swap');
@@ -25,8 +26,10 @@
 html,
 body {
     /* overflow-y: auto; */
+    /* overflow-x: hidden; */
     scroll-behavior: smooth;
     height: 100%;
+    font-family:'Poppins', 'sans-serif';
 
 }
 
@@ -4883,7 +4886,7 @@ input[type="file"] {
 .title-c {
     font-size: 2rem;
     font-weight: 600;
-    margin-left: -40px;
+    margin-left: -190px;
     color: #060606;
 }
 

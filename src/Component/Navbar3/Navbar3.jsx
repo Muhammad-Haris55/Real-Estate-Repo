@@ -3,8 +3,9 @@ import styled from "styled-components";
 import { GiHamburgerMenu } from "react-icons/gi";
 import { MdClose } from "react-icons/md";
 import { useState } from 'react';
-import logo from './IMG-20240223-WA0022-removebg-preview.png'
-import { NavLink } from 'react-router-dom'
+import logo from './AR builder logo.png'
+import { NavLink } from 'react-router-dom';
+
 
 
 
@@ -16,7 +17,7 @@ const Navbar3 = () => {
     <Container state={isNavOpen ? 1 : 0}>
       <div className="brand">
         {/* <h3 style={{color:"orange",fontWeight:"700"}}>AL REHMAN GARDEN</h3> */}
-        <img src={logo} alt="" />
+        <NavLink to="/"><img  src={logo} alt="" /></NavLink>
 
       </div>
       <div className="toggle">
@@ -31,7 +32,7 @@ const Navbar3 = () => {
           />
         )}
       </div>
-      <div className={`links ${isNavOpen ? "show" : ""}`}>
+      <div className={`links ${isNavOpen ? "show" : ""}`} style={{fontFamily:"Poppins"}}>
         <ul>
           <li>
             <NavLink to="/">Home</NavLink>
@@ -40,17 +41,14 @@ const Navbar3 = () => {
             <NavLink to="/About">About</NavLink>
           </li>
           <li>
-            <NavLink to="/P">Projects</NavLink>
+            <NavLink to="/Project">Projects</NavLink>
           </li>
-
+         
           <li>
             <NavLink to="/Contact">Contact</NavLink>
           </li>
-          <li>
-            <NavLink to="/login">Login</NavLink>
-          </li>
-
-          <button className="btn " style={{ background: "rgb(167,12,24)", color: "white" }}>Schedule a visit</button>
+               
+          <button className="btn " to="/Contact" style={{ background: "rgb(167,12,24)" }}><NavLink style={{color:"white"}} className="fa fa-calendar" > Schedule a visit</NavLink></button>
         </ul>
       </div>
       <div className="account-info">
@@ -62,12 +60,12 @@ const Navbar3 = () => {
 }
 const Container = styled.nav`
   display: flex;
+  position:relative;
+  height: 16vh;
+  z-index:1000000000;
   justify-content: space-between;
   align-items: center;
-  height: 16vh;
-  background:black;
-  position:relative;
-  z-index: 1000000000;
+  background:white;
   /* box-shadow: 10px 10px 5px black; */
 
   .brand {
@@ -80,7 +78,8 @@ const Container = styled.nav`
   }
   .toggle {
     display: none;
-    color:white;
+    color:black;
+   
   }
   .links {
     ul {
@@ -90,7 +89,7 @@ const Container = styled.nav`
       li {
         a {
           text-decoration: none;
-          color: white;
+          color: black;
           font-weight:700;
           /* cursor: pointer; */
           font-size:20px;
@@ -121,7 +120,7 @@ const Container = styled.nav`
   }
   @media  (max-width: 1080px){
     .brand img{ 
-      width:80px;
+      width:120px;
 
     }
     
@@ -141,7 +140,7 @@ const Container = styled.nav`
       display: flex;
       justify-content: space-between;
       align-items: center;
-      width: 50%;
+      width: 70%;
       height: 19vh;
       margin-left:-30px;
     }
@@ -149,7 +148,6 @@ const Container = styled.nav`
     .toggle {
       padding-right: 1rem;
       width: 30px;
-      
       display: block;
       z-index: 1;
      
@@ -167,7 +165,7 @@ const Container = styled.nav`
       right: 0;
       width: ${({ state }) => (state ? "50%" : "0%")};
       height: 100vh;
-      background-color:rgb(21, 21, 21);
+      background-color:rgb(255, 255, 255);
       opacity: 0;
       
       visibility: hidden;
@@ -179,7 +177,7 @@ const Container = styled.nav`
         justify-content: center;
         li {
           a {
-            color: white;
+            color: #030303;
             font-size:19px;
           }
         }

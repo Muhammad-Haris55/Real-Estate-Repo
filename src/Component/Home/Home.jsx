@@ -16,8 +16,10 @@ import plot from "./img/icons8-ground-48.png"
 import 'swiper/css'
 import { Swiper, SwiperSlide } from "swiper/react"
 import Navbar3 from "../Navbar3/Navbar3"
-import { useEffect, useState } from "react";
+import { useEffect, useState} from "react";
 import axios from "axios";
+import { NavLink } from "react-router-dom";
+
 
 const Home = () => {
   const [TestimonialsData, setData] = useState([])
@@ -92,46 +94,46 @@ const Home = () => {
           <div className="row g-5">
             <div className="col-lg-4 col-md-6">
               <div className="mb-3">
-                <h6 style={{ color: "black" }} className=" text-uppercase"> | Services</h6>
-                <h2 style={{ fontweight: "900", color: "black" }}>Pioneer Of Modern Building Company</h2>
+                <h6 style={{ color: "black" }} className="text-uppercase"> | Services</h6>
+                <h2 style={{ fontweight: "700", color: "black", fontFamily:"Poppins" }}>Pioneer Of Modern Building Company</h2>
               </div>
-              <p className="mb-4">Welcome to our estate marketing and building services! At our core, we specialize in property management, construction, and real estate solutions.</p>
-              <a style={{ background: "maroon", color: "white" }} href="" className="btn  py-md-3 px-md-5">Talk Us Now</a>
+              <p className="mb-4"  style={{fontFamily:"Mulish"}}>Welcome to our estate marketing and building services! At our core, we specialize in property management, construction, and real estate solutions.</p>
+              <NavLink style={{ background: "maroon", color: "white" }} to="/contact" className="btn  py-md-3 px-md-5">Talk Us Now</NavLink>
             </div>
             <div className="col-lg-4 col-md-6">
               <div className="service-item bg-light text-center p-5">
                 <img src={property} alt="" />
-                <h4>Commercial Property</h4>
-                <p className="mb-0">Efficient commercial property management, optimizing assets.</p>
+                <h4 style={{fontFamily:"Poppins"}}>Commercial Property</h4>
+                <p className="mb-0"  style={{fontFamily:"Mulish"}}>Efficient commercial property management, optimizing assets.</p>
               </div>
             </div>
             <div className="col-lg-4 col-md-6">
               <div className="service-item bg-light text-center p-5">
                 <img src={house} style={{ width: "60px" }} alt="" />
-                <h4>Houses</h4>
-                <p className="mb-0">Exemplary house building and construction services await.</p>
+                <h4  style={{fontFamily:"Poppins"}}>Houses</h4>
+                <p className="mb-0"  style={{fontFamily:"Mulish"}}>Exemplary house building and construction services await.</p>
               </div>
             </div>
             <div className="col-lg-4 col-md-6">
               <div className="service-item bg-light text-center p-5">
                 <img src={plot} style={{ width: "80px" }} alt="" />
                 <br />
-                <h4>Plots</h4>
-                <p className="mb-0">Streamlining seamless plot sales and purchases.</p>
+                <h4  style={{fontFamily:"Poppins"}}>Plots</h4>
+                <p className="mb-0"  style={{fontFamily:"Mulish"}}>Streamlining seamless plot sales and purchases.</p>
               </div>
             </div>
             <div className="col-lg-4 col-md-6">
               <div className="service-item bg-light text-center p-5">
                 <img src={estate} style={{ width: "70px" }} alt="" />
-                <h4>Real Estate, Property & Construction</h4>
-                <p className="mb-0">We deliver excellence, from property acquisition to construction.</p>
+                <h4  style={{fontFamily:"Poppins"}}>Real Estate, Property & Construction</h4>
+                <p className="mb-0"  style={{fontFamily:"Mulish"}}>We deliver excellence, from property acquisition to construction.</p>
               </div>
             </div>
             <div className="col-lg-4 col-md-6">
               <div className="service-item bg-light text-center p-5">
                 <img src={appartment} alt="" />
-                <h4>Shops & Apartments</h4>
-                <p className="mb-0">Find the perfect commercial or residential property to suit your lifestyle.</p>
+                <h4  style={{fontFamily:"Poppins"}}>Shops & Apartments</h4>
+                <p className="mb-0" style={{fontFamily:"Mulish" }}>Find the perfect commercial or residential property to suit your lifestyle.</p>
               </div>
             </div>
           </div>
@@ -144,10 +146,13 @@ const Home = () => {
           <div className="row">
             <div className="col-md-6">
               <div className="project_main">
-                <h1 className="services_taital">Your Dream Space
+                <h1 className="services_taital"  style={{fontFamily:"Poppins"}}>Your Dream Space
                   Our Passion</h1>
-                <p className="services_text">Ahemd & Rehman builders & developers are serving low-cost housing to their customers by conveying comforts and high-standard utilities to their clients. So, everyone can attain their dream house for themselves and turn their visions into reality with AR Builders. AR Builders & Developers are best construction company in Pakistan. We aim to facilitate luxurious and affordable housing services to our customers with comfort. So, avail this best opportunity to attain your dream house for yourself and turn your living desires into achievements with AR Builders & Developers in Pakistan.</p>
-                <div className="moremore_bt"><a href="#">Read More </a></div>
+                <p className="services_text"  style={{fontFamily:"Mulish"}}>Ahmed & Rehman builders & developers are serving low-cost housing to their customers by conveying comforts and high-standard utilities to their clients. So, everyone can attain their dream house for themselves and turn their visions into reality with AR Builders. Ahmed & Rehman Builders & Developers are best construction company in Pakistan. We aim to facilitate luxurious and affordable housing services to our customers with comfort. So, avail this best opportunity to attain your dream house for yourself and turn your living desires into achievements with Ahmed & Rehman Builders & Developers in Pakistan.</p>
+                <div className="moremore_bt">
+                  
+                  <NavLink target="_self" to="/about"  style={{fontFamily:"Poppins"}}>Read More </NavLink>
+                  </div>
                 {/* <div className="image_6"><img src={circle1}/></div> */}
               </div>
             </div>
@@ -158,13 +163,13 @@ const Home = () => {
                   <div className="container_1">
                     <img src={b1} alt="Avatar" className="image" style={{ width: "100%" }} />
                     <div className="middle">
-                      <h2 className="fact_text">Al-Rehman Builer</h2>
+                      <h2 className="fact_text"></h2>
                     </div>
                   </div>
                   <div className="container_1">
                     <img src={b2} alt="Avatar" className="image" style={{ width: "100%" }} />
                     <div className="middle">
-                      <h2 className="fact_text">Al-Rehman Builer</h2>
+                      <h2 className="fact_text"></h2>
                     </div>
                   </div>
                 </div>
@@ -173,14 +178,14 @@ const Home = () => {
                     <img src={b3} alt="Avatar" className="image" style={{ width: "100%" }} />
                     <div className="middle">
 
-                      <h2 className="fact_text">Al-Rehman Builer</h2>
+                      <h2 className="fact_text"></h2>
                     </div>
                   </div>
                   <div className="container_1">
                     <img src={b4} alt="Avatar" className="image" style={{ width: "100%" }} />
                     <div className="middle">
 
-                      <h2 className="fact_text">Al-Rehman Builer</h2>
+                      <h2 className="fact_text"></h2>
                     </div>
                   </div>
                 </div>
@@ -199,7 +204,7 @@ const Home = () => {
               <div className="section-heading">
                 <br />
                 <h6 style={{ color: "black" }}> | Best Deal</h6>
-                <h2 style={{ color: " rgb(167,12,24)", fontFamily: "protestStrike", fontWeight: "900" }}>Find Your Best Deal Right Now!</h2>
+                <h2 style={{ color: " rgb(167,12,24)", fontFamily: "Poppins", fontWeight: "900" }}>Find Your Best Deal Right Now!</h2>
               </div>
             </div>
             <div className="col-lg-12">
@@ -223,10 +228,11 @@ const Home = () => {
                         <div className="col-lg-3">
                           <div className="info-table">
                             <ul>
-                              <li>Total Space <span>185 sqf</span></li>
-                              <li>Number of rooms <span>4</span></li>
-                              <li>Parking Available <span>Yes</span></li>
-                              <span style={{ fontweight: "900", color: "white" }}>Enquire Now</span>
+                              <li style={{fontFamily:"Poppins"}}>Total Space <span style={{fontFamily:"Poppins"}}>185 sqf</span></li>
+                              <li style={{fontFamily:"Poppins"}}>Number of rooms <span style={{fontFamily:"Poppins"}}>4</span></li>
+                              <li style={{fontFamily:"Poppins"}}>Parking Available <span style={{fontFamily:"Poppins"}}>Yes</span></li>
+                              <button className="btn " href="/contact" style={{ background: "rgb(167,12,24)" , fontFamily:"poppin"}}><i style={{color:"white"}} className="fa fa-phone" > Call Now</i></button>
+                              
                             </ul>
                           </div>
                         </div>
@@ -234,11 +240,11 @@ const Home = () => {
                           <img src={about} style={{ width: "100%", height: "50vh", borderRadius: "25px" }} alt="" />
                         </div>
                         <div className="col-lg-3">
-                          <h4 style={{ fontSize: "18px", fontWeight: "700" }}>Extra Info About Property</h4>
-                          <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, do eiusmod tempor pack incididunt ut labore et dolore magna aliqua quised ipsum suspendisse.
-                            <br /><br />When you need free CSS templates, you can simply type TemplateMo in any search engine website. In addition, you can type TemplateMo Portfolio, TemplateMo One Page Layouts, etc.</p>
+                          <h4 style={{ fontSize: "18px", fontWeight: "700" , fontFamily:"Poppins"}}>Extra Info About Property</h4>
+                          <p  style={{fontFamily:"Mulish"}}>Lorem ipsum dolor sit amet, consectetur adipiscing elit, do eiusmod tempor pack incididunt ut labore et dolore magna aliqua quised ipsum suspendisse.
+                            <br />When you need free CSS templates, you can simply type TemplateMo in any search engine website. In addition, you can type TemplateMo Portfolio, TemplateMo One Page Layouts, etc.</p>
                           <div classNamename="icon-button">
-                            <a style={{ color: "maroon" }} href="property-details.html"><i className="fa fa-calendar"></i> Schedule a visit</a>
+                            <NavLink target="_self" style={{ color: "maroon" }} to="/project" ><i > See More</i></NavLink>
                           </div>
                         </div>
                       </div>
@@ -255,7 +261,7 @@ const Home = () => {
 
       {/* testimonials */}
       <div className="testimonials">
-        <h3 h3 className="display-5 fw-bold " style={{ color: "rgb(167,12,24)", textAlign: "center", fontFamily: "protestStrike" }}>What Our Client Say About Us</h3 >
+        <h3 h3 className="display-5 fw-bold " style={{ color: "rgb(167,12,24)", textAlign: "center", fontFamily: "Poppins" }}>What Our Client Say About Us</h3 >
         <br />
         <div className="wrapper1">
         </div>
@@ -288,9 +294,9 @@ const Home = () => {
                   <div className="testimonial">
 
 
-                    <span>{testimonials.comment}</span>
+                    <span  style={{fontFamily:"Mulish" , color:"black"}}>{testimonials.comment}</span>
                     <hr />
-                    <span>{testimonials.name}</span>
+                    <span  style={{fontweight:"700" ,fontFamily:"Poppins"}}>{testimonials.name}</span>
 
                   </div>
                 </SwiperSlide>))
@@ -313,16 +319,17 @@ const Home = () => {
               </div>
             </div>
             <div className="col-lg-6 wow fadeIn" data-wow-delay="0.5s">
-              <h1 className="mb-4" style={{ fontFamily: "protestStrike", fontWeight: "700", color: "maroon" }}>Join Us As We Bring Real Estate Visionaries To The Forefront.</h1>
-              <p className="mb-4">At Ahmed & Rehman Builders, we are a dynamic and multifaceted real estate firm committed to transforming your property dreams into reality. With a diverse portfolio of services, we cater to a wide spectrum of real estate needs:
+              <h1 className="mb-4" style={{ fontFamily: "Poppins", fontWeight: "700", color: "maroon" }}>Join Us As We Bring Real Estate Visionaries To The Forefront.</h1>
+              <p className="mb-4"  style={{fontFamily:"Mulish"}}>At Ahmed & Rehman Builders, we are a dynamic and multifaceted real estate firm committed to transforming your property dreams into reality. With a diverse portfolio of services, we cater to a wide spectrum of real estate needs:
               </p>
-              <p><i className="fa fa-check text-dark me-3"></i>Real Estate Expertise.</p>
-              <p><i className="fa fa-check text-dark me-3"></i>Construction and Development.</p>
-              <p><i className="fa fa-check text-dark me-3"></i>Property Marketing.</p>
+              <p style={{fontFamily:"Mulish"}}><i className="fa fa-check text-dark me-3"  ></i >Real Estate Expertise.</p>
+              <p style={{fontFamily:"Mulish"}}s><i className="fa fa-check text-dark me-3" ></i >Construction and Development.</p>
+              <p style={{fontFamily:"Mulish"}}s><i className="fa fa-check text-dark me-3" ></i >Property Marketing.</p>
 
 
 
-              <button className="btn" >About us</button>
+              <button className="btn" >
+                <a to="/about" >About us</a></button>
             </div>
           </div>
 
@@ -332,15 +339,15 @@ const Home = () => {
       {/* map */}
 
       <div >
-        <h3 h3 className="display-5 fw-bold " style={{ color: "rgb(167,12,24)", textAlign: "center", fontFamily: "protestStrike" }}> Boasting A Superb Location</h3 >
+        <h3 h3 className="display-5 fw-bold " style={{ color: "rgb(167,12,24)", textAlign: "center", fontFamily: "Poppins" }}> Boasting A Superb Location</h3 >
         <div className="col-lg-6 mx-auto">
-          <p className="lead mb-4" style={{ textAlign: "center", fontWeight: "400" }}>A Dream Real Estate Brand Packed With Potential and Results</p>
+          <p className="lead mb-4" style={{ textAlign: "center", fontWeight: "400" ,fontFamily:"Poppins"}}>A Dream Real Estate Brand Packed With Potential and Results</p>
 
         </div>
         <div style={{ margin: "15px" }}>
           <div className="row featurette" style={{ display: "flex", flexwrap: "wrap;", alignItems: "center", justifyContent: "center" }}>
-            <div className="col-md-6 col-sm-12 order-md-3" style={{ flex: "1 0 50%;" }}> <h1 className="featurette-heading lh-1" style={{ color: "rgb(167,12,24) ", fontweight: "800", textAlign: "center", fontFamily: "protestStrike" }}>Visit us</h1>
-              <p className="lead" style={{ fontsize: "18px", color: "black", textAlign: "center", fontWeight: "500" }}>
+            <div className="col-md-6 col-sm-12 order-md-3" style={{ flex: "1 0 50%;" }}> <h1 className="featurette-heading lh-1" style={{ color: "rgb(167,12,24) ", fontweight: "800", textAlign: "center", fontFamily: "Poppins" }}>Visit us</h1>
+              <p className="lead" style={{ fontsize: "18px", color: "black", textAlign: "center", fontWeight: "500", fontFamily:"Mulish" }}>
                 C-23 Gulistan e Rafi, Malir City, Karachi, Sindh, Pakistan </p>
             </div>
             <div className="col-md-5 col-sm-12 order-md-1" style={{ flex: "1 0 50%" }}>

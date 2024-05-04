@@ -60,8 +60,8 @@ function Modal2() {
         </div>
       </div> */}
       {/* <!-- Button trigger modal --> */}
-      <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#exampleModal">
-        Write a comment!
+      <button type="button" class="btn" style={{backgroundColor:"maroon",color:"white", justifyContent: "center", alignItems:"center"}} data-bs-toggle="modal" data-bs-target="#exampleModal">
+        Write a Review!
       </button>
 
       {/* <!-- Modal --> */}
@@ -69,7 +69,7 @@ function Modal2() {
         <div class="modal-dialog modal-dialog-centered" >
           <div class="modal-content">
             <div class="modal-header">
-              <h1 class="modal-title fs-5" id="exampleModalLabel">Enter Comment!</h1>
+              <h1 class="modal-title fs-5" id="exampleModalLabel">Write a Review!</h1>
               <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
             </div>
             <div class="modal-bodys" style={{ paddingLeft: '15px', paddingRight: '15px' }}>
@@ -85,7 +85,7 @@ function Modal2() {
             </div>
             <div class="modal-footer">
               <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
-              <button type="button" class="btn btn-primary" onClick={submitForm}>Submit</button>
+              <button type="button" class="btn btn-primary" onClick={submitForm} style={{backgroundColor:"maroon"}}>Submit</button>
             </div>
           </div>
         </div>
