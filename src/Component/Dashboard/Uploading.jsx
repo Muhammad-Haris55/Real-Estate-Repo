@@ -7,7 +7,7 @@ import Modal from "./Modal";
 import axios from "axios";
 function Uploading() {
   const [images, setImages] = useState([]);
-  const [list, setList] = useState([]);
+  const [setList] = useState([]);
   const [file, setFile] = useState([]);
   const [apiData, setAPIData] = useState({});
   const maxNumber = 69;
@@ -95,7 +95,7 @@ function Uploading() {
             data-aos-duration="500"
             data-aos-delay="500"
           >
-            <img src="logo.png" alt=""  style={{width :'100px',height:'70px'}}/>
+            <img src="logo.png" alt="" style={{ width: '100px', height: '70px' }} />
             {/* <p>Logo</p> */}
           </NavLink>
         </div>
@@ -231,7 +231,7 @@ function Uploading() {
       </div>
       {/* {list.length > 0 ? list : <p></p>} */}
       <Modal uploading={setState} />
-      <Canvas /> 
+      <Canvas />
     </>
   );
 }

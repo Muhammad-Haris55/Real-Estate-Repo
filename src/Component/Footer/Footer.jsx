@@ -38,14 +38,14 @@ const Footer = () => {
                   </p>
                   
                   <div className='hover' style={{ color: " rgb(167,12,24)" }}>
-                    <a href='' className='me-4 text-reset'>
+                    <a href='/#' className='me-4 text-reset'>
                       <MDBIcon fab icon="facebook-f" />
                     </a>
                    
-                    <a href='' className='me-4 text-reset'>
+                    <a href='/#' className='me-4 text-reset'>
                       <MDBIcon fab icon="google" />
                     </a>
-                    <a href='' className='me-4 text-reset'>
+                    <a href='/#' className='me-4 text-reset'>
                       <MDBIcon fab icon="instagram" />
                     </a>
                     

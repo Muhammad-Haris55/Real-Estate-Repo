@@ -1,14 +1,13 @@
-import React, { useContext, useEffect, useState } from "react";
+import React, { useEffect, useState } from "react";
 import { NavLink, createSearchParams, useNavigate } from "react-router-dom";
 import Sidebar from "./Sidebar";
-import DataContext from "../../context/store";
 import axios from "axios";
 import Canvas from "./Canvas";
 
 function Totalprojects() {
   // setRecords(ctx.data);
   const navigate = useNavigate();
-  const ctx = useContext(DataContext);
+  // const ctx = useContext(DataContext);
   const [records, setRecords] = useState([]);
   useEffect(() => {
     async function Call() {
@@ -67,6 +66,7 @@ function Totalprojects() {
   const updateContext2 = (id) => {
     const newData = records.map((obj) => {
       if (obj._id !== id) return obj;
+      else return null
     });
     setRecords([...newData]);
   };
@@ -146,7 +146,7 @@ function Totalprojects() {
               </div>
             </div>
           );
-        }
+        }else return null
       })
       : null;
   return (
@@ -163,8 +163,8 @@ function Totalprojects() {
             data-aos-duration="500"
             data-aos-delay="500"
           >
-            
-            <img src="logo.png" alt=""  style={{width :'100px',height:'70px'}}/>
+
+            <img src="logo.png" alt="" style={{ width: '100px', height: '70px' }} />
             {/* <p>Logo</p> */}
 
           </NavLink>
@@ -188,7 +188,7 @@ function Totalprojects() {
 
         </div>
       </div>
-    <Canvas/>
+      <Canvas />
     </>
 
   );

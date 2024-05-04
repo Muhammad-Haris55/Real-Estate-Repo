@@ -34,7 +34,7 @@ const Home = () => {
       }
     }
     apiCall()
-  }, {})
+  }, [])
 
   // const TestimonialsData = [
   //   {
@@ -163,13 +163,13 @@ const Home = () => {
                   <div className="container_1">
                     <img src={b1} alt="Avatar" className="image" style={{ width: "100%" }} />
                     <div className="middle">
-                      <h2 className="fact_text"></h2>
+                      {/* <h2 className="fact_text"></h2> */}
                     </div>
                   </div>
                   <div className="container_1">
                     <img src={b2} alt="Avatar" className="image" style={{ width: "100%" }} />
                     <div className="middle">
-                      <h2 className="fact_text"></h2>
+                      {/* <h2 className="fact_text"></h2> */}
                     </div>
                   </div>
                 </div>
@@ -178,14 +178,14 @@ const Home = () => {
                     <img src={b3} alt="Avatar" className="image" style={{ width: "100%" }} />
                     <div className="middle">
 
-                      <h2 className="fact_text"></h2>
+                      {/* <h2 className="fact_text"></h2> */}
                     </div>
                   </div>
                   <div className="container_1">
                     <img src={b4} alt="Avatar" className="image" style={{ width: "100%" }} />
                     <div className="middle">
 
-                      <h2 className="fact_text"></h2>
+                      {/* <h2 className="fact_text"></h2> */}
                     </div>
                   </div>
                 </div>
@@ -315,7 +315,7 @@ const Home = () => {
           <div className="row g-5 align-items-center">
             <div className="col-lg-6 wow fadeIn" data-wow-delay="0.1s">
               <div className="about-img position-relative overflow-hidden p-5 pe-0">
-                <img className="img-fluid " style={{ width: "100%", height: "60vh" }} src={home} />
+                <img className="img-fluid " style={{ width: "100%", height: "60vh" }} src={home} alt="img" />
               </div>
             </div>
             <div className="col-lg-6 wow fadeIn" data-wow-delay="0.5s">
@@ -329,7 +329,7 @@ const Home = () => {
 
 
               <button className="btn" >
-                <a to="/about" >About us</a></button>
+                <NavLink to="/about" >About us</NavLink></button>
             </div>
           </div>
 
@@ -352,7 +352,7 @@ const Home = () => {
             </div>
             <div className="col-md-5 col-sm-12 order-md-1" style={{ flex: "1 0 50%" }}>
 
-              <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d572.7379905504937!2d67.18867214275399!3d24.876970359817253!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3eb339a1c6d30ea7%3A0x3034dc0ab3319dad!2sAhmed%20%26%20Rehman%20Builders%20%26%20Developers!5e0!3m2!1sen!2sus!4v1708529326069!5m2!1sen!2sus" style={{ border: "0", width: "100%", height: "60vh", boxshadow: "2px 2px lightgrey" }} className="bd-placeholder-img bd-placeholder-img-lg featurette-image img-fluid mx-auto" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+              <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d572.7379905504937!2d67.18867214275399!3d24.876970359817253!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3eb339a1c6d30ea7%3A0x3034dc0ab3319dad!2sAhmed%20%26%20Rehman%20Builders%20%26%20Developers!5e0!3m2!1sen!2sus!4v1708529326069!5m2!1sen!2sus" style={{ border: "0", width: "100%", height: "60vh", boxshadow: "2px 2px lightgrey" }} className="bd-placeholder-img bd-placeholder-img-lg featurette-image img-fluid mx-auto" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade" title="map"></iframe>
             </div>
           </div>
         </div>

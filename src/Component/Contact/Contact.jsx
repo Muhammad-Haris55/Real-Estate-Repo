@@ -20,7 +20,7 @@ const Contact = () => {
             <div className="col-lg-5 offset-lg-3">
               <div className="section-heading wow fadeIn" data-wow-duration="1s"
                 data-wow-delay="0.5s">
-                <h6 style={{color: "#151515;", fontFamily:"Poppins" , fontWeight:"800" , color:"black"}}>| Contact Us</h6>
+                <h6 style={{color: "#151515;", fontFamily:"Poppins" , fontWeight:"800" }}>| Contact Us</h6>
                 <h4 style={{fontFamily:"Poppins" , fontWeight:"700"}}>Get In Touch With Us Now!</h4>
                 <h6 style={{fontFamily:"Mulish"}}>Have questions about our projects or services? Reach out to us now, and we'll respond promptly to assist you.</h6>
 
