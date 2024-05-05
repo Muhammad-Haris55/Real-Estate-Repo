@@ -60,7 +60,7 @@ function Modal2() {
         </div>
       </div> */}
       {/* <!-- Button trigger modal --> */}
-      <button type="button" class="btn" style={{backgroundColor:"maroon",color:"white", justifyContent: "center", alignItems:"center"}} data-bs-toggle="modal" data-bs-target="#exampleModal">
+      <button type="button" class="btn" style={{backgroundColor:"maroon",color:"white", marginLeft:"110px"}} data-bs-toggle="modal" data-bs-target="#exampleModal">
         Write a Review!
       </button>
 

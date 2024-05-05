@@ -42,7 +42,7 @@ const Login1 = () => {
             <div className="col-lg-6">
               <div className="section-heading">
                 <br />
-                <h4>| LOGIN FORM </h4>
+                <h4>|LOGIN FORM </h4>
               </div>
 
             </div>

@@ -1255,7 +1255,13 @@ body.open .sidebar {
 
     .contact-page .section-heading {
         margin-right: 100px;
+        
     }
+    .contact-page .section-heading h4{
+       
+        font-size: 1.2rem;
+    }
+
 }
 
 
