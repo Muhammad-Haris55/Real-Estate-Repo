@@ -1,5 +1,3 @@
-import home from "./img/pixasquare-4ojhpgKpS68-unsplash.jpg"
-import about from "./img/Home (1).jpg"
 import Carousels from '../carousel/carousel/Carousels';
 import Footer from '../Footer/Footer';
 // import b1 from "./img/joel-filipe-RFDP7_80v5A-unsplash.jpg"
@@ -323,7 +321,7 @@ const Home = () => {
               </p>
               <p style={{fontFamily:"Mulish"}}><i className="fa fa-check text-dark me-3"  ></i >Real Estate Expertise.</p>
               <p style={{fontFamily:"Mulish"}}s><i className="fa fa-check text-dark me-3" ></i >Construction and Development.</p>
-              <p style={{fontFamily:"Mulish"}}s><i className="fa fa-check text-dark me-3" ></i >Property Marketing.</p>
+              <p style={{fontFamily:"Mulish"}}s><i className= "fa fa-check text-dark me-3" ></i >Property Marketing.</p>
 
 
 
