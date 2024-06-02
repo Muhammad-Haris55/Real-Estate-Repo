@@ -2,10 +2,10 @@ import home from "./img/pixasquare-4ojhpgKpS68-unsplash.jpg"
 import about from "./img/Home (1).jpg"
 import Carousels from '../carousel/carousel/Carousels';
 import Footer from '../Footer/Footer';
-import b1 from "./img/joel-filipe-RFDP7_80v5A-unsplash.jpg"
-import b2 from "./img/luke-stackpoole-KjvIaa_Q5rY-unsplash.jpg"
-import b3 from "./img/joshua-fuller-rLeb8DxMmik-unsplash.jpg"
-import b4 from "./img/valentyn-chernetskyi-jUP7m4Svtus-unsplash.jpg"
+// import b1 from "./img/joel-filipe-RFDP7_80v5A-unsplash.jpg"
+// import b2 from "./img/luke-stackpoole-KjvIaa_Q5rY-unsplash.jpg"
+// import b3 from "./img/joshua-fuller-rLeb8DxMmik-unsplash.jpg"
+// import b4 from "./img/valentyn-chernetskyi-jUP7m4Svtus-unsplash.jpg"
 import truck from "./img/truck.png"
 import jcb from "./img/jcb.png"
 import property from "./img/icons8-property-100.png"
@@ -161,13 +161,13 @@ const Home = () => {
               <div className="images_main">
                 <div className="images_left">
                   <div className="container_1">
-                    <img src={b1} alt="Avatar" className="image" style={{ width: "100%" }} />
+                    <img src="/joel-filipe-RFDP7_80v5A-unsplash.jpg" alt="Avatar" className="image" style={{ width: "100%" }} />
                     <div className="middle">
                       {/* <h2 className="fact_text"></h2> */}
                     </div>
                   </div>
                   <div className="container_1">
-                    <img src={b2} alt="Avatar" className="image" style={{ width: "100%" }} />
+                    <img src="/luke-stackpoole-KjvIaa_Q5rY-unsplash.jpg" alt="Avatar" className="image" style={{ width: "100%" }} />
                     <div className="middle">
                       {/* <h2 className="fact_text"></h2> */}
                     </div>
@@ -175,14 +175,14 @@ const Home = () => {
                 </div>
                 <div className="images_right">
                   <div className="container_1">
-                    <img src={b3} alt="Avatar" className="image" style={{ width: "100%" }} />
+                    <img src="/joshua-fuller-rLeb8DxMmik-unsplash.jpg" alt="Avatar" className="image" style={{ width: "100%" }} />
                     <div className="middle">
 
                       {/* <h2 className="fact_text"></h2> */}
                     </div>
                   </div>
                   <div className="container_1">
-                    <img src={b4} alt="Avatar" className="image" style={{ width: "100%" }} />
+                    <img src="/valentyn-chernetskyi-jUP7m4Svtus-unsplash.jpg" alt="Avatar" className="image" style={{ width: "100%" }} />
                     <div className="middle">
 
                       {/* <h2 className="fact_text"></h2> */}
@@ -228,8 +228,8 @@ const Home = () => {
                         <div className="col-lg-3">
                           <div className="info-table">
                             <ul>
-                              <li style={{fontFamily:"Poppins"}}>Total Space <span style={{fontFamily:"Poppins"}}>185 sqf</span></li>
-                              <li style={{fontFamily:"Poppins"}}>Number of rooms <span style={{fontFamily:"Poppins"}}>4</span></li>
+                              <li style={{fontFamily:"Poppins"}}>Total Space <span style={{fontFamily:"Poppins"}}>600 sqf</span></li>
+                              <li style={{fontFamily:"Poppins"}}>Number of rooms <span style={{fontFamily:"Poppins"}}>5</span></li>
                               <li style={{fontFamily:"Poppins"}}>Parking Available <span style={{fontFamily:"Poppins"}}>Yes</span></li>
                               <button className="btn " href="/contact" style={{ background: "rgb(167,12,24)" , fontFamily:"poppin"}}><i style={{color:"white"}} className="fa fa-phone" > Call Now</i></button>
                               
@@ -237,12 +237,11 @@ const Home = () => {
                           </div>
                         </div>
                         <div className="col-lg-6">
-                          <img src={about} style={{ width: "100%", height: "50vh", borderRadius: "25px" }} alt="" />
+                          <img src="/AhmedRehman Project.jpeg" style={{ width: "100%", height: "50vh", borderRadius: "25px" }} alt="" />
                         </div>
                         <div className="col-lg-3">
                           <h4 style={{ fontSize: "18px", fontWeight: "700" , fontFamily:"Poppins"}}>Extra Info About Property</h4>
-                          <p  style={{fontFamily:"Mulish"}}>Lorem ipsum dolor sit amet, consectetur adipiscing elit, do eiusmod tempor pack incididunt ut labore et dolore magna aliqua quised ipsum suspendisse.
-                            <br />When you need free CSS templates, you can simply type TemplateMo in any search engine website. In addition, you can type TemplateMo Portfolio, TemplateMo One Page Layouts, etc.</p>
+                          <p  style={{fontFamily:"Mulish"}}>This development prioritizes Resident comfort with advanced features. A high-speed elevator. A standby generator safeguards power during outages.A UPS guarantees uninterrupted corridor lighting and safety during fluctuations. American-style kitchens offer modern functionality, while imported fittings elevate the bathrooms' luxury.</p>
                           <div classNamename="icon-button">
                             <NavLink target="_self" style={{ color: "maroon" }} to="/project" ><i > See More</i></NavLink>
                           </div>
@@ -315,7 +314,7 @@ const Home = () => {
           <div className="row g-5 align-items-center">
             <div className="col-lg-6 wow fadeIn" data-wow-delay="0.1s">
               <div className="about-img position-relative overflow-hidden p-5 pe-0">
-                <img className="img-fluid " style={{ width: "100%", height: "60vh" }} src={home} alt="img" />
+                <img className="img-fluid " style={{ width: "100%", height: "60vh" }} src="/AhmedRehman Project 2.jpeg" alt="img" />
               </div>
             </div>
             <div className="col-lg-6 wow fadeIn" data-wow-delay="0.5s">
@@ -348,7 +347,7 @@ const Home = () => {
           <div className="row featurette" style={{ display: "flex", flexwrap: "wrap;", alignItems: "center", justifyContent: "center" }}>
             <div className="col-md-6 col-sm-12 order-md-3" style={{ flex: "1 0 50%;" }}> <h1 className="featurette-heading lh-1" style={{ color: "rgb(167,12,24) ", fontweight: "800", textAlign: "center", fontFamily: "Poppins" }}>Visit us</h1>
               <p className="lead" style={{ fontsize: "18px", color: "black", textAlign: "center", fontWeight: "500", fontFamily:"Mulish" }}>
-                C-23 Gulistan e Rafi, Malir City, Karachi, Sindh, Pakistan </p>
+                CM-24 Gulistan e Rafi, Malir City, Karachi, Sindh, Pakistan </p>
             </div>
             <div className="col-md-5 col-sm-12 order-md-1" style={{ flex: "1 0 50%" }}>
 

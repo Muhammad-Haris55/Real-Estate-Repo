@@ -3,7 +3,7 @@ import Footer from '../Footer/Footer';
 import truck from "../Home/img/truck.png"
 import jcb from "../Home/img/jcb.png"
 import about from "../Home/img/about.png"
-import Background1 from "../Home/img/alice-donovan-rouse-tMHAmxLyzvA-unsplash.jpg"
+// import Background1 from "../Home/img/alice-donovan-rouse-tMHAmxLyzvA-unsplash.jpg"
 import 'swiper/css'
 import { Swiper, SwiperSlide } from "swiper/react"
 import Navbar3 from "../Navbar3/Navbar3"
@@ -72,7 +72,7 @@ export const About = () => {
     return (
         <>
             <Navbar3 />
-            <div class="page-heading header-text" style={{ backgroundImage: `url(${Background1})` }}>
+            <div class="page-heading header-text" style={{ backgroundImage: `url("/alice-donovan-rouse-tMHAmxLyzvA-unsplash.jpg")` }}>
                 <div class="container">
                     <div class="row">
 

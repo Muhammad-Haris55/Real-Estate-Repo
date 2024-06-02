@@ -81,7 +81,7 @@ const Cform = () => {
                             <img src={email}
                               alt="" />
                             <a href='/#'
-                              style={{ fontFamily: "Mulish" }}>arbuilderndeveloper@gmail.com</a>
+                              style={{ fontFamily: "Mulish", fontSize:"12.5px" }}>arbuilderndeveloper@gmail.com</a>
                           </div>
                         </div>
                       </div>

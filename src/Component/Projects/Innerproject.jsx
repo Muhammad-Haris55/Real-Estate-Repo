@@ -58,13 +58,14 @@ function Innerproject() {
                     <h5>
                         {description}
                     </h5>
-                    <button className='mt-2'
+                    <a href="https://api.whatsapp.com/send/?phone=03158058848&text=Hi%2C+I+want+to+discuss+about+a+project.&type=phone_number&app_absent=0" target='blank'>
+                    <button className='mt-2' 
 
                         style={{ width: '150px', height: '38px', display: 'flex', flexDirection: 'column', alignItems: 'center', justifyContent: 'center', fontSize: '13px' }}
                         id="rembtn"
                     >
                         Enquire Now!
-                    </button>
+                    </button></a>
                 </div>
 
                 <div className="col-xxl-6 col-xl-6 col-lg-6 col-md-11 col-sm-11  colb">
