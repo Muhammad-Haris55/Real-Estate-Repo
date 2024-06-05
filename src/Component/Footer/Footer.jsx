@@ -56,23 +56,23 @@ const Footer = () => {
                 <MDBCol md="2" lg="2" xl="2" className='mx-auto mb-4'>
                   <h6 className='text-uppercase fw-bold mb-4' style={{ fontFamily:"Poppins" }}>Our Projects</h6>
                   <p style={{fontFamily:"Mulish" }}>
-                    <a href='#!' className='text-reset'>
-                      Al-rehman garden
+                    <a href='\I?id=665cd293a6f05b5fcbfc1d46' className='text-reset'>
+                      CM-05 
                     </a>
                   </p>
                   <p style={{fontFamily:"Mulish" }}>
                     <a href='#!' className='text-reset'>
-                      Bahria town
+                      
                     </a>
                   </p>
                   <p style={{fontFamily:"Mulish" }}>
                     <a href='#!' className='text-reset'>
-                      Gloobe Residency
+                      
                     </a>
                   </p>
                   <p style={{fontFamily:"Mulish" }}>
                     <a href='#!' className='text-reset'>
-                      Urban city
+                     
                     </a>
                   </p>
                 </MDBCol>
