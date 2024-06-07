@@ -4,6 +4,7 @@ import PrivateRoutes from "./Component/User/PrivaateRoutes";
 import Login1 from "./Component/loginform1/Login1";
 import Scroll from "./Component/Sidescroll/Scroll";
 import React, { Suspense } from "react";
+import { CSpinner } from "@coreui/react";
 const Home1 = React.lazy(() => import("./Component/Home/Home"));
 const Project1 = React.lazy(() => import("./Component/Projects/Project"));
 const Innerproject1 = React.lazy(() =>
@@ -26,7 +27,7 @@ function App() {
   return (
     <>
       <Scroll />
-      <Suspense fallback={<div> Data is Loading</div>}>
+      <Suspense fallback={<div style={{"textAlign":"center" ,"margin":"10px"}}> <CSpinner color="dark" /></div>}>
         <Routes>
           <Route path="/" element={<Home1 />}></Route>
           <Route element={<PrivateRoutes />}>
