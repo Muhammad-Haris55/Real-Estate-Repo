@@ -7,6 +7,7 @@ import Navbar3 from '../Navbar3/Navbar3';
 import Footer from '../Footer/Footer';
 import truck from "../Home/img/truck.png"
 import jcb from "../Home/img/jcb.png"
+import { CSpinner } from '@coreui/react';
 
 
 
@@ -95,7 +96,7 @@ function Innerproject() {
         <>
             <Navbar3 />
             <div className="inner">
-                {isLoading ? <p>Data is Loading</p> : isData && data}
+                {isLoading ? <div style={{"textAlign":"center" ,"margin":"10px"}}> <CSpinner color="dark" /></div> : isData && data}
             </div >
             {images.length >= 1 && <Modal data={images} title={title} />}
 
