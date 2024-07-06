@@ -3,7 +3,7 @@ import styled from "styled-components";
 import { GiHamburgerMenu } from "react-icons/gi";
 import { MdClose } from "react-icons/md";
 import { useState } from 'react';
-import logo from './AR builder logo.png'
+import logo from './Ahmed Rehman builders.png'
 import { NavLink } from 'react-router-dom';
 
 
