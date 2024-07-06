@@ -1,22 +1,33 @@
-import Carousels from '../carousel/carousel/Carousels';
-import Footer from '../Footer/Footer';
+// import Carousels from '../carousel/carousel/Carousels';
+// import Footer from '../Footer/Footer';
 // import b1 from "./img/joel-filipe-RFDP7_80v5A-unsplash.jpg"
 // import b2 from "./img/luke-stackpoole-KjvIaa_Q5rY-unsplash.jpg"
 // import b3 from "./img/joshua-fuller-rLeb8DxMmik-unsplash.jpg"
 // import b4 from "./img/valentyn-chernetskyi-jUP7m4Svtus-unsplash.jpg"
-import truck from "./img/truck.png"
-import jcb from "./img/jcb.png"
-import property from "./img/icons8-property-100.png"
-import house from "./img/icons8-houses-48.png"
-import appartment from "./img/icons8-building-100.png"
-import estate from "./img/icons8-construction-48.png"
-import plot from "./img/icons8-ground-48.png"
+// import truck from "./img/truck.png"
+// import jcb from "./img/jcb.png"
+// import property from "./img/icons8-property-100.png"
+// import house from "./img/icons8-houses-48.png"
+// import appartment from "./img/icons8-building-100.png"
+// import estate from "./img/icons8-construction-48.png"
+// import plot from "./img/icons8-ground-48.png"
 import 'swiper/css'
 import { Swiper, SwiperSlide } from "swiper/react"
-import Navbar3 from "../Navbar3/Navbar3"
+// import Navbar3 from "../Navbar3/Navbar3"
 import { useEffect, useState} from "react";
 import axios from "axios";
 import { NavLink } from "react-router-dom";
+const Carousels = React.lazy(() => import("../carousel/carousel/Carousels"))
+const Navbar3 = React.lazy(() => import("../Navbar3/Navbar3"))
+const Footer = React.lazy(() => import("../Footer/Footer"))
+const truck = React.lazy(() => import("../Home/img/truck.png"))
+const jcb = React.lazy(() => import("../Home/img/jcb.png"))
+const property = React.lazy(() => import("./img/icons8-property-100.png"))
+const house = React.lazy(() => import("./img/icons8-houses-48.png"))
+const appartment = React.lazy(() => import("./img/icons8-building-100.png"))
+const estate = React.lazy(() => import("./img/icons8-construction-48.png"))
+const plot = React.lazy(() => import("./img/icons8-ground-48.png"))
+
 
 
 const Home = () => {

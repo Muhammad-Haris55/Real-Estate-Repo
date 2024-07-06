@@ -1,13 +1,19 @@
 import React, { useEffect, useState } from 'react'
-import Footer from '../Footer/Footer';
-import truck from "../Home/img/truck.png"
-import jcb from "../Home/img/jcb.png"
+// import Footer from '../Footer/Footer';
+// import truck from "../Home/img/truck.png"
+// import jcb from "../Home/img/jcb.png"
 import about from "../Home/img/about.png"
 // import Background1 from "../Home/img/alice-donovan-rouse-tMHAmxLyzvA-unsplash.jpg"
 import 'swiper/css'
 import { Swiper, SwiperSlide } from "swiper/react"
-import Navbar3 from "../Navbar3/Navbar3"
+// import Navbar3 from "../Navbar3/Navbar3"
 import axios from 'axios';
+
+
+const Navbar3 = React.lazy(() => import("../Navbar3/Navbar3"))
+const Footer = React.lazy(() => import("../Footer/Footer"))
+const truck = React.lazy(() => import("../Home/img/truck.png"))
+const jcb = React.lazy(() => import("../Home/img/jcb.png"))
 
 
 export const About = () => {

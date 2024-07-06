@@ -1,15 +1,18 @@
-import React, { useEffect, useState } from 'react'
-import Modal from "../Modal/Modal"
+import React, { useEffect, useState, Suspense } from 'react'
+// import Modal from "../Modal/Modal"
 import { useSearchParams } from 'react-router-dom';
 import axios from 'axios';
 import { FacebookEmbed } from 'react-social-media-embed';
-import Navbar3 from '../Navbar3/Navbar3';
-import Footer from '../Footer/Footer';
-import truck from "../Home/img/truck.png"
-import jcb from "../Home/img/jcb.png"
+// import Navbar3 from '../Navbar3/Navbar3';
+// import Footer from '../Footer/Footer';
+// import truck from "../Home/img/truck.png"
+// import jcb from "../Home/img/jcb.png"
 import { CSpinner } from '@coreui/react';
-
-
+const Modal = React.lazy(() => import("../Modal/Modal"))
+const Navbar3 = React.lazy(() => import("../Navbar3/Navbar3"))
+const Footer = React.lazy(() => import("../Footer/Footer"))
+const truck = React.lazy(() => import("../Home/img/truck.png"))
+const jcb = React.lazy(() => import("../Home/img/jcb.png"))
 
 
 function Innerproject() {
@@ -60,18 +63,18 @@ function Innerproject() {
                         {description}
                     </h5>
                     <a href="https://api.whatsapp.com/send/?phone=03158058848&text=Hi%2C+I+want+to+discuss+about+a+project.&type=phone_number&app_absent=0" target='blank'>
-                    <button className='mt-2' 
+                        <button className='mt-2'
 
-                        style={{ width: '150px', height: '38px', display: 'flex', flexDirection: 'column', alignItems: 'center', justifyContent: 'center', fontSize: '13px' }}
-                        id="rembtn"
-                    >
-                        Enquire Now!
-                    </button></a>
+                            style={{ width: '150px', height: '38px', display: 'flex', flexDirection: 'column', alignItems: 'center', justifyContent: 'center', fontSize: '13px' }}
+                            id="rembtn"
+                        >
+                            Enquire Now!
+                        </button></a>
                 </div>
 
                 <div className="col-xxl-6 col-xl-6 col-lg-6 col-md-11 col-sm-11  colb">
                     <div style={{ display: 'flex', justifyContent: 'center', alignItems: 'center' }} >
-                        <FacebookEmbed url={`${link}`}width={500}  height={300} />
+                        <FacebookEmbed url={`${link}`} width={500} height={300} />
                         {/* <FacebookEmbed url={"https://www.facebook.com/BuildersGFS/videos/1196635581509534"}width={500}  height={300}/> */}
                         {/* <FacebookEmbed url={"https://www.facebook.com/BuildersGFS/videos/1145371583467952"}width={500}  height={300}/> */}
                         {/* <FacebookEmbed url={"https://fb.watch/rOpty7GMLo/"}width={500}  height={300}/> */}
@@ -96,7 +99,7 @@ function Innerproject() {
         <>
             <Navbar3 />
             <div className="inner">
-                {isLoading ? <div style={{"textAlign":"center" ,"margin":"10px"}}> <CSpinner color="dark" /></div> : isData && data}
+                {isLoading ? <div style={{ "textAlign": "center", "margin": "10px" }}> <CSpinner color="dark" /></div> : isData && data}
             </div >
             {images.length >= 1 && <Modal data={images} title={title} />}
 

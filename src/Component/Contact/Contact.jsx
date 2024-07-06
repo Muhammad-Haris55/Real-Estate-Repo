@@ -1,10 +1,16 @@
 import React from 'react'
-import truck from "../Home/img/truck.png"
-import jcb from "../Home/img/jcb.png"
-import Footer from '../Footer/Footer';
-import Navbar3 from "../Navbar3/Navbar3"
-import Modal2 from './Modal2';
+// import truck from "../Home/img/truck.png"
+// import jcb from "../Home/img/jcb.png"
+// import Footer from '../Footer/Footer';
+// import Navbar3 from "../Navbar3/Navbar3"
+// import Modal2 from './Modal2';
 import Cform from './Cform';
+const Modal2 = React.lazy(() => import("./Modal2"))
+const Navbar3 = React.lazy(() => import("../Navbar3/Navbar3"))
+const Footer = React.lazy(() => import("../Footer/Footer"))
+const truck = React.lazy(() => import("../Home/img/truck.png"))
+const jcb = React.lazy(() => import("../Home/img/jcb.png"))
+
 
 
 const Contact = () => {

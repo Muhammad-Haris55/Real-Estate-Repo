@@ -1,11 +1,16 @@
 import React, { useContext, useEffect, useState } from 'react'
 import { createSearchParams, useNavigate } from 'react-router-dom'
 import ProjectContext from '../../context/project'
-import Navbar3 from '../Navbar3/Navbar3'
-import Footer from '../Footer/Footer'
+// import Navbar3 from '../Navbar3/Navbar3'
+// import Footer from '../Footer/Footer'
 import Cform from '../Contact/Cform'
-import truck from "../Home/img/truck.png"
-import jcb from "../Home/img/jcb.png"
+// import truck from "../Home/img/truck.png"
+// import jcb from "../Home/img/jcb.png"
+const Navbar3 = React.lazy(() => import("../Navbar3/Navbar3"))
+const Footer = React.lazy(() => import("../Footer/Footer"))
+const truck = React.lazy(() => import("../Home/img/truck.png"))
+const jcb = React.lazy(() => import("../Home/img/jcb.png"))
+
 
 
 function Project() {
